@@ -7,13 +7,12 @@ struct Config {
     std::string algorithm;
     
     std::vector<std::string> pattern;
-    std::string input_file;
+    std::string inputFile;
     
-    bool is_valid = true;
-    bool show_positions = false;
-    bool mode_comparison = false;
+    bool isValid = true;
+    bool showPositions = false;
 
-    std::string error_msg;
+    std::string errorMsg;
 };
 
 #endif
