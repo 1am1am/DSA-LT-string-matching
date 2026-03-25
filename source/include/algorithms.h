@@ -6,7 +6,7 @@
 struct Result {
     std::vector<int> positions;
     long long comparisons;
-    double time_ms;
+    double runningTime;
 };
 
 Result bruteForce(const std::vector<std::vector<char>>& text, const std::vector<std::string>& pattern);
