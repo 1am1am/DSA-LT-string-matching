@@ -6,8 +6,8 @@
 struct Config {
     std::string algorithm;
     
-    std::vector<std::string> pattern;
     std::string inputFile;
+    std::string outputFile;
     
     bool isValid = true;
     bool showPositions = false;

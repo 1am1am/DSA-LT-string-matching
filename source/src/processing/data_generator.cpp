@@ -1,12 +1,14 @@
-#include "include/data_generator.h"
-#include <algorithm>
-#include <chrono>
 #include <iostream>
-#include <random>
 #include <vector>
 #include <fstream>
+#include <algorithm>
+#include <chrono>
+#include <random>
 
-const int RANDOM_CHAR = 26;
+
+#include "data_generator.h"
+
+const int RANDOM_CHAR = 'z' - 'a';
 
 std::mt19937 rng(7405);
 
@@ -34,10 +36,10 @@ std::vector<std::string> getPattern(int K, int R, int C) {
     std::vector<std::string> pattern;
     int maxSize = std::min(R, C);
 
-    while (--K) {
+    for (int i = 0; i < K; ++i) {
         int textSize = rnd(1, maxSize);
         std::string s;
-        while (--textSize) {
+        for (int j = 0; j < textSize; ++j) {
             s += createCharacter();
         }
         pattern.push_back(s);
@@ -45,50 +47,54 @@ std::vector<std::string> getPattern(int K, int R, int C) {
     return pattern;
 }
 
-void scenario1() {
-    int K = 5;
-    std::vector<std::pair<int, int>> matrixSize = {{10, 10}, {50, 50}, {100, 100}, {500, 500}};
-
-    for (int i = 0; i < matrixSize.size(); ++i) {
-        RandomData data(
-            matrixSize[i].first,
-            matrixSize[i].second,
-            getText(matrixSize[i].first, matrixSize[i].second),
-            getPattern(K, matrixSize[i].first, matrixSize[i].second)
-        );
-        printInput(data);
-    }
-}
-
-void scenario2() {
-    std::pair<int, int> matrixSize = {100, 100};
-    std::vector<int> patternSize = {1, 10, 50, 100};
-    for (int i = 0; i < patternSize.size(); ++i) {
-        RandomData data(
-            matrixSize.first,
-            matrixSize.second,
-            getText(matrixSize.first, matrixSize.second),
-            getPattern(patternSize[i], matrixSize.first, matrixSize.second)
-        );
-        printInput(data);
-    }
-}
-
-void printInput(RandomData data) {
-    std::string filename = "input.txt";
+void printInput(Data data, Config config) {
+    std::string filename = config.inputFile;
     std::ofstream fout(filename);
     
-    fout << data.R << ' ' << data.C;
+    fout << data.R << ' ' << data.C << '\n';
     for (int i = 0; i < data.R; ++i) {
         for (int j = 0; j < data.C; ++j) {
             fout << data.text[i][j] << ' ';
         }
         fout << '\n';
     }
-    fout << data.K;
+    fout << data.K << '\n';
     for (int i = 0; i < data.K; ++i) {
         fout << data.pattern[i] << '\n';
     }
 
     fout.close();
+}
+
+void scenario1(Config config) {
+    int patternSize = 5;
+    std::vector<std::pair<int, int>> matrixSize = {{10, 10}, {50, 50}, {100, 100}, {500, 500}};
+
+    for (int i = 0; i < matrixSize.size(); ++i) {
+        config.inputFile = "./source/data/scenario1_" + std::to_string(i + 1) + ".txt";
+        Data data(
+            matrixSize[i].first,
+            matrixSize[i].second,
+            getText(matrixSize[i].first, matrixSize[i].second),
+            patternSize,
+            getPattern(patternSize, matrixSize[i].first, matrixSize[i].second)
+        );
+        printInput(data, config);
+    }
+}
+
+void scenario2(Config config) {
+    std::pair<int, int> matrixSize = {100, 100};
+    std::vector<int> patternSize = {1, 10, 50, 100};
+    for (int i = 0; i < patternSize.size(); ++i) {
+        config.inputFile = "./source/data/scenario2_" + std::to_string(i + 1) + ".txt";
+        Data data(
+            matrixSize.first,
+            matrixSize.second,
+            getText(matrixSize.first, matrixSize.second),
+            patternSize[i],
+            getPattern(patternSize[i], matrixSize.first, matrixSize.second)
+        );
+        printInput(data, config);
+    }
 }

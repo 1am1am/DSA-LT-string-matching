@@ -2,27 +2,29 @@
 #define DATA_GENERATOR_H
 #include <string>
 #include <vector>
+#include "cli_parser.h"
 
-struct RandomData {
+struct Data {
     int R, C;
     std::vector<std::vector<char>> text;
     int K;
     std::vector<std::string> pattern;
 
-    RandomData(){
+    Data(){
         R = C = K = 0;
         return;
     }
-    RandomData(int self_R, int self_C, std::vector<std::vector<char>> self_text, std::vector<std::string> self_pattern) {
+    Data(int self_R, int self_C, std::vector<std::vector<char>> self_text, int self_K, std::vector<std::string> self_pattern) {
         R = self_R;
         C = self_C;
         text = self_text;
+        K = self_K;
         pattern = self_pattern;
         return;
     }
 };
 
-void scenario1();
-void scenario2();
+void scenario1(Config config);
+void scenario2(Config config);
 
 #endif
