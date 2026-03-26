@@ -4,7 +4,7 @@
 #include <string>
 
 struct Result {
-    std::vector<int> positions;
+    std::vector<std::pair<int, int>> positions;
     long long comparisons;
     double runningTime;
 };
