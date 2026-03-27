@@ -1,0 +1,70 @@
+\subsection[Counting Sort]{Counting Sort\cite[p.194~196]{cormen2009introduction} \cite{gfg_countingsort}}
+    \subsubsection{Overview}
+        \begin{itemize}
+            \item \textbf{History and Origin:} In 1954, Harold H. Seward introduced the idea of distribution counting for radix sort\cite[p.~170]{knuth1998sorting}, which later became the basis of the counting sort algorithm.
+            \item \textbf{Efficiency:} This algorithm works best when the range of values is smaller than the number of elements. It cannot be used directly for decimal values or non-integer numbers. If the value range is too large, it may consume more memory compared to other in-place algorithms.
+            \item \textbf{Application:} Counting sort is often used to optimize radix sort. Its core idea is also applied in bucket sort. It is suitable for sorting data with a limited range of values, such as sorting students by grades or organizing events by time, days, or months.
+        \end{itemize}
+    \subsubsection{Core Concepts}
+        \begin{itemize}
+            \item Instead of comparing elements, counting sort counts how many times each value appears in the array.
+            \item Then it calculates the sum of previous counts to know the position of each value in the sorted array.
+            \item Finally, the elements are placed into their correct positions based on these counts.
+        \end{itemize}
+    \subsubsection{Step-by-step Explanation}
+        \begin{itemize}
+            \item Consider an array of n elements, $a[0 \ldots (n-1)]$.
+            \item \textbf{Step 1:} Find $k$, the maximum value in array $a$, and create an array $Cnt[0 \ldots k]$.
+            \item \textbf{Step 2:} Count the frequency of each value in array $a$ and store it in $Cnt$.
+            \item \textbf{Step 3:} Compute the sum of previous counts in $Cnt$ to know the position of each value (prefix sum).
+            \item \textbf{Step 4:} Start from $n-1$ and move to $0$, placing each element into its correct position and decreasing the corresponding count in $Cnt$.        \end{itemize}
+    \subsubsection{Pseudo Code}
+        \begin{itemize}
+            \item \textbf{Algorithm:} Counting Sort
+            \item \textbf{Input:} An array A of n elements
+        \end{itemize}
+        \begin{verbatim}
+            1. maxv = 0
+            2. for i = 0 to length(A)-1
+                if A[i] > maxv
+                        maxv = A[i]
+            3. create Count[0..maxv] and set all to 0
+            4. for i = 0 to length(A)-1
+                Count[A[i]] = Count[A[i]] + 1
+            5. for i = 1 to maxv
+                Count[i] = Count[i] + Count[i-1]
+            6. create array B[0..length(A)-1]
+            7. for i = length(A)-1 downto 0
+                B[Count[A[i]]-1] = A[i]
+                Count[A[i]] = Count[A[i]] - 1
+            8. for i = 0 to length(A)-1
+                A[i] = B[i]
+        \end{verbatim}
+    \subsubsection{Complexity Analysis}
+        \begin{itemize}
+            \item \textbf{Time Complexity:}
+            \begin{itemize}
+                \item Best, Average, and Worst case: $O((n + k))$
+                    \subitem Where \textit{n} is the number of elements, and \textit{k} is the maximum value in the array.
+            \end{itemize}
+            \item \textbf{Space Complexity:} $O(n + k)$ 
+                \subitem Where \textit{n} is the number of elements, and \textit{k} is the maximum value in the array.
+        \end{itemize}
+        
+    \subsubsection{Variants and Optimizations}
+        \begin{itemize}
+        \item \textbf{Unstable counting sort\cite{bajpai2014ecounting}:}
+            \begin{itemize}
+                \item Instead of calculating the prefix sum, we find the correct position directly using the $Cnt$ array. This can make the algorithm run faster but it loses stability.
+                \item The time complexity and space complexity are the same as the standard counting sort.
+            \end{itemize}
+        \end{itemize}
+        \begin{itemize}
+        \item \textbf{Counting sort with negative numbers\cite{stackoverflow_countingsort_negative}:}
+            \begin{itemize}
+                \item \textbf{Idea 1:} Find the maximum and minimum values in the array, then create an array with size $(maximum - minimum + 1)$ to cover the range $[minimum, max]$. Instead of $Cnt[a[i]]$, use $Cnt[a[i] - minimum]$. All other steps are the same as the standard counting sort.
+                \item \textbf{Idea 2:} Increase the size of the $Cnt$ array to cover the range $[-max, max]$ (i.e., size $2 \cdot max + 1$). Instead of using $Cnt[a[i]]$, use $Cnt[a[i] + max]$. All other steps remain the same.
+                \item \textbf{Idea 3\cite{saiana2018parallelcounting}:} Separate the array into two lists: negative and positive numbers. Convert the negative numbers to positive values (for example by multiplying by $-1$) or apply \textbf{Idea 1} or \textbf{Idea 2}.
+            \end{itemize}
+        \end{itemize}
+

@@ -1,0 +1,57 @@
+\subsection[Bubble Sort]{Bubble Sort \cite{friend1956sorting}}
+    \subsubsection{Overview}
+        \begin{itemize}
+            \item \textbf{Origin:} The bubble sort probably had its origins in a paper published in 1956 by Friend entitled “Sorting on Electronic Computer Systems,” which uses the term “sorting by exchange”
+            \item \textbf{Efficiency:} This algorithm is only used for small datasets.
+            \item \textbf{Application:} The bubble sort can be used for educational purposes because it is one of the simplest sorting algorithms to study.
+        \end{itemize}
+    \subsubsection{Core Concepts}
+        \begin{itemize}
+            \item The bubble sort compares adjacent elements and swaps their position if neccessary.
+            \item The algorithm works to swap the larger items to the end of the array, those items are described as bubbles float to the surface, and that is the reason this sorting algorithm is called bubble sort.
+        \end{itemize}
+    \subsubsection{Step-by-step Explanation}
+    \begin{itemize}
+        \item Assume that the array of n elements, a[0...(n-1)].
+        \item \textbf{Step 1:} Start with the first element of the array.
+        \item \textbf{Step 2:} Compare each pair of adjacent elements and swap them if they are in the wrong order.
+        \item \textbf{Step 3:} After the algorithm compares the last pair of elements, the largest element is moved to the end of the array
+        \item \textbf{Step 4:} Repeat the process at \textbf{Step 2} and \textbf{Step 3} with the remaining unsorted part.
+        \item The algorithm will stop after (n-1) passes .
+    \end{itemize}
+    \subsubsection{Pseudo code} 
+        \begin{verbatim}
+            1. for i = 0 to n - 2:
+            2.   for j = 0 to n - i - 2:
+            3.      if a[j] > a[j+1]:
+            4.        swap(a[j], a[j+1])
+        \end{verbatim}
+
+
+    \subsubsection{Complexity Analysis}
+        For original version of bubble sort:
+        \begin{itemize}
+            \item \textbf{Best case:} $O(n^2)$
+            \subitem When the array is already sorted, it requires 0 swap but the number of comparisons remain unchanged.
+            \item \textbf{Average case:} $O(n^2)$
+            \item \textbf{Worst case:} $O(n^2)$
+            \subitem When the array is in reversed order, the number of swaps is maximum
+        \end{itemize}
+    
+
+    \subsubsection{Variants and Optimizations} 
+    \begin{itemize}
+        \item \textbf{Current implementation:} Original Bubble 
+            \begin{itemize}
+                \item Compares all adjacent pair of elements.
+            \end{itemize}
+        \item \textbf{Improved implementation:} Bubble sort with additional flag:
+         \begin{itemize}
+            \item The flag is bool type to check whether the array is sorted or not.
+            \begin{itemize}
+                \item If the array is already sorted, the algorithm will stop immediately
+                \item This enhancement reduces time complexity of bubble sort to $O(n)$ in best case instead of $O(n^2) $ in all cases.
+            \end{itemize}
+         \end{itemize}
+    \end{itemize}
+
