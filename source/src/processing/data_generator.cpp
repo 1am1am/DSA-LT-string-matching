@@ -5,7 +5,6 @@
 #include <chrono>
 #include <random>
 
-
 #include "data_generator.h"
 
 const int RANDOM_CHAR = 'z' - 'a';
