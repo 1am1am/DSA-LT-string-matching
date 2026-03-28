@@ -10,7 +10,7 @@ Result getAlgorithm(string Name, const vector<vector<char>>& text, const vector<
     data.R = text.size();
     data.C = text.empty() ? 0 : text[0].size();
     data.K = patterns.size();
-    data.pattern = patterns;
+    data.patterns = patterns;
     data.text = text;
 
     Result res;

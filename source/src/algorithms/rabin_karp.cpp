@@ -14,7 +14,7 @@ std::vector<std::vector<Position>> rabinKarp(Data data, long long& comparisons) 
     long long q = 1000000007;
 
     for (int p_idx = 0; p_idx < K; ++p_idx) {
-        const std::string& pat = data.pattern[p_idx];
+        const std::string& pat = data.patterns[p_idx];
         int M = pat.length();
         if (M == 0) continue;
 

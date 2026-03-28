@@ -6,7 +6,7 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
     data.R = 10;
     data.C = 10;
     data.K = 5;
-    data.pattern = {"hkq", "oq", "xsnthd", "jgojl", "wnaezm"};
+    data.patterns = {"hkq", "oq", "xsnthd", "jgojl", "wnaezm"};
     data.text = {
     {'s', 'n', 'x', 'o', 'y', 'g', 'u', 'b', 'f', 'h'},
     {'h', 'l', 'r', 'f', 'm', 't', 'o', 'q', 'w', 'f'},
@@ -23,7 +23,7 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
     std::vector<std::vector<Position>> ans = func(data);
 
     for (int i = 0; i < data.K; ++i) {
-        std::cout << "Tu khoa '" << data.pattern[i] << "': ";
+        std::cout << "Tu khoa '" << data.patterns[i] << "': ";
         
         if (ans[i].empty()) {
             std::cout << "Khong tim thay!";
@@ -47,10 +47,10 @@ int main() {
     //g++ -I source/include source/src/algorithms/*.cpp source/src/processing/*.cpp source/main.cpp -o source/07.exe -std=c++17
     Config config;
 
-    // scenario1(config);
-    // scenario2(config);
+    scenario1(config);
+    scenario2(config);
 
-    test(bruteForce);
+    // test(bruteForce);
 
     return 0;
 }

@@ -7,7 +7,7 @@
 std::vector<std::vector<Position>> bruteForce(Data data) {
     std::vector<std::vector<Position>> pos(data.K);
     for (int keywordIndex = 0; keywordIndex < data.K; ++keywordIndex) {
-        std::string keyword = data.pattern[keywordIndex];
+        std::string keyword = data.patterns[keywordIndex];
         for (int i = 0; i < data.R; ++i) {
             for (int j = 0; j <= data.C - keyword.size(); ++j) {
                 int k = 0;
@@ -23,7 +23,7 @@ std::vector<std::vector<Position>> bruteForce(Data data) {
     }
 
     for (int keywordIndex = 0; keywordIndex < data.K; ++keywordIndex) {
-        std::string keyword = data.pattern[keywordIndex];
+        std::string keyword = data.patterns[keywordIndex];
         for (int i = 0; i < data.C; ++i) {
             for (int j = 0; j <= data.R - keyword.size(); ++j) {
                 int k = 0;
@@ -44,7 +44,7 @@ std::vector<std::vector<Position>> bruteForce(Data data) {
 std::vector<std::vector<Position>> bruteForce(Data data, long long& comparisons) {
     std::vector<std::vector<Position>> pos(data.K);
     for (int keywordIndex = 0; keywordIndex < data.K; ++keywordIndex) {
-        std::string keyword = data.pattern[keywordIndex];
+        std::string keyword = data.patterns[keywordIndex];
         for (int i = 0; i < data.R; ++i) {
             for (int j = 0; j <= data.C - keyword.size(); ++j) {
                 int k = 0;
@@ -60,7 +60,7 @@ std::vector<std::vector<Position>> bruteForce(Data data, long long& comparisons)
     }
 
     for (int keywordIndex = 0; keywordIndex < data.K; ++keywordIndex) {
-        std::string keyword = data.pattern[keywordIndex];
+        std::string keyword = data.patterns[keywordIndex];
         for (int i = 0; i < data.C; ++i) {
             for (int j = 0; j <= data.R - keyword.size(); ++j) {
                 int k = 0;
