@@ -1,0 +1,85 @@
+\subsection[Quick Sort]{Quick Sort \cite{hoare1962quicksort}}
+    \subsubsection{Overview}
+        \begin{itemize}
+            \item \textbf{History and Origin:} Developed by Tony Hoare in 1959 \cite{hoare1962quicksort}. One of the most famous divide-and-conquer algorithms, extensively analyzed in standard algorithm texts \cite{cormen2009introduction}.
+            \item \textbf{Efficiency:} Highly efficient and generally outperforms other $O(n \log n)$ algorithms in practice due to excellent cache locality.
+            \item \textbf{Application:} The default sorting algorithm in many standard libraries.
+        \end{itemize}
+    \subsubsection{Core concepts}
+        \begin{itemize}
+            \item It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot.
+            \item The sub-arrays are then sorted recursively.
+            \item The implemented version uses the Lomuto partition scheme with the middle element acting as the initial pivot.
+        \end{itemize}
+
+    \subsubsection{Step-by-step Explanation}
+        \begin{itemize}
+            \item \textbf{Step 1:} Calculate the middle index \textit{mid} and swap the element at \textit{mid} with the last element at \textit{r}.
+            \item \textbf{Step 2:} Set the pivot as the new element at the last index \textit{r}.
+            \item \textbf{Step 3:} Initialize a pointer \textit{j} to $l - 1$ to keep track of the boundary of elements smaller than the pivot.
+            \item \textbf{Step 4:} Iterate a pointer \textit{i} from \textit{l} to $r - 1$:
+            \begin{itemize}
+                \item If the current element is less than or equal to the pivot, increment \textit{j} and swap $A[i]$ with $A[j]$.
+            \end{itemize}
+            \item \textbf{Step 5:} Finally, swap the pivot at $r$ with $A[j + 1]$ to place the pivot in its correct sorted position. Return $j + 1$.
+            \item \textbf{Step 6:} Recursively apply Quick Sort to the sub-array before the pivot and the sub-array after the pivot.
+        \end{itemize}
+        
+    \subsubsection{Pseudo Code}
+        \begin{itemize}
+            \item \textbf{Algorithm:} Quick Sort 
+            \item \textbf{Input:} An array A, left index l, right index r
+        \end{itemize}
+        \begin{verbatim}
+            Algorithm: Partition(A, l, r)
+            1. mid = l + (r - l) / 2
+            2. Swap(A[mid], A[r])
+            3. pivot = A[r]
+            4. j = l - 1
+            5. For i = l to r - 1:
+            6.    If A[i] <= pivot:
+            7.       j = j + 1
+            8.       Swap(A[j], A[i])
+            9. j = j + 1
+            10. Swap(A[j], A[r])
+            11. Return j
+
+            Algorithm: Quick Sort
+            1. If l < r:
+            2.    p = Partition(A, l, r)
+            3.    QuickSort(A, l, p - 1)
+            4.    QuickSort(A, p + 1, r)
+        \end{verbatim}
+    \subsubsection{Complexity Analysis}
+        \begin{itemize}
+            \item \textbf{Time Complexity:}
+            \begin{itemize}
+                \item \textbf{Best and Average case:} $O(n \log n)$
+                \item \textbf{Worst case:} $O(n^2)$ 
+                    \subitem Occurs when the partition is highly unbalanced.
+            \end{itemize}
+            \item \textbf{Space Complexity:} $O(\log n)$ 
+                \subitem Bounded by the call stack depth during recursion.
+        \end{itemize}
+        
+   \subsubsection{Variants and Optimizations}
+        \begin{itemize}
+            \item \textbf{Current Implementation (Lomuto Partition with Mid Pivot):}
+            \begin{itemize}
+                \item The implemented C++ code uses a modified Lomuto partition scheme that safely avoids the $O(n^2)$ worst-case on already sorted arrays by selecting the middle element and swapping it to the end before partitioning.
+            \end{itemize}
+            \item \textbf{Theoretical Upgrade 1: Median-of-Three + Hoare Partition:}
+            \begin{itemize}
+                \item \textbf{Optimization:} Instead of swapping the middle element to the end and using Lomuto, choose the median of the first, middle, and last elements as the pivot, and use Hoare's two-pointer partition scheme.
+                \item \textbf{Benefit:} Hoare's partition does 3 times fewer swaps on average than Lomuto and creates more balanced sub-arrays.
+            \end{itemize}
+            \item \textbf{Theoretical Upgrade 2: Hybrid Sorting (Insertion Sort Threshold):}
+            \begin{itemize}
+                \item \textbf{Optimization:} When the recursive sub-array size is small (e.g., less than 10 elements), stop recursion and apply Insertion Sort.
+                \item \textbf{Benefit:} Removes recursive function call overhead for small arrays.
+            \end{itemize}
+            \item \textbf{Theoretical Upgrade 3: Dual-Pivot Quick Sort \cite{nebel2014pivot}:}
+            \begin{itemize}
+                \item \textbf{Optimization:} Use two pivots to partition the array into three segments simultaneously. Reduces comparisons and memory accesses.
+            \end{itemize}
+        \end{itemize}

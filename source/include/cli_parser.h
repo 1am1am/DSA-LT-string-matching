@@ -1,11 +1,18 @@
 #ifndef CLI_PARSER_H
 #define CLI_PARSER_H
-
+#include <vector>
 #include <string>
 
 struct Config {
-    string algorithm, inputFile, outputFile, errorMsg;
+    std::string algorithm;
+    
+    std::string inputFile;
+    std::string outputFile;
+    
     bool isValid = true;
+    bool showPositions = false;
+
+    std::string errorMsg;
 };
 
 #endif

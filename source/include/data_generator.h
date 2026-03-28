@@ -8,7 +8,7 @@ struct Data {
     int R, C;
     std::vector<std::vector<char>> text;
     int K;
-    std::vector<std::string> pattern;
+    std::vector<std::string> patterns;
 
     Data(){
         R = C = K = 0;
@@ -19,7 +19,7 @@ struct Data {
         C = self_C;
         text = self_text;
         K = self_K;
-        pattern = self_pattern;
+        patterns = self_pattern;
         return;
     }
 };

@@ -1,0 +1,49 @@
+\section{Experimental results and comments}
+    \subsection{Running time}
+        The four line graphs below illustrate the running times of 12 
+        sorting algorithms across four input data distributions: 
+        \textbf{sorted, nearly sorted, reverse sorted, and random}.
+
+        \indent Overall, it is evident that \textbf{Selection Sort} and \textbf{Bubble Sort}
+        exhibit significantly higher execution times compared to 
+        the other algorithms. Notably, \textbf{Counting Sort} remains the 
+        most efficient algorithm across all test cases.
+
+        \indent In the sorted and nearly sorted scenarios, \textbf{Selection Sort} 
+        and \textbf{Bubble Sort} consistently record the highest running times.
+        
+        \indent Regarding the reverse sorted and randomized input, five algorithms show a 
+        dramatic increase in execution time: \textbf{Insertion Sort}, \textbf{Binary Insertion Sort}, 
+        \textbf{Shaker Sort}, and the two previously mentioned algorithms (i.e., \textbf{Selection Sort} and \textbf{Bubble Sort}).
+    \subsection{The number of comparisons}
+        The four bar charts below display the number of comparisons made by
+        12 different categories of sorting algorithms across four input data types:
+        \textbf{sorted, nearly sorted, reverse sorted, and random}.
+
+        \indent Generally, it is clear that \textbf{Selection Sort} and \textbf{Bubble Sort} consistently
+        require the highest number of comparisons across all scenarios.
+        In constrast, \textbf{Counting Sort} exibits the lowest qunatity of comparison count.
+
+        \indent In the sorted and nearly sorted cases, \textbf{Selection Sort} and \textbf{Bubble Sort}
+        perform the remarkably badly, with their comparion counts being significantly
+        higher than the other algorithms. 
+
+        \indent In the reverse sorted and randomized input scenarios,
+        the number of comparisons for most $O(n^2)$ algorithms (specifically \textbf{Insertion Sort},
+        \textbf{Binary Insertion Sort}, and \textbf{Shaker Sort}) increases dramatically.
+        Meanwhile, $O(n \log n)$ algorithms such as \textbf{Merge Sort}, \textbf{Heap Sort}, and \textbf{Quick Sort}, etc.
+        maintain a relatively stable and efficient number of comparisons.
+    \subsection{Tables and Graphs}
+
+    \includepdf[pages={1}, landscape=true, scale=1.1, pagecommand={}]{data/Sorted.pdf}
+    \includepdf[pages={1}, landscape=true, scale=1.1, pagecommand={}]{data/NearlySorted.pdf}
+    \includepdf[pages={1}, landscape=true, scale=1.1, pagecommand={}]{data/ReverseSorted.pdf}
+    \includepdf[pages={1}, landscape=true, scale=1.1, pagecommand={}]{data/Randomized.pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Sorted Input.pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Nearly Sorted Input.pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Reverse Sorted Input.pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Randomized Input.pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Sorted Input (1).pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Nearly Sorted Input (1).pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Reverse Sorted Input (1).pdf}
+    \includepdf[pages={1}, landscape=true, scale=0.9, pagecommand={}]{data/Graph/Randomized Input (1).pdf}

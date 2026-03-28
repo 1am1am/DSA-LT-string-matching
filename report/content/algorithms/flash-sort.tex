@@ -1,0 +1,92 @@
+\subsection[Flash Sort]{Flash Sort\cite{neubert1997flashsort}}
+    \subsubsection{Overview}
+        \begin{itemize}
+            \item \textbf{History and Origin:} Invented by Karl-Dietrich Neubert in 1997.
+            \item \textbf{Efficiency:} Generally effective for sorting large datasets with a uniform distribution of values, achieving linear time complexity in the best case.
+        \end{itemize}
+    \subsubsection{Core Concepts}
+        \begin{itemize}
+            \item FlashSort is based on the principle of \textit{in-situ} permutation, combining the concepts of bucket sort and counting sort.
+            \item The algorithm operates by classifying elements into different \textit{classes} based on their values, then permuting them directly into their target positions.
+            \item It achieves $O(n)$ time complexity under the assumption of a uniform distribution of input values.
+        \end{itemize}
+
+    \subsubsection{Step-by-Step Explanation}
+        \begin{itemize}
+            \item Consider an array of $n$ elements, $a[0\ldots (n - 1)]$.
+            \item \textbf{Step 1:} Identify classes size $$m = 0.45 \cdot n$$ ($0.45$ is considered by scientists, which gives the best performance for the algorithm) and create an auxiliary list \textit{L} of classes to hold the number of elements in each one.
+            \item \textbf{Step 2:} Each element $a[i]$ is classified into a class based on its value which is calculated using the formula: $$k = \lfloor (m - 1) \cdot \dfrac{a[i] - min}{max - min} \rfloor$$ where $min$ and $max$ are the minimum and maximum values in the array, respectively.
+            \item \textbf{Step 3:} Convert the class counts \textit{L} into a prefix sum, where $L_b$ ($b \in \mathbb{Z}, 0 \le b < m$) is the number of elements $a[i]$ in class $b$ and the previous classes ($L_{m - 1} = n$), which $$L_b = \sum_{i=0}^{b} L_i$$
+            \item \textbf{Step 4:} Rearrange the elements $a[i]$ in the array by permuting them into their correct classes when $L_{b - 1} < i \le L_b$.
+            \item \textbf{Step 5:} Finally, applying Insertion Sort to sort the array.
+        \end{itemize}
+
+    \subsubsection{Pseudo Code}
+        \begin{itemize}
+            \item \textbf{Algorithm:} Insertion Sort
+            \item \textbf{Input:} An array $A$ of $n$ elements
+        \end{itemize}
+        \begin{verbatim}
+            1.  If n <= 1: return
+            2.  m = floor(0.45 * n)
+            3.  Initialize L[0...m-1] with 0
+
+            4.  minVal = A[0], maxIndex = 0
+            5.  For i = 1 to n - 1:
+            6.      If A[i] < minVal: minVal = A[i]
+            7.      If A[i] > A[maxIndex]: maxIndex = i
+
+            8. c1 = (m - 1) / (A[maxIndex] - minVal)
+            9. For i = 0 to n - 1:
+            10.     k = floor(c1 * (A[i] - minVal))
+            11.     If k < 0: k = 0
+            12.     If k >= m: k = m - 1
+            13.     L[k] = L[k] + 1
+            14. For i = 1 to m - 1:
+            15.     L[i] = L[i] + L[i - 1]
+
+            16. Swap(A[0], A[maxIndex])
+            17. move = 0, j = 0, k = m - 1
+            18. While move < n - 1:
+            19.     While j < n && j >= L[k]:
+            20.         j = j + 1
+            21.         If(j < n):
+            22.             k = floor(c1 * (A[j] - minVal))
+            23.             If k < 0: k = 0
+            24.             If k >= m: k = m - 1
+            25.     If j >= n: break
+            26.     flash = A[j]
+            27.     While j != L[k]:
+            28.         k = floor(c1 * (flash - minVal))
+            29.         If k < 0: k = 0
+            30.         If k >= m: k = m - 1
+            31.         L[k] = L[k] - 1
+            32.         pos = L[k]
+            33.         Swap(flash, A[pos])
+            34.         move = move + 1
+
+            35. Call InsertionSort(A)
+        \end{verbatim}
+    \subsubsection{Complexity Analysis}
+        \begin{itemize}
+            \item \textbf{Time Complexity:}
+            \begin{itemize}
+                \item Best case: $O(n)$
+                    \subitem When the input is uniformly distributed, leading to balanced class sizes and minimal permutations.
+                    \subitem All elements are already in the correct class, resulting Insertion Sort being applied to very small sub-arrays.
+                \item Average case: $O(n)$
+                \item Worst case: $O(n^2)$ 
+                    \subitem Occurs when the input has some extremely large or small elements while most elements are the same, leading to unbalanced class sizes, causing like Insertion Sort to be applied to large sub-arrays.
+            \end{itemize}
+            \item \textbf{Space Complexity:} O(m) 
+                \subitem Only requires additional space for the class count array \textit{L}.
+        \end{itemize}
+        
+    \subsubsection{Variants and Optimizations}
+        \begin{itemize}
+            \item \textbf{Change Insertion Sort to another sorting algorithm:}
+            \begin{itemize}
+                \item If the input data is in the worst case, the algorithm performs Insertion Sort, resulting $O(n^2)$ time complexity.
+                \item Avoiding this by changing Insertion Sort to another sorting algorithm (e.g., Quick Sort, Merge Sort or Heap Sort), if the size of data is larger than a threhold.
+            \end{itemize}
+        \end{itemize}
