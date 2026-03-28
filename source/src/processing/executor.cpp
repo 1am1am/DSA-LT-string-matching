@@ -1,7 +1,7 @@
-#include "executor.h"
 #include <iostream>
 #include <fstream>
 #include <chrono>
+#include "executor.h"
 
 using namespace std;
 
@@ -27,13 +27,13 @@ Result getAlgorithm(string Name, const vector<vector<char>>& text, const vector<
         res.positions = rabinKarp(data, res.comparisons);
     }
     else if (Name == "kmp") {
-        res.positions = KMP(data, res.comparisons);
+        // res.positions = KMP(data, res.comparisons);
     }
     else if (Name == "bm") {
-        res.positions = boyerMoore(data, res.comparisons);
+        // res.positions = boyerMoore(data, res.comparisons);
     }
     else if (Name == "ac") {
-        res.positions = ahoCorasick(data, res.comparisons); 
+        // res.positions = ahoCorasick(data, res.comparisons); 
     }
     else {
         cout << "Error: Unknown algorithm name!" << endl;

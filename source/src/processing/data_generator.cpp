@@ -98,7 +98,7 @@ void scenario1(Config config) {
     std::vector<std::pair<int, int>> matrixSize = {{10, 10}, {50, 50}, {100, 100}, {500, 500}};
 
     for (int i = 0; i < matrixSize.size(); ++i) {
-        config.inputFile = "./source/data/scenario1_" + std::to_string(i + 1) + ".txt";
+        config.inputFile = "../../data/scenario1_" + std::to_string(i + 1) + ".txt";
         std::vector<std::string> patterns = getPatterns(patternsSize, matrixSize[i].first, matrixSize[i].second);
         Data data(
             matrixSize[i].first,
@@ -115,7 +115,7 @@ void scenario2(Config config) {
     std::pair<int, int> matrixSize = {100, 100};
     std::vector<int> patternsSize = {1, 10, 50, 100};
     for (int i = 0; i < patternsSize.size(); ++i) {
-        config.inputFile = "./source/data/scenario2_" + std::to_string(i + 1) + ".txt";
+        config.inputFile = "../../data/scenario2_" + std::to_string(i + 1) + ".txt";
         std::vector<std::string> patterns = getPatterns(patternsSize[i], matrixSize.first, matrixSize.second);
         Data data(
             matrixSize.first,

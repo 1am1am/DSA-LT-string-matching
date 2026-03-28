@@ -6,18 +6,24 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
     data.R = 10;
     data.C = 10;
     data.K = 5;
-    data.patterns = {"hkq", "oq", "xsnthd", "jgojl", "wnaezm"};
+    data.patterns = {
+        "dz",
+        "kyumiusbn",
+        "xsnthd",
+        "jgojl",
+        "wnaezm"
+    };
     data.text = {
-    {'s', 'n', 'x', 'o', 'y', 'g', 'u', 'b', 'f', 'h'},
-    {'h', 'l', 'r', 'f', 'm', 't', 'o', 'q', 'w', 'f'},
-    {'r', 'o', 'y', 'y', 'f', 'k', 'i', 'j', 't', 'm'},
-    {'o', 'q', 'h', 'w', 's', 'g', 's', 'n', 'f', 'n'},
-    {'j', 'x', 'j', 'h', 'k', 'q', 'e', 'g', 'p', 'j'},
-    {'t', 't', 'h', 'v', 'v', 'o', 'h', 'k', 'q', 'l'},
-    {'m', 'l', 'j', 'v', 'v', 'j', 'h', 's', 'u', 'n'},
-    {'m', 'j', 'o', 'q', 'u', 'n', 'n', 'f', 'j', 'o'},
-    {'y', 't', 'n', 'y', 'z', 'y', 'r', 'w', 'm', 'h'},
-    {'n', 'o', 'q', 't', 'r', 'n', 'b', 'k', 'e', 'z'}
+        {'u', 'n', 'm', 'j', 'o', 'q', 'u', 'n', 'n', 'f'},
+        {'j', 'd', 'o', 'x', 's', 'n', 't', 'h', 'd', 'y'},
+        {'t', 'z', 'n', 'y', 'z', 'y', 'r', 'w', 'm', 'h'},
+        {'n', 'i', 'w', 'd', 'z', 't', 'r', 'n', 'b', 'k'},
+        {'e', 'z', 's', 's', 'z', 'u', 'o', 'r', 'd', 'i'},
+        {'s', 'p', 'n', 't', 'o', 'x', 'p', 'i', 'z', 'r'},
+        {'h', 'j', 'g', 'i', 'e', 'b', 'e', 'm', 'p', 'm'},
+        {'t', 'o', 'k', 'x', 's', 'b', 't', 'a', 'p', 'd'},
+        {'y', 'r', 'q', 'p', 'b', 'u', 'u', 'c', 'x', 'e'},
+        {'m', 'x', 's', 'w', 'n', 'a', 'e', 'z', 'm', 'a'}
     };
 
     std::vector<std::vector<Position>> ans = func(data);
@@ -36,21 +42,21 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
     }
 
     //Ket qua dung la:
-    // Tu khoa 'hkq': (4, 3) -> (4, 6); (5, 6) -> (5, 9);
-    // Tu khoa 'oq': (1, 6) -> (1, 8); (3, 0) -> (3, 2); (7, 2) -> (7, 4); (9, 1) -> (9, 3); (2, 1) -> (4, 1);
-    // Tu khoa 'xsnthd': Khong tim thay!
+    // Tu khoa 'dz': (3, 3) -> (3, 4); (1, 1) -> (2, 1); (4, 8) -> (5, 8); 
+    // Tu khoa 'kyumiusbn': Khong tim thay!
+    // Tu khoa 'xsnthd': (1, 3) -> (1, 8);
     // Tu khoa 'jgojl': Khong tim thay!
-    // Tu khoa 'wnaezm': Khong tim thay!
+    // Tu khoa 'wnaezm': (9, 3) -> (9, 8);
 }
 
 int main() {
     //g++ -I source/include source/src/algorithms/*.cpp source/src/processing/*.cpp source/main.cpp -o source/07.exe -std=c++17
     Config config;
 
-    scenario1(config);
-    scenario2(config);
+    // scenario1(config);
+    // scenario2(config);
 
-    // test(bruteForce);
+    test(bruteForce);
 
     return 0;
 }
