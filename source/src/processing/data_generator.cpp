@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include <fstream>
 #include <algorithm>
 #include <chrono>
 #include <random>
+#include "include\algorithms.h"
 
 
 #include "data_generator.h"
@@ -65,6 +67,19 @@ void printInput(Data data, Config config) {
 
     fout.close();
 }
+
+
+void printOutput(Result result, Config config) {
+
+    std::string filename = config.inputFile;
+    std::ofstream fout(filename);
+    
+
+
+}
+
+
+
 
 void scenario1(Config config) {
     int patternSize = 5;
