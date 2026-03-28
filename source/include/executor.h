@@ -4,10 +4,13 @@
 #include <string>
 #include <vector>
 #include "algorithms.h"
-// #include "commandProcessing.h"
 
 using namespace std;
-Result getAlgorithm(string Name, const vector<vector<char>>& text, const vector<string>& patterns);
-void readFile(string inputFile, vector<vector<char>>& text, vector<string>& patterns);
+
+Result getAlgorithm(string Name, Data data);
+
+void readFile(string inputFile, Data& data);
+
+void writeOutputFile(const string& outputFile, const string& algName, const Data& data, const Result& result);
 
 #endif
