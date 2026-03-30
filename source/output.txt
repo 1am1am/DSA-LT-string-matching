@@ -4,6 +4,6 @@ xsnthd: (1,3) -> (1,8);
 jgojl: not found
 wnaezm: (9,3) -> (9,8);
 -------------------------
-Algorithm: Boyer-Moore
-Comparisons: 246
-Execution Time: 0.12 ms.
+Algorithm: Brute Force
+Comparisons: 574
+Execution Time: 0.01 ms.
