@@ -58,6 +58,8 @@ int main(int argc, char* argv[]) {
     Result result = getAlgorithm(config.algorithm, data);
     writeOutputFile(config.outputFile, config.algorithm, data, result);
 
+    //-a bm -i scenario1_1.txt -o output.txt --> command de chay
+
 
     // scenario1(config);
     // scenario2(config);
