@@ -18,15 +18,15 @@ Result getAlgorithm(string Name, Data data) {
     else if (Name == "rk") {
         res.positions = rabinKarp(data, res.comparisons);
     }
-    else if (Name == "kmp") {
-        res.positions = KMP(data, res.comparisons);
-    }
+    // else if (Name == "kmp") {
+    //     res.positions = KMP(data, res.comparisons);
+    //}
     else if (Name == "bm") {
         res.positions = boyerMoore(data, res.comparisons);
     }
-    else if (Name == "ac") {
-        res.positions = ahoCorasick(data, res.comparisons); 
-    }
+    // else if (Name == "ac") {
+    //     res.positions = ahoCorasick(data, res.comparisons); 
+    // }
     else {
         cout << "Error: Unknown algorithm name!" << endl;
         return res;
