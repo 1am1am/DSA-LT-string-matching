@@ -1,13 +1,13 @@
 #include "algorithms.h"
+using namespace std;
 
-
-std::vector<std::vector<Position>> rabinKarp(Data data, long long& comparisons) {
+vector<vector<Position>> rabinKarp(Data data, long long& comparisons) {
     int R = data.R;
     int C = data.C;
     int K = data.K;
     
 
-    std::vector<std::vector<Position>> result(K);
+    vector<vector<Position>> result(K);
     
 
     long long d = 256;
@@ -94,7 +94,7 @@ std::vector<std::vector<Position>> rabinKarp(Data data, long long& comparisons) 
     }
     return result;
 }
-std::vector<std::vector<Position>> rabinKarp(Data data) {
+vector<vector<Position>> rabinKarp(Data data) {
     long long dummy_comparisons = 0;
     return rabinKarp(data, dummy_comparisons);
 }
