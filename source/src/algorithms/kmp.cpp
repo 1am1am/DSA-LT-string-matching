@@ -1,6 +1,7 @@
 #include <iostream>
-#include <string>
-#include <vector>
+#include "kmp.h"
+#include "algorithms.h"
+#include "data_generator.h"
 
 using namespace std;
 
@@ -9,7 +10,6 @@ void convertGridTextToString(vector<vector<char>>Text, vector<string> &ans){
     int C = (int)Text[0].size();
 
     string tmpString;
-    vector<string> ans;
 
     //row
     for(int i = 0; i < R; ++i){
@@ -32,34 +32,107 @@ void convertGridTextToString(vector<vector<char>>Text, vector<string> &ans){
     return;
 }
 
-void makeKMP(string ans){
-    int N = (int)ans.size();
-    vector<int> pi(N, 0);
+Position calPos(int indexOfList_string, int lenOfPattern, Data data, int idx){
+    Position _pos;
 
-    for(int i = 0; i < N; ++i){
-        int j = pi[i - 1];
-        while(j >= 0 && ans[j + 1] != ans[i]){
-            j = pi[j];
-        }
-        if(ans[j + 1] == ans[i]) ++j;
-        pi[i] = j;
+    if(indexOfList_string < data.R){
+        //row
+        _pos.startPos.first = indexOfList_string;
+        _pos.startPos.second = idx - 2 * lenOfPattern; 
+        //calculate the pos of idx in grid 
+
+        _pos.endPos.first = indexOfList_string;
+        _pos.endPos.second = idx - lenOfPattern - 1;
     }
+    else{
+        //column
+        _pos.startPos.first = idx - 2 * lenOfPattern;
+        _pos.startPos.second =  indexOfList_string - data.R; 
+        //calculate the pos of idx in grid 
+
+        _pos.endPos.first = idx - lenOfPattern - 1;
+        _pos.endPos.second = indexOfList_string - data.R;
+    }
+
+    return _pos;
 }
 
-void KMP(vector<vector<char>>Text, vector<string> K){
+std::vector<std::vector<Position>> KMP(Data data){
     
+    vector<vector<Position>> pos(data.K);
     vector<string> List_string;
 
-    convertGridTextToString(Text, List_string);
+    convertGridTextToString(data.text, List_string);
 
     int N = (int)List_string.size(); //Size of list string
-    int M = (int)K.size();
+    int M = (int)data.K;
+    vector<int> pi;
 
-    for(int i = 0; i < N; ++i){
-        for(int j = 0; j < M; ++j){
-            makeKMP(K[j] + '#' + List_string[i] );
+    for(int indexOfList_string = 0; indexOfList_string < N; ++indexOfList_string){
+        for(int indexOfPattern = 0; indexOfPattern < M; ++indexOfPattern){
+
+            string kmp = data.patterns[indexOfPattern] + '#' + List_string[indexOfList_string];
+            int lenOfkmp = (int)kmp.size();
+            int lenOfPattern = (int)data.patterns[indexOfPattern].size();
+            pi.assign(lenOfkmp, 0);
+
+            for(int i = 1; i < lenOfkmp; ++i){
+                int j = pi[i - 1];
+
+                while(j > 0 && kmp[j] != kmp[i]){
+                    j = pi[j - 1];
+                }
+
+                if(kmp[j] == kmp[i]) ++j;
+                pi[i] = j;
+                
+                if(pi[i] == lenOfPattern){
+                    Position _pos = calPos(indexOfList_string, lenOfPattern, data, i);
+                    pos[indexOfPattern].push_back(_pos);
+                }
+            }
         }
     }
 
-    return;
+    return pos;
+}
+
+std::vector<std::vector<Position>> KMP(Data data, long long& comparisons){
+    
+    vector<vector<Position>> pos(data.K);
+    vector<string> List_string;
+
+    convertGridTextToString(data.text, List_string);
+
+    int N = (int)List_string.size(); //Size of list string
+    int M = (int)data.K;
+    vector<int> pi;
+
+    for(int indexOfList_string = 0; indexOfList_string < N; ++indexOfList_string){
+        for(int indexOfPattern = 0; indexOfPattern < M; ++indexOfPattern){
+
+            string kmp = data.patterns[indexOfPattern] + '#' + List_string[indexOfList_string];
+            int lenOfkmp = (int)kmp.size();
+            int lenOfPattern = (int)data.patterns[indexOfPattern].size();
+            pi.assign(lenOfkmp, 0);
+
+            for(int i = 1; i < lenOfkmp; ++i){
+                int j = pi[i - 1];
+
+                while(++comparisons && j > 0 && kmp[j] != kmp[i]){
+                    j = pi[j - 1];
+                }
+
+                if(++comparisons && kmp[j] == kmp[i]) ++j;
+                pi[i] = j;
+                
+                if(pi[i] == lenOfPattern){
+                    Position _pos = calPos(indexOfList_string, lenOfPattern, data, i);
+                    pos[indexOfPattern].push_back(_pos);
+                }
+            }
+        }
+    }
+
+    return pos;
 }

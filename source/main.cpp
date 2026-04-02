@@ -27,7 +27,7 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
     };
 
     std::vector<std::vector<Position>> ans = func(data);
-
+    cout << "DONE!\n";
     for (int i = 0; i < data.K; ++i) {
         std::cout << "Tu khoa '" << data.patterns[i] << "': ";
         
@@ -57,6 +57,7 @@ int main() {
     // scenario2(config);
 
     test(bruteForce);
-
+    cout << endl;
+    test(ahoCorasick);
     return 0;
 }
