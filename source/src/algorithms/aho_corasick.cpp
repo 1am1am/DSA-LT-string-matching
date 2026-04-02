@@ -107,8 +107,11 @@ std::vector<std::vector<Position>> ahoCorasick(Data data, long long& comparisons
     vector<vector<Position>> pos((int)List_string.size());
     int N = (int)data.patterns.size();
     int M = (int)List_string.size();
+    int maxLenOfList_string = max(data.C, data.R);
 
     for(int i = 0; i < N; ++i){
+        if((int)data.patterns[i].size() > maxLenOfList_string) continue;
+        //Avoid adding unnecessary patterns to minimize memory usage
         add(data.patterns[i], root, i);
     }
 
