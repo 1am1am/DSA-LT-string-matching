@@ -66,29 +66,34 @@ void Search(string S, Data data, vector<vector<Position>> &ans, int IDX){
     int lenS = (int)S.size();
 
     for(int i = 0; i < lenS; ++i){
-
         cur = go(cur, S[i]);
-        int N = (int)cur->pos.size();
+        Node* tmp = cur;
 
-        if(N > 0){
-            for(auto idx : cur->pos){
-                Position _pos;
+        while(tmp != root){
+            int N = (int)tmp->pos.size();
 
-                if(IDX < data.R){
-                    _pos.startPos.first = IDX;
-                    _pos.startPos.second = i - (int)data.patterns[idx].size() + 1;
-                    _pos.endPos.first = IDX;
-                    _pos.endPos.second = i;
+            if(N > 0){
+                for(auto idx : tmp->pos){
+                    Position _pos;
+
+                    if(IDX < data.R){
+                        _pos.startPos.first = IDX;
+                        _pos.startPos.second = i - (int)data.patterns[idx].size() + 1;
+                        _pos.endPos.first = IDX;
+                        _pos.endPos.second = i;
+                    }
+                    else{
+                        _pos.startPos.first = i - (int)data.patterns[idx].size() + 1;
+                        _pos.startPos.second = IDX - data.R;;
+                        _pos.endPos.first = i;
+                        _pos.endPos.second = IDX - data.R;;
+                    }
+                    
+                    ans[idx].push_back(_pos);
                 }
-                else{
-                    _pos.startPos.first = i - (int)data.patterns[idx].size() + 1;
-                    _pos.startPos.second = IDX - data.R;;
-                    _pos.endPos.first = i;
-                    _pos.endPos.second = IDX - data.R;;
-                }
-                
-                ans[idx].push_back(_pos);
             }
+
+            tmp = getLink(tmp);
         }
     }
 }
