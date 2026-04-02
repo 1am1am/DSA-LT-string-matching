@@ -1,5 +1,6 @@
 #include <iostream>
 #include "all_headers.h"
+#include "cli_parser.h"
 
 void test(std::vector<std::vector<Position>> (*func)(Data)) {
     Data data;
@@ -49,9 +50,16 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
     // Tu khoa 'wnaezm': (9, 3) -> (9, 8);
 }
 
-int main() {
+int main(int argc, char* argv[]) {
     //g++ -I source/include source/src/algorithms/*.cpp source/src/processing/*.cpp source/main.cpp -o source/07.exe -std=c++17
-    Config config;
+    Config config = getCommand(argc, argv);
+    Data data;
+    readFile(config.inputFile, data);
+    Result result = getAlgorithm(config.algorithm, data);
+    writeOutputFile(config.outputFile, config.algorithm, data, result);
+
+    //07.exe -a bf -i scenario1_1.txt -o output.txt --> command de chay
+
 
     // scenario1(config);
     // scenario2(config);

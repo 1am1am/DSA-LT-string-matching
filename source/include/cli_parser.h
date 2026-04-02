@@ -14,5 +14,5 @@ struct Config {
 
     std::string errorMsg;
 };
-
+Config getCommand(int argc, char* argv[]);
 #endif
