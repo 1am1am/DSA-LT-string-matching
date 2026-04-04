@@ -11,28 +11,38 @@ Result getAlgorithm(string Name, Data data) {
     res.comparisons = 0;
 
     auto start = chrono::high_resolution_clock::now();
+    auto end = chrono::high_resolution_clock::now();
 
     if (Name == "bf") {
-        res.positions = bruteForce(data, res.comparisons);
+        res.positions = bruteForce(data);
+        end = chrono::high_resolution_clock::now();
+        bruteForce(data, res.comparisons);
     }
     else if (Name == "rk") {
-        res.positions = rabinKarp(data, res.comparisons);
+        res.positions = rabinKarp(data);
+        end = chrono::high_resolution_clock::now();
+        rabinKarp(data, res.comparisons);
     }
-    // else if (Name == "kmp") {
-    //     res.positions = KMP(data, res.comparisons);
-    //}
+    else if (Name == "kmp") {
+        res.positions = KMP(data);
+        end = chrono::high_resolution_clock::now();
+        KMP(data, res.comparisons);
+    }
     else if (Name == "bm") {
-        res.positions = boyerMoore(data, res.comparisons);
+        res.positions = boyerMoore(data);
+        end = chrono::high_resolution_clock::now();
+        boyerMoore(data, res.comparisons);
     }
-    // else if (Name == "ac") {
-    //     res.positions = ahoCorasick(data, res.comparisons); 
-    // }
+    else if (Name == "ac") {
+        res.positions = ahoCorasick(data); 
+        end = chrono::high_resolution_clock::now();
+        ahoCorasick(data, res.comparisons);
+    }
     else {
         cout << "Error: Unknown algorithm name!" << endl;
         return res;
     }
 
-    auto end = chrono::high_resolution_clock::now();
     chrono::duration<double, milli> elapsed = end - start;
     res.runningTime = elapsed.count();
 
