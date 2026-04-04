@@ -51,14 +51,14 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
 }
 
 int main(int argc, char* argv[]) {
-    //g++ -I source/include source/src/algorithms/*.cpp source/src/processing/*.cpp source/main.cpp -o source/07.exe -std=c++17
+    //g++ -I source/include source/src/algorithms/*.cpp source/src/processing/*.cpp source/main.cpp -o source/crossword.exe -std=c++17
     Config config = getCommand(argc, argv);
     Data data;
     readFile(config.inputFile, data);
     Result result = getAlgorithm(config.algorithm, data);
     writeOutputFile(config.outputFile, config.algorithm, data, result);
 
-    //07.exe -a bf -i scenario1_1.txt -o output.txt --> command de chay
+    //crossword.exe -a bf -i source/data/scenario1_1.txt -o output.txt --> command de chay
 
 
     // scenario1(config);
