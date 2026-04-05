@@ -609,6 +609,12 @@ INPUT .\data\Graph\Randomized Input (1).pdf
 INPUT .\content\acknowledgements.tex
 INPUT .\content\acknowledgements.tex
 INPUT content\acknowledgements.tex
+INPUT .\content\reference.tex
+INPUT .\content\reference.tex
+INPUT content\reference.tex
+INPUT .\main.bbl
+INPUT .\main.bbl
+INPUT main.bbl
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

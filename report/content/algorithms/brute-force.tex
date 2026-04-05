@@ -1,7 +1,20 @@
 \subsection[The Naïve string-matching algorithm]{The Naïve string-matching algorithm (Brute-Force approach)}
     \subsubsection{Introduction \& Application}
-        %aabccab
-        abc
+        \begin{itemize}
+            \item \textbf{Core idea:} According to Abdeen\cite{abdeen2011algorithm}, the brute-force algorithm works with two pointers; a "text pointer" i
+        and a "pattern pointer" j. For all possible shifts of the pattern P over the text T,
+        compare the pattern characters with the corresponding text characters.
+        If mismatch occurs, i is incremented by 1, and j is reset to 0 and the comparing
+        process is restarted. In the case that all characters match, the algorithm records
+        the position of the match and continues searching for the next possible match.
+            \item \textbf{Real-world applications:}
+            \begin{itemize}
+                \item Text Editors: Using in "Search" or "Find and Replace" features to locate destination words.
+                \item Bioinformatics: Searching for specific DNA.
+                \item Checking for Plagiarism: Comparing documents to find and compare a script or a piece of code with the exact match in a large database.
+            \end{itemize}
+        \end{itemize}
+
     \subsubsection{Pseudocode}
         \textbf{Notation:}
         \begin{itemize}
@@ -9,7 +22,7 @@
             \item \textbf{Pattern $P$ (K the number of keywords)}: The list of strings that we are looking for.
             \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
         \end{itemize}
-        \textsc{Brute-Force-2D-Matcher}($T, P, K, R, C$)
+        \textsc{Brute-Force-Algorithm}($T, P, K, R, C$)
         \begin{algorithmic}[1]
         \State $pos = \text{empty array of size } K$
         \For{$idx = 1$ \textbf{to} $K$}
@@ -38,8 +51,8 @@
         \EndFor
         \State \Return $pos$
         \end{algorithmic}
-    \newpage
-    \subsubsection{Step-by-step trace}
+    \subsubsection{Step-by-step trace\cite{CLRS2022}}
+
     \indent \textbf{Notation:}
         \begin{itemize}
             \item \textbf{Text $T$ (length $n$)}: The main text being searched.
@@ -57,36 +70,36 @@
         \end{figure}
         \item The first character 'a' matches in both arrays.
         
-        The second character in text T ('a') does not match the second character in pattern P ('b').
+        The second character in text $T$ ('a') does not match the second character in pattern $P$ ('b').
         
-        Text at the bottom shows the current shift is s = 0 and the list of found matches is empty (Positions = []).
+        Text at the bottom shows the current shift is $s = 0$ and the list of found matches is empty ($Positions = []$).
         
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force2.pdf}
             \caption{Step 2}
         \end{figure}
-        \item All characters in pattern P ('a', 'b', 'c') successfully match the corresponding characters in text T ('a', 'b', 'c').
+        \item All characters in pattern $P$ ('a', 'b', 'c') successfully match the corresponding characters in text $T$ ('a', 'b', 'c').
         
-        Shift is s = 1 and the list of found matches is updated to record this position (Positions = [(1, 3)]).
+        Shift is $s = 1$ and the list of found matches is updated to record this position ($Positions = [(1, 3)]$).
 
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force3.pdf}
             \caption{Step 3}
         \end{figure}
-        \item The first character in pattern P ('a') does not match the character in text T ('b') at the current shift position s = 2.
+        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('b') at the current shift position $s = 2$.
         
-        Skip to the next shift without updating Positions.
+        Skip to the next shift without updating $Positions$.
 
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force4.pdf}
             \caption{Step 4}
         \end{figure}
-        \item The first character in pattern P ('a') does not match the character in text T ('c') at the current shift position s = 2.
+        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('c') at the current shift position $s = 2$.
         
-        Skip to the next shift without updating Positions.
+        Skip to the next shift without updating $Positions$.
 
         \begin{figure}[H]
             \centering
@@ -94,12 +107,12 @@
             \caption{Step 5}
         \end{figure}
 
-        \item The first two characters in pattern P ('a', 'b') match the corresponding characters in text T,
-        but the third character in pattern P ('c') does not match the character in text T ('b') at the current shift position s = 4.
+        \item The first two characters in pattern $P$ ('a', 'b') match the corresponding characters in text $T$,
+        but the third character in pattern $P$ ('c') does not match the character in text $T$ ('b') at the current shift position $s = 4$.
 
-        Skip to the next shift without updating Positions.
+        Skip to the next shift without updating $Positions$.
 
-        \item After that, $s$ increases by 1.Because $s = 5$ and $n - m = 7 - 3 = 4$, we have $s > n - m$. The algorithm terminates and returns the list of found matches: $\text{Positions} = [(1, 3)]$.
+        \item After that, $s$ increases by 1. Because $s = 5$ and $n - m = 7 - 3 = 4$, we have $s > n - m$. The algorithm terminates and returns the list of found matches: $\text{Positions} = [(1, 3)]$.
     \end{itemize}
     
 
@@ -118,7 +131,14 @@
         \caption{Complexity Analysis of 2D Brute Force Algorithm}
         \end{table}
 
-
-        
     \subsubsection{Discussion}
+    \begin{itemize}
+        \item In scenarios 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
+        Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
+        \item In scenarios 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
+        This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
+        which is much longer compared to scenario 1.
+        \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
+        It is worse for scenarios with a large number of one.
+    \end{itemize}
         

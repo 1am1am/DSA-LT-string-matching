@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.4)  5 APR 2026 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.4)  5 APR 2026 21:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -818,7 +818,7 @@ Package hyperref Info: Link coloring ON on input line 4.
 
 \c@lstlisting=\count382
 (content/title.tex
-<img/hcmus-logo.png, id=42, 597.9138pt x 597.9138pt>
+<img/hcmus-logo.png, id=46, 597.9138pt x 597.9138pt>
 File: img/hcmus-logo.png Graphic file (type png)
 <use img/hcmus-logo.png>
 Package pdftex.def Info: img/hcmus-logo.png  used on input line 20.
@@ -883,7 +883,7 @@ Package lettrine.sty Info: Targeted height = 20.66666pt
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/problem-statement1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/problem-statement1.pdf, id=73, 963.6pt x 542.025pt>
+<data/Illustrations/problem-statement1.pdf, id=80, 963.6pt x 542.025pt>
 File: data/Illustrations/problem-statement1.pdf Graphic file (type pdf)
 <use data/Illustrations/problem-statement1.pdf>
 Package pdftex.def Info: data/Illustrations/problem-statement1.pdf  used on input line 18.
@@ -891,7 +891,7 @@ Package pdftex.def Info: data/Illustrations/problem-statement1.pdf  used on inpu
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/problem-statement2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/problem-statement2.pdf, id=75, 963.6pt x 542.025pt>
+<data/Illustrations/problem-statement2.pdf, id=82, 963.6pt x 542.025pt>
 File: data/Illustrations/problem-statement2.pdf Graphic file (type pdf)
 <use data/Illustrations/problem-statement2.pdf>
 Package pdftex.def Info: data/Illustrations/problem-statement2.pdf  used on input line 24.
@@ -899,47 +899,47 @@ Package pdftex.def Info: data/Illustrations/problem-statement2.pdf  used on inpu
 ) [3 <./data/Illustrations/problem-statement1.pdf> <./data/Illustrations/problem-statement2.pdf>] (content/algorithms.tex (content/algorithms/brute-force.tex [4]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force1.pdf, id=111, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force1.pdf, id=123, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force1.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force1.pdf>
-Package pdftex.def Info: data/Illustrations/brute-force1.pdf  used on input line 55.
+Package pdftex.def Info: data/Illustrations/brute-force1.pdf  used on input line 68.
 (pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force2.pdf, id=113, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force2.pdf, id=125, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force2.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force2.pdf>
-Package pdftex.def Info: data/Illustrations/brute-force2.pdf  used on input line 66.
+Package pdftex.def Info: data/Illustrations/brute-force2.pdf  used on input line 79.
 (pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
 [5 <./data/Illustrations/brute-force1.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force3.pdf, id=130, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force3.pdf, id=142, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force3.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force3.pdf>
-Package pdftex.def Info: data/Illustrations/brute-force3.pdf  used on input line 75.
+Package pdftex.def Info: data/Illustrations/brute-force3.pdf  used on input line 88.
 (pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force4.pdf, id=132, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force4.pdf, id=144, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force4.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force4.pdf>
-Package pdftex.def Info: data/Illustrations/brute-force4.pdf  used on input line 84.
+Package pdftex.def Info: data/Illustrations/brute-force4.pdf  used on input line 97.
 (pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
 [6 <./data/Illustrations/brute-force2.pdf> <./data/Illustrations/brute-force3.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force5.pdf, id=159, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force5.pdf, id=171, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force5.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force5.pdf>
-Package pdftex.def Info: data/Illustrations/brute-force5.pdf  used on input line 93.
+Package pdftex.def Info: data/Illustrations/brute-force5.pdf  used on input line 106.
 (pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
 [7 <./data/Illustrations/brute-force4.pdf> <./data/Illustrations/brute-force5.pdf>])) [8] (content/experimental-results.tex
 
 pdfTeX warning: pdflatex (file ./data/Sorted.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Sorted.pdf, id=192, 794.97pt x 614.295pt>
+<data/Sorted.pdf, id=204, 794.97pt x 614.295pt>
 File: data/Sorted.pdf Graphic file (type pdf)
 <use data/Sorted.pdf>
 Package pdftex.def Info: data/Sorted.pdf  used on input line 38.
@@ -950,7 +950,7 @@ pdfTeX warning: pdflatex (file ./data/Sorted.pdf): PDF inclusion: found PDF vers
 
 
 pdfTeX warning: pdflatex (file ./data/Sorted.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Sorted.pdf, id=194, page=1, 794.97pt x 614.295pt>
+<data/Sorted.pdf, id=206, page=1, 794.97pt x 614.295pt>
 File: data/Sorted.pdf Graphic file (type pdf)
 <use data/Sorted.pdf, page 1>
 Package pdftex.def Info: data/Sorted.pdf , page1 used on input line 38.
@@ -977,7 +977,7 @@ Package pdftex.def Info: data/Sorted.pdf , page1 used on input line 38.
  <./data/Sorted.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/NearlySorted.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/NearlySorted.pdf, id=216, 794.97pt x 614.295pt>
+<data/NearlySorted.pdf, id=228, 794.97pt x 614.295pt>
 File: data/NearlySorted.pdf Graphic file (type pdf)
 <use data/NearlySorted.pdf>
 Package pdftex.def Info: data/NearlySorted.pdf  used on input line 39.
@@ -988,7 +988,7 @@ pdfTeX warning: pdflatex (file ./data/NearlySorted.pdf): PDF inclusion: found PD
 
 
 pdfTeX warning: pdflatex (file ./data/NearlySorted.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/NearlySorted.pdf, id=218, page=1, 794.97pt x 614.295pt>
+<data/NearlySorted.pdf, id=230, page=1, 794.97pt x 614.295pt>
 File: data/NearlySorted.pdf Graphic file (type pdf)
 <use data/NearlySorted.pdf, page 1>
 Package pdftex.def Info: data/NearlySorted.pdf , page1 used on input line 39.
@@ -1014,7 +1014,7 @@ Package pdftex.def Info: data/NearlySorted.pdf , page1 used on input line 39.
  <./data/NearlySorted.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/ReverseSorted.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/ReverseSorted.pdf, id=235, 794.97pt x 614.295pt>
+<data/ReverseSorted.pdf, id=247, 794.97pt x 614.295pt>
 File: data/ReverseSorted.pdf Graphic file (type pdf)
 <use data/ReverseSorted.pdf>
 Package pdftex.def Info: data/ReverseSorted.pdf  used on input line 40.
@@ -1025,7 +1025,7 @@ pdfTeX warning: pdflatex (file ./data/ReverseSorted.pdf): PDF inclusion: found P
 
 
 pdfTeX warning: pdflatex (file ./data/ReverseSorted.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/ReverseSorted.pdf, id=237, page=1, 794.97pt x 614.295pt>
+<data/ReverseSorted.pdf, id=249, page=1, 794.97pt x 614.295pt>
 File: data/ReverseSorted.pdf Graphic file (type pdf)
 <use data/ReverseSorted.pdf, page 1>
 Package pdftex.def Info: data/ReverseSorted.pdf , page1 used on input line 40.
@@ -1051,7 +1051,7 @@ Package pdftex.def Info: data/ReverseSorted.pdf , page1 used on input line 40.
  <./data/ReverseSorted.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Randomized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Randomized.pdf, id=255, 794.97pt x 614.295pt>
+<data/Randomized.pdf, id=267, 794.97pt x 614.295pt>
 File: data/Randomized.pdf Graphic file (type pdf)
 <use data/Randomized.pdf>
 Package pdftex.def Info: data/Randomized.pdf  used on input line 41.
@@ -1062,7 +1062,7 @@ pdfTeX warning: pdflatex (file ./data/Randomized.pdf): PDF inclusion: found PDF 
 
 
 pdfTeX warning: pdflatex (file ./data/Randomized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Randomized.pdf, id=257, page=1, 794.97pt x 614.295pt>
+<data/Randomized.pdf, id=269, page=1, 794.97pt x 614.295pt>
 File: data/Randomized.pdf Graphic file (type pdf)
 <use data/Randomized.pdf, page 1>
 Package pdftex.def Info: data/Randomized.pdf , page1 used on input line 41.
@@ -1086,12 +1086,12 @@ Package pdftex.def Info: data/Randomized.pdf , page1 used on input line 41.
 [13
 
  <./data/Randomized.pdf>]
-<data/Graph/Sorted Input.pdf, id=274, 840.13875pt x 372.39125pt>
+<data/Graph/Sorted Input.pdf, id=286, 840.13875pt x 372.39125pt>
 File: data/Graph/Sorted Input.pdf Graphic file (type pdf)
 <use data/Graph/Sorted Input.pdf>
 Package pdftex.def Info: data/Graph/Sorted Input.pdf  used on input line 42.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Sorted Input.pdf, id=276, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Sorted Input.pdf, id=288, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Sorted Input.pdf Graphic file (type pdf)
 <use data/Graph/Sorted Input.pdf, page 1>
 Package pdftex.def Info: data/Graph/Sorted Input.pdf , page1 used on input line 42.
@@ -1115,12 +1115,12 @@ Package pdftex.def Info: data/Graph/Sorted Input.pdf , page1 used on input line 
  [14
 
  <./data/Graph/Sorted Input.pdf>]
-<data/Graph/Nearly Sorted Input.pdf, id=297, 840.13875pt x 372.39125pt>
+<data/Graph/Nearly Sorted Input.pdf, id=309, 840.13875pt x 372.39125pt>
 File: data/Graph/Nearly Sorted Input.pdf Graphic file (type pdf)
 <use data/Graph/Nearly Sorted Input.pdf>
 Package pdftex.def Info: data/Graph/Nearly Sorted Input.pdf  used on input line 43.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Nearly Sorted Input.pdf, id=299, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Nearly Sorted Input.pdf, id=311, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Nearly Sorted Input.pdf Graphic file (type pdf)
 <use data/Graph/Nearly Sorted Input.pdf, page 1>
 Package pdftex.def Info: data/Graph/Nearly Sorted Input.pdf , page1 used on input line 43.
@@ -1144,12 +1144,12 @@ Package pdftex.def Info: data/Graph/Nearly Sorted Input.pdf , page1 used on inpu
  [15
 
  <./data/Graph/Nearly Sorted Input.pdf>]
-<data/Graph/Reverse Sorted Input.pdf, id=320, 840.13875pt x 372.39125pt>
+<data/Graph/Reverse Sorted Input.pdf, id=332, 840.13875pt x 372.39125pt>
 File: data/Graph/Reverse Sorted Input.pdf Graphic file (type pdf)
 <use data/Graph/Reverse Sorted Input.pdf>
 Package pdftex.def Info: data/Graph/Reverse Sorted Input.pdf  used on input line 44.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Reverse Sorted Input.pdf, id=322, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Reverse Sorted Input.pdf, id=334, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Reverse Sorted Input.pdf Graphic file (type pdf)
 <use data/Graph/Reverse Sorted Input.pdf, page 1>
 Package pdftex.def Info: data/Graph/Reverse Sorted Input.pdf , page1 used on input line 44.
@@ -1173,12 +1173,12 @@ Package pdftex.def Info: data/Graph/Reverse Sorted Input.pdf , page1 used on inp
  [16
 
  <./data/Graph/Reverse Sorted Input.pdf>]
-<data/Graph/Randomized Input.pdf, id=343, 840.13875pt x 372.39125pt>
+<data/Graph/Randomized Input.pdf, id=355, 840.13875pt x 372.39125pt>
 File: data/Graph/Randomized Input.pdf Graphic file (type pdf)
 <use data/Graph/Randomized Input.pdf>
 Package pdftex.def Info: data/Graph/Randomized Input.pdf  used on input line 45.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Randomized Input.pdf, id=345, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Randomized Input.pdf, id=357, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Randomized Input.pdf Graphic file (type pdf)
 <use data/Graph/Randomized Input.pdf, page 1>
 Package pdftex.def Info: data/Graph/Randomized Input.pdf , page1 used on input line 45.
@@ -1202,12 +1202,12 @@ Package pdftex.def Info: data/Graph/Randomized Input.pdf , page1 used on input l
  [17
 
  <./data/Graph/Randomized Input.pdf>]
-<data/Graph/Sorted Input (1).pdf, id=366, 840.13875pt x 372.39125pt>
+<data/Graph/Sorted Input (1).pdf, id=378, 840.13875pt x 372.39125pt>
 File: data/Graph/Sorted Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Sorted Input (1).pdf>
 Package pdftex.def Info: data/Graph/Sorted Input (1).pdf  used on input line 46.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Sorted Input (1).pdf, id=368, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Sorted Input (1).pdf, id=380, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Sorted Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Sorted Input (1).pdf, page 1>
 Package pdftex.def Info: data/Graph/Sorted Input (1).pdf , page1 used on input line 46.
@@ -1231,12 +1231,12 @@ Package pdftex.def Info: data/Graph/Sorted Input (1).pdf , page1 used on input l
  [18
 
  <./data/Graph/Sorted Input (1).pdf>]
-<data/Graph/Nearly Sorted Input (1).pdf, id=391, 840.13875pt x 372.39125pt>
+<data/Graph/Nearly Sorted Input (1).pdf, id=403, 840.13875pt x 372.39125pt>
 File: data/Graph/Nearly Sorted Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Nearly Sorted Input (1).pdf>
 Package pdftex.def Info: data/Graph/Nearly Sorted Input (1).pdf  used on input line 47.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Nearly Sorted Input (1).pdf, id=393, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Nearly Sorted Input (1).pdf, id=405, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Nearly Sorted Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Nearly Sorted Input (1).pdf, page 1>
 Package pdftex.def Info: data/Graph/Nearly Sorted Input (1).pdf , page1 used on input line 47.
@@ -1260,12 +1260,12 @@ Package pdftex.def Info: data/Graph/Nearly Sorted Input (1).pdf , page1 used on 
  [19
 
  <./data/Graph/Nearly Sorted Input (1).pdf>]
-<data/Graph/Reverse Sorted Input (1).pdf, id=415, 840.13875pt x 372.39125pt>
+<data/Graph/Reverse Sorted Input (1).pdf, id=427, 840.13875pt x 372.39125pt>
 File: data/Graph/Reverse Sorted Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Reverse Sorted Input (1).pdf>
 Package pdftex.def Info: data/Graph/Reverse Sorted Input (1).pdf  used on input line 48.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Reverse Sorted Input (1).pdf, id=417, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Reverse Sorted Input (1).pdf, id=429, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Reverse Sorted Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Reverse Sorted Input (1).pdf, page 1>
 Package pdftex.def Info: data/Graph/Reverse Sorted Input (1).pdf , page1 used on input line 48.
@@ -1289,12 +1289,12 @@ Package pdftex.def Info: data/Graph/Reverse Sorted Input (1).pdf , page1 used on
  [20
 
  <./data/Graph/Reverse Sorted Input (1).pdf>]
-<data/Graph/Randomized Input (1).pdf, id=439, 840.13875pt x 372.39125pt>
+<data/Graph/Randomized Input (1).pdf, id=451, 840.13875pt x 372.39125pt>
 File: data/Graph/Randomized Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Randomized Input (1).pdf>
 Package pdftex.def Info: data/Graph/Randomized Input (1).pdf  used on input line 49.
 (pdftex.def)             Requested size: 840.1367pt x 372.39034pt.
-<data/Graph/Randomized Input (1).pdf, id=441, page=1, 840.13875pt x 372.39125pt>
+<data/Graph/Randomized Input (1).pdf, id=453, page=1, 840.13875pt x 372.39125pt>
 File: data/Graph/Randomized Input (1).pdf Graphic file (type pdf)
 <use data/Graph/Randomized Input (1).pdf, page 1>
 Package pdftex.def Info: data/Graph/Randomized Input (1).pdf , page1 used on input line 49.
@@ -1317,7 +1317,7 @@ Package pdftex.def Info: data/Graph/Randomized Input (1).pdf , page1 used on inp
 (pdftex.def)             Requested size: 756.1179pt x 335.14902pt.
  [21
 
- <./data/Graph/Randomized Input (1).pdf>]) (content/acknowledgements.tex) [22] (main.aux)
+ <./data/Graph/Randomized Input (1).pdf>]) (content/acknowledgements.tex) [22] (content/reference.tex (main.bbl)) [23] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1328,20 +1328,20 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 5.26317pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0B5AEF89C3A45668AA563EDFBB84B8E0;1375.
+(rerunfilecheck)             Checksum: 955DC002D0DDFB77F71CBBEC702D0290;1469.
  ) 
 Here is how much of TeX's memory you used:
- 27363 strings out of 467871
- 512682 string characters out of 5419345
- 906051 words of memory out of 5000000
- 55681 multiletter control sequences out of 15000+600000
+ 27387 strings out of 467871
+ 513222 string characters out of 5419345
+ 908109 words of memory out of 5000000
+ 55693 multiletter control sequences out of 15000+600000
  636834 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  95i,18n,97p,488b,662s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lam\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Lam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (23 pages, 1153001 bytes).
+Output written on main.pdf (24 pages, 1159909 bytes).
 PDF statistics:
- 522 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 347 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 540 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 355 words of extra memory for PDF output out of 10000 (max. 10000000)
 

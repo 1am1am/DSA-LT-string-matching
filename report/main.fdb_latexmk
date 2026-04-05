@@ -1,5 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1775386455.824 "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" "main.pdf" "main" 1775386459.2635 0
+["bibtex main"] 1775400942.94992 "main.aux" "main.bbl" "main" 1775400947.42964 0
+  "./bibliography/bibliography.bib" 1775400048 973 a70797653ab79fde376947c03980063e ""
+  "C:/Users/Lam/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
+  "main.aux" 1775400946 3754 e293cbb8b70cef1ec6b1644b5f531dce "pdflatex"
+  (generated)
+  "main.bbl"
+  "main.blg"
+  (rewritten before read)
+["pdflatex"] 1775400943.27947 "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" "main.pdf" "main" 1775400947.43042 0
   "C:/Users/Lam/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775310093 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/Lam/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1767538571 14064 66704dd2a8dd29001f9f2fbfb85c1247 ""
   "C:/Users/Lam/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1767538303 13332518 e8d974c03b4027776d43f9479ed866db ""
@@ -196,14 +204,15 @@
   "C:/Users/Lam/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Lam/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Lam/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
-  "content/acknowledgements.tex" 1773750702 727 23bcefcb9d89cf995e7affd0fb939b89 ""
+  "content/acknowledgements.tex" 1775400728 748 4322ec8cf1e4e2d73de5fa1f113715f3 ""
   "content/algorithms.tex" 1775359864 97 ce8e12fe1df5f88edfe1935e5d91771c ""
-  "content/algorithms/brute-force.tex" 1775386451 6038 a06b2676fca06bf51b8c360420bb0975 ""
+  "content/algorithms/brute-force.tex" 1775400937 7860 f70c06d8479b30d5938915f94a0cb61b ""
   "content/experimental-results.tex" 1775359912 3589 da937369ae6ee051906e7c48b6727315 ""
   "content/group-information.tex" 1775386212 1352 446d6bb391aab3cb6013b479b7fa22b8 ""
-  "content/problem-statement.tex" 1775318139 1744 8c87a7d593f1a7b595a09356537d7a21 ""
+  "content/problem-statement.tex" 1775400269 1796 d68a645d5af17ce7aa4ad024857c3990 ""
+  "content/reference.tex" 1773671398 90 f5cff3b0c5d1f7bf4229caf30ff79be0 ""
   "content/title.tex" 1775305983 1491 8160d3c6ecaa809d630b737b748dee72 ""
-  "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" 1775384085 826 680fc5a1fd4044a2cd50e9e7b8aa3337 ""
+  "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" 1775399979 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
   "data/Graph/Nearly Sorted Input (1).pdf" 1773832235 55207 7929babcf6912c0e0014493ca06a7df5 ""
   "data/Graph/Nearly Sorted Input.pdf" 1773832235 49205 bb3580c622c4f78d80207a285581db57 ""
   "data/Graph/Randomized Input (1).pdf" 1773832235 54711 d8a307ffb07e5994a11b4e1551a6f076 ""
@@ -223,12 +232,13 @@
   "data/Randomized.pdf" 1773832041 90861 4b2d738662def29a441a7895bf7b2ceb ""
   "data/ReverseSorted.pdf" 1773831992 91049 ba49f9c5262f1ee5cba57e93cbf08c36 ""
   "data/Sorted.pdf" 1773831918 90445 7d78c174d531125ae97001bfafd2bf62 ""
-  "hcmus-report-template.sty" 1775380290 4847 065d156f90952681360359cc20eb03fa ""
+  "hcmus-report-template.sty" 1775400235 4845 9e82a6379fb1b5b173c406a8e1fd2a12 ""
   "img/hcmus-logo.png" 1773419248 258629 122747e63e393f11b7f15571540c7d20 ""
-  "main.aux" 1775386458 3396 04d0822e6af1833a71870b0e985b7009 "pdflatex"
-  "main.out" 1775386458 1375 0b5aef89c3a45668aa563edfbb84b8e0 "pdflatex"
-  "main.tex" 1775384085 826 680fc5a1fd4044a2cd50e9e7b8aa3337 ""
-  "main.toc" 1775386458 1209 c803335d0e7590c00886a3a7bce186cf "pdflatex"
+  "main.aux" 1775400946 3754 e293cbb8b70cef1ec6b1644b5f531dce "pdflatex"
+  "main.bbl" 1775400943 797 dd800edcf428d7de0618e8e9a6a8a723 "bibtex main"
+  "main.out" 1775400946 1469 955dc002d0ddfb77f71cbbec702d0290 "pdflatex"
+  "main.tex" 1775399979 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
+  "main.toc" 1775400946 1292 a3f6bbef02dd20cb0c099112f163b292 "pdflatex"
   "preamble.tex" 1775384169 595 615fd0392fb7cfa11d353c04dac369d9 ""
   (generated)
   "main.aux"
