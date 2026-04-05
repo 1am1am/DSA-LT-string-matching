@@ -30,6 +30,7 @@ std::vector<std::vector<Position>> rabinKarp(Data data, long long& comparisons);
 
 std::vector<std::vector<Position>> KMP(Data data);
 std::vector<std::vector<Position>> KMP(Data data, long long& comparisons);
+void convertGridTextToString(std::vector<std::vector<char>>Text, std::vector<std::string> &ans);
 
 std::vector<std::vector<Position>> boyerMoore(Data data);
 std::vector<std::vector<Position>> boyerMoore(Data data, long long& comparisons);

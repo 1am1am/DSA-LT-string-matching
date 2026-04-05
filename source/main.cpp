@@ -2,12 +2,25 @@
 #include "all_headers.h"
 #include "cli_parser.h"
 
-void test(std::vector<std::vector<Position>> (*func)(Data)) {
+bool test(int K, int R, int C) {
     Data data;
-    data.R = 10;
-    data.C = 10;
-    data.K = 5;
-    data.patterns = {
+    data.R = R;
+    data.C = C;
+    data.K = K;
+    data.patterns = getPatterns(K, R, C);
+    data.text = getText(R, C, data.patterns);
+    cout << "Data(K, R, C): " << K << ' ' << R << ' ' << C << endl;
+    Result ans = getAlgorithm("bf",  data);
+    cout << "Brute_force\n" << "Time ms: " << ans.runningTime << "\nComparisons: " << ans.comparisons << '\n';
+    ans = getAlgorithm("kmp",  data);
+    cout << "KMP\n" << "Time ms: " << ans.runningTime << "\nComparisons: " << ans.comparisons << '\n';
+    ans = getAlgorithm("rk",  data);
+    cout << "Rabin_karp\n" << "Time ms: " << ans.runningTime << "\nComparisons: " << ans.comparisons << '\n';
+    ans = getAlgorithm("bm",  data);
+    cout << "Boyer_moore\n" << "Time ms: " << ans.runningTime << "\nComparisons: " << ans.comparisons << '\n';
+    ans = getAlgorithm("ac",  data);
+    cout << "Aho_corasick\n" << "Time ms: " << ans.runningTime << "\nComparisons: " << ans.comparisons << '\n';
+    /*data.patterns = {
         "dz",
         "kyumiusbn",
         "xsnthd",
@@ -25,23 +38,55 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
         {'t', 'o', 'k', 'x', 's', 'b', 't', 'a', 'p', 'd'},
         {'y', 'r', 'q', 'p', 'b', 'u', 'u', 'c', 'x', 'e'},
         {'m', 'x', 's', 'w', 'n', 'a', 'e', 'z', 'm', 'a'}
-    };
-
-    std::vector<std::vector<Position>> ans = func(data);
-    cout << "DONE!\n";
+    };*/
+    /*
+    std::vector<std::vector<Position>> ans[5];
+    ans[0] = bruteForce(data);
+    cout << "bruteforce done!\n";
+    ans[1] = boyerMoore(data);
+    cout << "boyer done!\n";
+    ans[2] = rabinKarp(data);
+    cout << "hash done!\n";
+    ans[3] = ahoCorasick(data);
+    cout << "aho done!\n";
+    ans[4] = KMP(data);
+    cout << "kmp done!\n";
+    cout << K << ' ' << R << ' ' << C << endl;
     for (int i = 0; i < data.K; ++i) {
-        std::cout << "Tu khoa '" << data.patterns[i] << "': ";
-        
-        if (ans[i].empty()) {
-            std::cout << "Khong tim thay!";
-        } else {
-            for (size_t j = 0; j < ans[i].size(); ++j) {
-                std::cout << "(" << ans[i][j].startPos.first << ", " << ans[i][j].startPos.second << ") -> (" << ans[i][j].endPos.first << ", " << ans[i][j].endPos.second << "); ";
+        for(int j = 1; j < 5; ++j){
+            if(ans[0][i].size() != ans[j][i].size()){
+                cout << "Thuat thu " << j << " co van de!\n";
+                return 0;
+            }
+            else{
+                for(int k = 0; k < ans[0][i].size(); ++k){
+                    if(ans[0][i][k].startPos.first != ans[j][i][k].startPos.first)
+                    {
+                        cout << "Thuat thu " << j << " co van de!\n";
+                        return 0;
+                    }
+                    if(ans[0][i][k].startPos.second != ans[j][i][k].startPos.second)
+                    {
+                        cout << "Thuat thu " << j << " co van de!\n";
+                        return 0;
+                    }
+                    if(ans[0][i][k].endPos.first != ans[j][i][k].endPos.first)
+                    {
+                        cout << "Thuat thu " << j << " co van de!\n";
+                        return 0;
+                    }
+                    if(ans[0][i][k].endPos.second != ans[j][i][k].endPos.second)
+                    {
+                        cout << "Thuat thu " << j << " co van de!\n";
+                        return 0;
+                    }
+                }
             }
         }
-        std::cout << "\n";
+        
     }
-
+    //cout << "Moi thuat ok!\n";*/
+    return 1;
     //Ket qua dung la:
     // Tu khoa 'dz': (3, 3) -> (3, 4); (1, 1) -> (2, 1); (4, 8) -> (5, 8); 
     // Tu khoa 'kyumiusbn': Khong tim thay!
@@ -50,22 +95,46 @@ void test(std::vector<std::vector<Position>> (*func)(Data)) {
     // Tu khoa 'wnaezm': (9, 3) -> (9, 8);
 }
 
+
 int main(int argc, char* argv[]) {
     //g++ -I source/include source/src/algorithms/*.cpp source/src/processing/*.cpp source/main.cpp -o source/07.exe -std=c++17
-    Config config = getCommand(argc, argv);
+   /* Config config = getCommand(argc, argv);
     Data data;
     readFile(config.inputFile, data);
     Result result = getAlgorithm(config.algorithm, data);
-    writeOutputFile(config.outputFile, config.algorithm, data, result);
+    writeOutputFile(config.outputFile, config.algorithm, data, result);*/
 
     //07.exe -a bf -i scenario1_1.txt -o output.txt --> command de chay
 
-
+ 
     // scenario1(config);
     // scenario2(config);
+    // Test moi thuat
+    int K = 1, R = 0, C = 0;
+    int ArraySizeRC [] = {10, 50, 100, 500};
+    int ArraySizeK [] = {1, 10, 50, 100};
+    int n = (int)sizeof(ArraySizeRC) / sizeof(ArraySizeRC[0]);
+    int m = (int)sizeof(ArraySizeK) / sizeof(ArraySizeK[0]);
+    int cnt = 0;
+    bool flag = 1;
+    //cout << "tESTT\n";
+    //while(cnt < 100 && flag == 1){
+        for(int i = 0; i < n; ++i){
+            R = C = ArraySizeRC[i];
+            flag &= test(K, R, C);
+        }
+        
+        R = C = 100;
 
-    test(bruteForce);
-    cout << endl;
-    test(ahoCorasick);
+        for(int i = 0; i < m; ++i){
+            K = ArraySizeK[i];
+            flag &= test(K, R, C);
+        }
+        //if(flag) cout << "Test lan thu " << cnt << " dung!\n";
+        //else cout << "Test lan thu " << cnt << " sai!\n";
+        //cout << cnt << ' ' << flag << endl;
+        //++cnt;
+    //}
+
     return 0;
 }

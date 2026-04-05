@@ -26,5 +26,7 @@ struct Data {
 
 void scenario1(Config config);
 void scenario2(Config config);
+std::vector<std::string> getPatterns(int K, int R, int C);
+std::vector<std::vector<char>> getText(int R, int C, std::vector<std::string> patterns);
 
 #endif

@@ -1,5 +1,4 @@
 #include <iostream>
-#include "kmp.h"
 #include "algorithms.h"
 #include "data_generator.h"
 

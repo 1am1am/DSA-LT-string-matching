@@ -1,10 +1,24 @@
 #include <iostream>
-#include "kmp.h"
 #include "algorithms.h"
-#include "aho_corasick.h"
 #include "data_generator.h"
 
 using namespace std;
+
+struct Node{
+    char pC;
+    std::vector<int> pos;
+    std::vector<Node*> nxt;
+    std::vector<Node*> go;
+    Node* link;
+    Node* par;
+
+    Node(){
+        nxt.assign(26, nullptr);
+        go.assign(26, nullptr);
+        link = par = nullptr;
+        pC = '\0';
+    }
+};
 
 Node* root = nullptr;
 
@@ -98,13 +112,13 @@ void Search(string S, Data data, vector<vector<Position>> &ans, int IDX){
     }
 }
 
-std::vector<std::vector<Position>> ahoCorasick(Data data, long long& comparisons){
+std::vector<std::vector<Position>> ahoCorasick(Data data){
     
     vector<string> List_string;
 
     convertGridTextToString(data.text, List_string);
 
-    vector<vector<Position>> pos((int)List_string.size());
+    vector<vector<Position>> pos(data.K);
     int N = (int)data.patterns.size();
     int M = (int)List_string.size();
     int maxLenOfList_string = max(data.C, data.R);
