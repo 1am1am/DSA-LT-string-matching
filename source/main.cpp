@@ -104,7 +104,7 @@ int main(int argc, char* argv[]) {
     Result result = getAlgorithm(config.algorithm, data);
     writeOutputFile(config.outputFile, config.algorithm, data, result);*/
 
-    //07.exe -a bf -i scenario1_1.txt -o output.txt --> command de chay
+    //crossword.exe -a bf -i source/data/scenario1_1.txt -o output.txt --> command de chay
 
  
     // scenario1(config);
