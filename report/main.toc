@@ -1,98 +1,15 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Group Information}{4}{section.1}%
-\contentsline {section}{\numberline {2}Algorithms Presentation}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Selection Sort}{5}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Overview}{5}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Core Concepts}{5}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Step-by-step Explanation}{5}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.4}Pseudo Code}{5}{subsubsection.2.1.4}%
-\contentsline {subsubsection}{\numberline {2.1.5}Complexity Analysis}{6}{subsubsection.2.1.5}%
-\contentsline {subsubsection}{\numberline {2.1.6}Variants and Optimizations}{6}{subsubsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.2}Insertion Sort}{7}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Overview}{7}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Core Concepts}{7}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Step-by-Step Explanation}{7}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Pseudo Code}{7}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Complexity Analysis}{8}{subsubsection.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.6}Variants and Optimizations}{8}{subsubsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.3}Shell Sort}{9}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Overview}{9}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Core Concepts}{9}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Step-by-step Explanation}{9}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Pseudo code}{9}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}Complexity Analysis}{9}{subsubsection.2.3.5}%
-\contentsline {subsubsection}{\numberline {2.3.6}Variants and Optimizations}{10}{subsubsection.2.3.6}%
-\contentsline {subsection}{\numberline {2.4}Bubble Sort}{11}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Overview}{11}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Core Concepts}{11}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}Step-by-step Explanation}{11}{subsubsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.4}Pseudo code}{11}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}Complexity Analysis}{11}{subsubsection.2.4.5}%
-\contentsline {subsubsection}{\numberline {2.4.6}Variants and Optimizations}{12}{subsubsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.5}Heap Sort}{13}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Overview}{13}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Core Concepts}{13}{subsubsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.3}Step-by-step Explanation}{13}{subsubsection.2.5.3}%
-\contentsline {subsubsection}{\numberline {2.5.4}Pseudo code}{13}{subsubsection.2.5.4}%
-\contentsline {subsubsection}{\numberline {2.5.5}Complexity Analysis}{14}{subsubsection.2.5.5}%
-\contentsline {subsubsection}{\numberline {2.5.6}Variants and Optimizations}{14}{subsubsection.2.5.6}%
-\contentsline {subsection}{\numberline {2.6}Merge Sort}{15}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Overview}{15}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Core Concepts}{15}{subsubsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.3}Step-by-Step Explanation}{15}{subsubsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.4}Pseudo Code}{15}{subsubsection.2.6.4}%
-\contentsline {subsubsection}{\numberline {2.6.5}Complexity Analysis}{16}{subsubsection.2.6.5}%
-\contentsline {subsubsection}{\numberline {2.6.6}Variants and Optimizations}{16}{subsubsection.2.6.6}%
-\contentsline {subsection}{\numberline {2.7}Quick Sort}{17}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Overview}{17}{subsubsection.2.7.1}%
-\contentsline {subsubsection}{\numberline {2.7.2}Core concepts}{17}{subsubsection.2.7.2}%
-\contentsline {subsubsection}{\numberline {2.7.3}Step-by-step Explanation}{17}{subsubsection.2.7.3}%
-\contentsline {subsubsection}{\numberline {2.7.4}Pseudo Code}{17}{subsubsection.2.7.4}%
-\contentsline {subsubsection}{\numberline {2.7.5}Complexity Analysis}{18}{subsubsection.2.7.5}%
-\contentsline {subsubsection}{\numberline {2.7.6}Variants and Optimizations}{18}{subsubsection.2.7.6}%
-\contentsline {subsection}{\numberline {2.8}Radix Sort}{19}{subsection.2.8}%
-\contentsline {subsubsection}{\numberline {2.8.1}Overview}{19}{subsubsection.2.8.1}%
-\contentsline {subsubsection}{\numberline {2.8.2}Core Concepts}{19}{subsubsection.2.8.2}%
-\contentsline {subsubsection}{\numberline {2.8.3}Step-by-step Explanation}{19}{subsubsection.2.8.3}%
-\contentsline {subsubsection}{\numberline {2.8.4}Pseudo Code}{19}{subsubsection.2.8.4}%
-\contentsline {subsubsection}{\numberline {2.8.5}Complexity Analysis}{20}{subsubsection.2.8.5}%
-\contentsline {subsubsection}{\numberline {2.8.6}Variants and Optimizations}{20}{subsubsection.2.8.6}%
-\contentsline {subsection}{\numberline {2.9}Binary Insertion Sort}{21}{subsection.2.9}%
-\contentsline {subsubsection}{\numberline {2.9.1}Overview}{21}{subsubsection.2.9.1}%
-\contentsline {subsubsection}{\numberline {2.9.2}Core Concepts}{21}{subsubsection.2.9.2}%
-\contentsline {subsubsection}{\numberline {2.9.3}Step-by-step Expanation}{21}{subsubsection.2.9.3}%
-\contentsline {subsubsection}{\numberline {2.9.4}Pseudo Code}{21}{subsubsection.2.9.4}%
-\contentsline {subsubsection}{\numberline {2.9.5}Complexity Analysis}{22}{subsubsection.2.9.5}%
-\contentsline {subsubsection}{\numberline {2.9.6}Variants and Optimizations}{22}{subsubsection.2.9.6}%
-\contentsline {subsection}{\numberline {2.10}Shaker Sort}{23}{subsection.2.10}%
-\contentsline {subsubsection}{\numberline {2.10.1}Overview}{23}{subsubsection.2.10.1}%
-\contentsline {subsubsection}{\numberline {2.10.2}Core Concepts}{23}{subsubsection.2.10.2}%
-\contentsline {subsubsection}{\numberline {2.10.3}Step-by-step Explanation}{23}{subsubsection.2.10.3}%
-\contentsline {subsubsection}{\numberline {2.10.4}Pseudo Code}{23}{subsubsection.2.10.4}%
-\contentsline {subsubsection}{\numberline {2.10.5}Complexity Analysis}{24}{subsubsection.2.10.5}%
-\contentsline {subsubsection}{\numberline {2.10.6}Variants and Optimizations}{24}{subsubsection.2.10.6}%
-\contentsline {subsection}{\numberline {2.11}Flash Sort}{25}{subsection.2.11}%
-\contentsline {subsubsection}{\numberline {2.11.1}Overview}{25}{subsubsection.2.11.1}%
-\contentsline {subsubsection}{\numberline {2.11.2}Core Concepts}{25}{subsubsection.2.11.2}%
-\contentsline {subsubsection}{\numberline {2.11.3}Step-by-Step Explanation}{25}{subsubsection.2.11.3}%
-\contentsline {subsubsection}{\numberline {2.11.4}Pseudo Code}{25}{subsubsection.2.11.4}%
-\contentsline {subsubsection}{\numberline {2.11.5}Complexity Analysis}{26}{subsubsection.2.11.5}%
-\contentsline {subsubsection}{\numberline {2.11.6}Variants and Optimizations}{27}{subsubsection.2.11.6}%
-\contentsline {subsection}{\numberline {2.12}Counting Sort}{28}{subsection.2.12}%
-\contentsline {subsubsection}{\numberline {2.12.1}Overview}{28}{subsubsection.2.12.1}%
-\contentsline {subsubsection}{\numberline {2.12.2}Core Concepts}{28}{subsubsection.2.12.2}%
-\contentsline {subsubsection}{\numberline {2.12.3}Step-by-step Explanation}{28}{subsubsection.2.12.3}%
-\contentsline {subsubsection}{\numberline {2.12.4}Pseudo Code}{28}{subsubsection.2.12.4}%
-\contentsline {subsubsection}{\numberline {2.12.5}Complexity Analysis}{29}{subsubsection.2.12.5}%
-\contentsline {subsubsection}{\numberline {2.12.6}Variants and Optimizations}{29}{subsubsection.2.12.6}%
-\contentsline {section}{\numberline {3}Experimental results and comments}{30}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Running time}{30}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}The number of comparisons}{30}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Tables and Graphs}{30}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Project Organization and Programming Notes}{43}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Overview}{43}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Main Functions}{43}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}File Organization}{48}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Program Running Process}{50}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Acknowledgements}{51}{section.5}%
-\contentsline {section}{\numberline {6}References}{52}{section.6}%
+\contentsline {section}{\numberline {1}Group Information}{2}{section.1}%
+\contentsline {section}{\numberline {2}Problem Statement}{3}{section.2}%
+\contentsline {section}{\numberline {3}Algorithms Analysis}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Naïve string-matching algorithm}{4}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Introduction \& Application}{4}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Pseudocode}{4}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Step-by-step trace}{5}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Complexity}{8}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Discussion}{8}{subsubsection.3.1.5}%
+\contentsline {section}{\numberline {4}Experimental Results}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Running time}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The number of comparisons}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Tables and Graphs}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Acknowledgements}{22}{section.5}%

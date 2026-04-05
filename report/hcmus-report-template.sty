@@ -4,7 +4,7 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{setspace}
-\usepackage[colorlinks=true,linkcolor=blue, citecolor=red]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black, citecolor=black]{hyperref}
 \usepackage{url}
 \usepackage[top=.75in, left=.75in, right=.75in, bottom=1in]{geometry}
 % \usepackage[utf8]{vietnam}
@@ -46,11 +46,14 @@
 % ============ HEADER AND FOOTER ============
 % Header length
 \setlength{\headheight}{29.43912pt}
+\pagestyle{fancy}
+%\fancyhead[L]{\textit{\rightmark}}
+%\fancyhead[R]{\textit{\MakeUppercase{\leftmark}}}
 
 % Footer page number would be on the lower-right corner
-\pagestyle{fancy}
+
 \fancyfoot{}
-\fancyfoot[R]{Trang \thepage}
+\fancyfoot[R]{\thepage}
 
 % Vietnamese lstlisting
 \newcommand{\vietnameselst}{

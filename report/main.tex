@@ -2,24 +2,29 @@
 \input{preamble.tex}
 
 \begin{document}
-    \input{content/title.tex}
-    \newpage 
-    \renewcommand{\contentsname}{Table of Contents}
+    %renewcommand
+    \renewcommand{\contentsname}{Contents}
     \renewcommand{\refname}{References}
     \renewcommand{\bibname}{References}
+    \renewcommand{\algorithmiccomment}[1]{\quad $\triangleright$ #1}
+
+    \input{content/title.tex}
+    \newpage 
+    \setcounter{tocdepth}{2}
+    
     \tableofcontents
     \newpage
     \setcounter{section}{0}
     \renewcommand{\thesection}{\arabic{section}}
     \input{content/group-information.tex}
     \newpage
+    \input{content/problem-statement.tex}
+    \newpage
     \input{content/algorithms.tex}
     \newpage
-    \input{content/experimental-results-and-comments.tex}
-    \newpage
-    \input{content/project-organization-and-programming-notes.tex}
+    \input{content/experimental-results.tex}
     \newpage
     \input{content/acknowledgements.tex}
     \newpage
-    \input{content/reference.tex}
+    %\input{content/reference.tex}
 \end{document}
