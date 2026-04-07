@@ -1,0 +1,150 @@
+\subsection[The Boyer Moore Algorithm]{The Boyer Moore}
+    \subsubsection{Introduction \& Application}
+        \begin{itemize}
+            \item \textbf{Core idea:} The Boyer Moore Algorithm is a practical method to find patterns. This algorithm is the combination of three main ideas comprising scanning the pattern in revserse order, bad character heuristic and good suffix heuristic. This speeds up the searching process
+             considerably by skipping a plenty of characters. 
+            \item \textbf{Reality applications:}
+            \begin{itemize}
+                \item Text Editors: Using in "Search" or "Find and Replace" features to locate the destination of the words.
+                \item Intrusion Detection Systems (Network Security): use Boyer-Moore to scan network traffic in real-time for "malicious signatures"—specific byte patterns that indicate a cyberattack or virus.
+                \item Large-Scale Plagiarism Detection: compare submitted essays against billions of web pages and academic journals to find copied content.
+            \end{itemize}
+        \end{itemize}
+
+\subsubsection{Pseudocode}
+\textbf{Notation:}
+\begin{itemize}
+    \item \textbf{Text $T$ ($R$ rows, $C$ columns)}: The 2D character matrix.
+    \item \textbf{Pattern $P$ ($K$ keywords)}: The list of strings to search.
+    \item \textbf{Heuristics}: $BC$ (Bad Character table) and $GS$ (Good Suffix table).
+\end{itemize}\textsc{Boyer-Moore Algorithm}($T, P, K, R, C$)
+\begin{algorithmic}[1]
+    \State $pos = \text{empty array of size } K$
+    \For{$idx = 1$ \textbf{to} $K$}
+    \State $P_i = P[idx]$, $m = P_i.length$
+    \State $BC = \text{PreProcessBadChar}(P_i)$\State $GS = 
+    \text{PreProcessGoodSuffix}(P_i)$
+    \Statex
+    \Comment{Horizontal Search (Rows)}
+    \For{$r = 0$ \textbf{to} $R-1$}\State $s = 0$
+    \While{$s \le C - m$}\State $j = m - 1$\While{$j \ge 0$ \textbf{and} $P_i[j] == T[r, s+j]$}
+    \State $j = j - 1$
+    \EndWhile
+    \If{$j < 0$}\State add $(r, s)$ to $pos[idx]$
+    \State $s = s + GS[0]$
+    \Else
+    \State $s = s + \max(GS[j], j - BC[T[r, s+j]])$
+    \EndIf
+    \EndWhile
+    \EndFor
+    \Statex
+    \Comment{Vertical Search (Columns)}
+    \For{$c = 0$ \textbf{to} $C-1$}
+    \State $s = 0$\While{$s \le R - m$}
+    \State $j = m - 1$\While{$j \ge 0$ 
+    \textbf{and} $P_i[j] == T[s+j, c]$}
+    \State $j = j - 1$
+    \EndWhile
+    \If{$j < 0$}
+    \State add $(s, c)$ to $pos[idx]$
+    \State $s = s + GS[0]$
+    \Else
+    \State $s = s + \max(GS[j], j - BC[T[s+j, c]])$
+    \EndIf
+    \EndWhile
+    \EndFor
+    \EndFor
+    \State 
+    \Return $pos$
+\end{algorithmic}
+\subsection{step trace}
+
+    \indent \textbf{Notation:}
+        \begin{itemize}
+            \item \textbf{Text $T$ (length $n$)}: The main text being searched.
+            \item \textbf{Pattern $P$}: The string that we are looking for.
+            \item \textbf{Shift ($s$)}: The current offset of the text T.
+            \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
+        \end{itemize}
+
+    \textbf{Example:} text $T = [G, C, A, T, G, C, C, T, A, G]$ and pattern $P = [T, A, T, G]$
+    \begin{itemize}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force1.pdf}
+            \caption{Step 1}
+        \end{figure}
+        \item The first character 'a' matches in both arrays.
+        
+        The second character in text $T$ ('a') does not match the second character in pattern $P$ ('b').
+        
+        Text at the bottom shows the current shift is $s = 0$ and the list of found matches is empty ($Positions = []$).
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force2.pdf}
+            \caption{Step 2}
+        \end{figure}
+        \item All characters in pattern $P$ ('a', 'b', 'c') successfully match the corresponding characters in text $T$ ('a', 'b', 'c').
+        
+        Shift is $s = 1$ and the list of found matches is updated to record this position ($Positions = [(1, 3)]$).
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force3.pdf}
+            \caption{Step 3}
+        \end{figure}
+        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('b') at the current shift position $s = 2$.
+        
+        Skip to the next shift without updating $Positions$.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force4.pdf}
+            \caption{Step 4}
+        \end{figure}
+        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('c') at the current shift position $s = 2$.
+        
+        Skip to the next shift without updating $Positions$.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force5.pdf}
+            \caption{Step 5}
+        \end{figure}
+
+        \item The first two characters in pattern $P$ ('a', 'b') match the corresponding characters in text $T$,
+        but the third character in pattern $P$ ('c') does not match the character in text $T$ ('b') at the current shift position $s = 4$.
+
+        Skip to the next shift without updating $Positions$.
+
+        \item After that, $s$ increases by 1. Because $s = 5$ and $n - m = 7 - 3 = 4$, we have $s > n - m$. The algorithm terminates and returns the list of found matches: $\text{Positions} = [(1, 3)]$.
+    \end{itemize}
+    
+
+    \subsubsection{Complexity}
+        \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|l|c|p{8cm}|}
+        \hline
+        \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
+        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when patterns and text share many prefix characters (e.g., all 'A's). \\ \hline
+        \textbf{Time (Average)} & $O(K \cdot R \cdot C)$ & In practice, a mismatch usually occurs after only a few character comparisons. \\ \hline
+        \textbf{Time (Best)} & $O(K \cdot R \cdot C)$ & The first character of the pattern always results in a mismatch at every shift. \\ \hline
+        \textbf{Auxiliary Space} & $O(1)$ & The algorithm uses only a constant amount of extra memory for loop indices. \\ \hline
+        \end{tabular}
+        \caption{Complexity Analysis of 2D Brute Force Algorithm}
+        \end{table}
+
+    \subsubsection{Discussion}
+    \begin{itemize}
+        \item In scenarios 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
+        Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
+        \item In scenarios 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
+        This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
+        which is much longer compared to scenario 1.
+        \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
+        It is worse for scenarios with a large number of one.
+    \end{itemize}
+        
