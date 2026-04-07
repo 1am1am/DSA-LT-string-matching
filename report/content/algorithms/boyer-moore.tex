@@ -1,7 +1,7 @@
 \subsection[The Boyer Moore Algorithm]{The Boyer Moore}
     \subsubsection{Introduction \& Application}
         \begin{itemize}
-            \item \textbf{Core idea:} The Boyer Moore Algorithm is a practical method to find patterns. This algorithm is the combination of three main ideas comprising scanning the pattern in revserse order, bad character heuristic and good suffix heuristic. This speeds up the searching process
+            \item \textbf{Core idea:} The Boyer Moore Algorithm is a practical method to find patterns. This algorithm is the combination of three main ideas comprising scanning the pattern in reverse order, bad character heuristic and good suffix heuristic. This speeds up the searching process
              considerably by skipping a plenty of characters. 
             \item \textbf{Reality applications:}
             \begin{itemize}
@@ -86,7 +86,7 @@
         \textbf{Note:}
         \begin{itemize}
             \item \textbf{Bad character table:} Choose the index for characters from 0 to n - 1. In this case, T appears two times, only the last appearance are regconized.
-            \item \textbf{Good suffix table:} For index j from 3 to 0, if the suffix of the character at index j is found, the shift value will be decreased. In this example, index 3 is the exception since there is no suffix and the shift value is 1, other suffixes including g, tg, atg are not found in the pattern, then their pattern shifts is the length of the pattern.
+            \item \textbf{Good suffix table:} For index j from 3 to 0, if the suffix of the character at index j is found, the shift value will be decreased. In this example, index 3 is the exception since there is no suffix and the shift value is 1, other suffixes including g, tg, atg are not found in the prefix of the pattern, then their pattern shifts is the length of the pattern.
         \end{itemize}
         \item Step 2: Compare the patterns and make shifts based on preprocessing values.
          \begin{figure}[H]
@@ -118,9 +118,23 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.75\textwidth, clip]{data/Illustrations/boyer_moore_step3.pdf}
-            \caption{Make bigger shift by using good suffix heuristic}
+            \caption{Make larger shift by using good suffix heuristic}
 
         \end{figure}
+        Mismatch at index 3, continue calculate shift value
+
+        shift value = max(GS, BC) = max(1, 2) = 2
+
+        \item \textbf{Shift by 2 characters}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.75\textwidth, clip]{data/Illustrations/boyer_moore_lastStep.pdf}
+            \caption{Make bigger shift by using bad character heuristic}
+
+        \end{figure}
+        The algorithm stops since the pattern is out of text's range.
+
+
 
 
        
@@ -134,22 +148,19 @@
         \begin{tabular}{|l|c|p{8cm}|}
         \hline
         \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
-        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when patterns and text share many prefix characters (e.g., all 'A's). \\ \hline
-        \textbf{Time (Average)} & $O(K \cdot R \cdot C)$ & In practice, a mismatch usually occurs after only a few character comparisons. \\ \hline
-        \textbf{Time (Best)} & $O(K \cdot R \cdot C)$ & The first character of the pattern always results in a mismatch at every shift. \\ \hline
-        \textbf{Auxiliary Space} & $O(1)$ & The algorithm uses only a constant amount of extra memory for loop indices. \\ \hline
+        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when many characters are repeated and both bad character and good suffix rules provide minimal shifts \\ \hline
+        \textbf{Time (Average)} & $O(R \cdot C)$& In reality, the rules of bad character and good suffix usually make larger skips and considerably improve the efficiency of the algorithm.  \\ \hline
+        \textbf{Time (Best)} & $O(\frac{R \cdot C}{m})$ & In best scenario, mismatches happen at the last character, allowing maximum shifts close to the pattern length(m). \\ \hline
+        \textbf{Auxiliary Space} & $O(|\Sigma| + m)$ & The algorithm uses extra memory for bad character table (alphabet size) and good suffix table (pattern length) \\ \hline
         \end{tabular}
-        \caption{Complexity Analysis of 2D Brute Force Algorithm}
+        \caption{Complexity Analysis of 2D Boyer-Moore Algorithm}
         \end{table}
 
     \subsubsection{Discussion}
     \begin{itemize}
-        \item In scenarios 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
-        Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
-        \item In scenarios 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
-        This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
-        which is much longer compared to scenario 1.
-        \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
-        It is worse for scenarios with a large number of one.
+        \item In Scenario 1, where the number of patterns $K$ is small and the text size ranges from $10 \times 10$ to $500 \times 500$, the Boyer--Moore algorithm performs very efficiently due to its ability to skip large portions of the text. The running time is close to $O(R \cdot C)$ in practice.
+
+        \item In Scenario 2, where the number of patterns $K$ is large and the text is fixed at $100 \times 100$, the total running time increases linearly with $K$. However, Boyer--Moore still outperforms brute-force due to fewer comparisons per pattern.
+
+        \item In conclusion, the Boyer--Moore algorithm is particularly effective when the pattern is relatively long and the alphabet is large, as it can achieve significant shifts and reduce the number of comparisons.
     \end{itemize}
-        
