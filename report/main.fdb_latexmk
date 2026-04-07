@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1775495739.61125 "main.aux" "main.bbl" "main" 1775495753.86701 0
+["bibtex main"] 1775580172.03418 "main.aux" "main.bbl" "main" 1775580178.17511 0
   "./bibliography/bibliography.bib" 1775483508 973 a70797653ab79fde376947c03980063e ""
   "C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1775495752 5287 681cd88c58aa78d0810390f5fa95a6aa "pdflatex"
+  "main.aux" 1775580177 5408 0ab7d0c3db1128e6a6d8752601ff8f3b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1775495749.36231 "c:/Users/ADMIN/Desktop/report/report/main.tex" "main.pdf" "main" 1775495753.8676 0
+["pdflatex"] 1775580172.48126 "c:/Users/ADMIN/Desktop/report/report/main.tex" "main.pdf" "main" 1775580178.17582 0
   "C:/Users/ADMIN/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775483814 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/ADMIN/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1773417936 14064 aabc936044298e9a29b2c840bbdc5572 ""
   "C:/Users/ADMIN/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1773409671 13333487 b06764420ff454274a100b053af5efc3 ""
@@ -208,7 +208,7 @@
   "c:/Users/ADMIN/Desktop/report/report/main.tex" 1775483508 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
   "content/acknowledgements.tex" 1775483508 748 4322ec8cf1e4e2d73de5fa1f113715f3 ""
   "content/algorithms.tex" 1775483817 143 cbcb4c13fab33d837e97728f63e1da4c ""
-  "content/algorithms/boyer-moore.tex" 1775495749 7667 0d0d7db69207aa46d1d55a3c347a20c9 ""
+  "content/algorithms/boyer-moore.tex" 1775580167 7450 5483fa6c4036ffc071370033bc78f79e ""
   "content/algorithms/brute-force.tex" 1775483508 7860 f70c06d8479b30d5938915f94a0cb61b ""
   "content/experimental-results.tex" 1775483508 3589 da937369ae6ee051906e7c48b6727315 ""
   "content/group-information.tex" 1775483508 1352 446d6bb391aab3cb6013b479b7fa22b8 ""
@@ -223,11 +223,16 @@
   "data/Graph/Reverse Sorted Input.pdf" 1775483508 48321 e410a6bfb622c509496f59a03716c949 ""
   "data/Graph/Sorted Input (1).pdf" 1775483508 54519 a828851f0083fc7e8488dcb14341aef3 ""
   "data/Graph/Sorted Input.pdf" 1775483508 48065 bd3fe02bc15ecd3dffdbebf7479d1e10 ""
+  "data/Illustrations/Bad_Char_Table.pdf" 1775578925 26885 97e3ec98a4694d05ef6139b2d21fa615 ""
+  "data/Illustrations/Boyer_moore_step1.pdf" 1775578179 59927 e426b5316f261aac94913ba510b50504 ""
+  "data/Illustrations/boyer_moore_step2.pdf" 1775579515 53898 56435534e5ef0462f06961a7405f5caa ""
+  "data/Illustrations/boyer_moore_step3.pdf" 1775580023 48881 e7f90f8fe2973d49d7798785b901aa9c ""
   "data/Illustrations/brute-force1.pdf" 1775483508 19061 0eb35cae0e48ae963d98c98ca6b6c999 ""
   "data/Illustrations/brute-force2.pdf" 1775483508 19448 c38c965581a5bfc61d0852b12998381e ""
   "data/Illustrations/brute-force3.pdf" 1775483508 19414 a4673a2d470a549483982f0a16465b39 ""
   "data/Illustrations/brute-force4.pdf" 1775483508 19407 77ef317987de190e391bbe5184ccf8a6 ""
   "data/Illustrations/brute-force5.pdf" 1775483508 19806 a2f29fbbcdbcc482320ce394ac846ab0 ""
+  "data/Illustrations/good-suffix-table_cropped.pdf" 1775576609 30359 1659e17c8d73bab7180c4d793795c1a2 ""
   "data/Illustrations/problem-statement1.pdf" 1775483508 17703 793c6e0b15bdfaf1f729cb1302e6af9c ""
   "data/Illustrations/problem-statement2.pdf" 1775483508 18369 1a636083e92e434030c7af4b74c4bd03 ""
   "data/NearlySorted.pdf" 1775483508 91440 858bbfbff4052a99427f46ad3c338c43 ""
@@ -236,11 +241,11 @@
   "data/Sorted.pdf" 1775483508 90445 7d78c174d531125ae97001bfafd2bf62 ""
   "hcmus-report-template.sty" 1775483508 4845 9e82a6379fb1b5b173c406a8e1fd2a12 ""
   "img/hcmus-logo.png" 1775483508 258629 122747e63e393f11b7f15571540c7d20 ""
-  "main.aux" 1775495752 5287 681cd88c58aa78d0810390f5fa95a6aa "pdflatex"
-  "main.bbl" 1775495739 797 dd800edcf428d7de0618e8e9a6a8a723 "bibtex main"
-  "main.out" 1775495752 1772 23730e6d33ae3193b68508863a166790 "pdflatex"
+  "main.aux" 1775580177 5408 0ab7d0c3db1128e6a6d8752601ff8f3b "pdflatex"
+  "main.bbl" 1775580172 797 dd800edcf428d7de0618e8e9a6a8a723 "bibtex main"
+  "main.out" 1775580177 1661 eaf99c91bf7d257534afde18d4fc9547 "pdflatex"
   "main.tex" 1775483508 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
-  "main.toc" 1775495752 1826 cbb0a38c5832b7ec5384d5b5b9ec3b11 "pdflatex"
+  "main.toc" 1775580177 1844 c0550777f98c5198b2036e8aeb897175 "pdflatex"
   "preamble.tex" 1775483508 595 615fd0392fb7cfa11d353c04dac369d9 ""
   (generated)
   "main.aux"
