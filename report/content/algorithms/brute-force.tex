@@ -56,7 +56,7 @@
     \indent \textbf{Notation:}
         \begin{itemize}
             \item \textbf{Text $T$ (length $n$)}: The main text being searched.
-            \item \textbf{Pattern $P$}: The string that we are looking for.
+            \item \textbf{Pattern $P$ (length $m$)}: The string that we are looking for.
             \item \textbf{Shift ($s$)}: The current offset of the text T.
             \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
         \end{itemize}
@@ -123,7 +123,7 @@
         \begin{tabular}{|l|c|p{8cm}|}
         \hline
         \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
-        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when patterns and text share many prefix characters (e.g., all 'A's). \\ \hline
+        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when patterns (length $m$) and text $T$ share many prefix characters (e.g., all 'A's). \\ \hline
         \textbf{Time (Average)} & $O(K \cdot R \cdot C)$ & In practice, a mismatch usually occurs after only a few character comparisons. \\ \hline
         \textbf{Time (Best)} & $O(K \cdot R \cdot C)$ & The first character of the pattern always results in a mismatch at every shift. \\ \hline
         \textbf{Auxiliary Space} & $O(1)$ & The algorithm uses only a constant amount of extra memory for loop indices. \\ \hline
