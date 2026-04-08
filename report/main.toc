@@ -11,6 +11,7 @@
 \contentsline {subsection}{\numberline {3.2}The Boyer Moore Algorithm}{8}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Introduction \& Application}{8}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Pseudocode}{8}{subsubsection.3.2.2}%
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {3.3}step trace}{9}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Complexity}{13}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Discussion}{13}{subsubsection.3.3.2}%
@@ -26,3 +27,14 @@
 \contentsline {subsection}{\numberline {4.3}Tables and Graphs}{16}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Acknowledgements}{29}{section.5}%
 \contentsline {section}{\numberline {6}References}{30}{section.6}%
+=======
+\contentsline {subsubsection}{\numberline {3.2.3}Step-by-step trace}{9}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Complexity}{13}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Discussion}{13}{subsubsection.3.2.5}%
+\contentsline {section}{\numberline {4}Experimental Results}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Running time}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The number of comparisons}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Tables and Graphs}{14}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Acknowledgements}{27}{section.5}%
+\contentsline {section}{\numberline {6}References}{28}{section.6}%
+>>>>>>> c2218ac0d7f2279cae71dccc56168ebaebd9dad7
