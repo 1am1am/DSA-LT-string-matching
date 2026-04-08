@@ -14,9 +14,15 @@
 \contentsline {subsection}{\numberline {3.3}step trace}{9}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Complexity}{13}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Discussion}{13}{subsubsection.3.3.2}%
-\contentsline {section}{\numberline {4}Experimental Results}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Running time}{14}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The number of comparisons}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Tables and Graphs}{14}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Acknowledgements}{27}{section.5}%
-\contentsline {section}{\numberline {6}References}{28}{section.6}%
+\contentsline {subsection}{\numberline {3.4}The Rabin-Karp Algorithm}{13}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Introduction \& Application}{13}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Pseudocode}{13}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Step-by-step Trace}{14}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Complexity}{14}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.5}Discussion}{15}{subsubsection.3.4.5}%
+\contentsline {section}{\numberline {4}Experimental Results}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Running time}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The number of comparisons}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Tables and Graphs}{16}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Acknowledgements}{29}{section.5}%
+\contentsline {section}{\numberline {6}References}{30}{section.6}%
