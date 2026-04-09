@@ -1,0 +1,190 @@
+\subsection[The Knuth-Morris-Pratt algorithm]{The Knuth-Morris-Pratt algorithm (KMP algorithm)}
+    \subsubsection{Introduction \& Application} %khai niem finite automaton trich tu introduction to algorithm
+        \begin{itemize}
+            \item \textbf{Core idea:} According to Abdeen\cite{abdeen2011algorithm}, the brute-force algorithm works with two pointers; a "text pointer" i
+        and a "pattern pointer" j. For all possible shifts of the pattern P over the text T,
+        compare the pattern characters with the corresponding text characters.
+        If mismatch occurs, i is incremented by 1, and j is reset to 0 and the comparing
+        process is restarted. In the case that all characters match, the algorithm records
+        the position of the match and continues searching for the next possible match.
+            \item \textbf{Real-world applications:}
+            \begin{itemize}
+                \item Text Editors: Using in "Search" or "Find and Replace" features to locate destination words.
+                \item Bioinformatics: Searching for specific DNA.
+                \item Checking for Plagiarism: Comparing documents to find and compare a script or a piece of code with the exact match in a large database.
+            \end{itemize}
+        \end{itemize}
+
+        \subsubsection{Pseudocode}
+            \textbf{Notation:}
+            \begin{itemize}
+                \item \textbf{Text $T$ (R rows, C columns)}: The 2D grid of characters.
+                \item \textbf{Pattern $P$ (K keywords)}: The list of patterns to search for.
+                \item \textbf{Prefix Array $\pi$}: An array storing the lengths of the longest proper prefix that is also a suffix.
+            \end{itemize}
+
+            \textsc{Convert-Grid-To-Strings}($T, R, C$)
+            \begin{algorithmic}[1]
+            \State $ans = \text{empty array}$
+            \Statex
+            \Comment{Extract Rows}
+            \For{$i = 0$ \textbf{to} $R - 1$}
+                \State $tmpString = \text{empty string}$
+                \For{$j = 0$ \textbf{to} $C - 1$}
+                    \State $tmpString = tmpString + T[i][j]$
+                \EndFor
+                \State \text{append } $tmpString$ \text{ to } $ans$
+            \EndFor
+            \Statex
+            \Comment{Extract Columns}
+            \For{$j = 0$ \textbf{to} $C - 1$}
+                \State $tmpString = \text{empty string}$
+                \For{$i = 0$ \textbf{to} $R - 1$}
+                    \State $tmpString = tmpString + T[i][j]$
+                \EndFor
+                \State \text{append } $tmpString$ \text{ to } $ans$
+            \EndFor
+            \State \Return $ans$
+            \end{algorithmic}
+
+            \textsc{Calculate-Position}($idxString, m, R, idx$)
+            \begin{algorithmic}[1]
+            \If{$idxString < R$}
+                \Statex
+                \Comment{Horizontal match (Row extraction)}
+                \State $start = (idxString, idx - 2 \cdot m)$
+                \State $end = (idxString, idx - m - 1)$
+            \Else
+                \Statex
+                \Comment{Vertical match (Column extraction)}
+                \State $start = (idx - 2 \cdot m, idxString - R)$
+                \State $end = (idx - m - 1, idxString - R)$
+            \EndIf
+            \State \Return $(start, end)$
+            \end{algorithmic}
+
+            \textsc{KMP-Algorithm}($T, P, K, R, C$)
+            \begin{algorithmic}[1]
+            \State $pos = \text{array of } K \text{ empty lists}$
+            \State $List\_string = \textsc{Convert-Grid-To-Strings}(T, R, C)$
+            \State $N = List\_string.length$
+            \Statex
+            \For{$idxString = 0$ \textbf{to} $N - 1$}
+                \For{$pIdx = 0$ \textbf{to} $K - 1$}
+                    \State $kmpString = P[pIdx] + \text{`\#'} + List\_string[idxString]$
+                    \State $L = kmpString.length$
+                    \State $m = P[pIdx].length$
+                    \State $\pi = \text{array of size } L \text{ initialized to 0}$
+                    \Statex
+                    \Comment{Compute Prefix Function \& Search}
+                    \For{$i = 1$ \textbf{to} $L - 1$}
+                        \State $j = \pi[i - 1]$
+                        \While{$j > 0$ \textbf{and} $kmpString[j] \neq kmpString[i]$}
+                            \State $j = \pi[j - 1]$
+                        \EndWhile
+                        \If{$kmpString[j] == kmpString[i]$}
+                            \State $j = j + 1$
+                        \EndIf
+                        \State $\pi[i] = j$
+                        \Statex
+                        \Comment{Match found}
+                        \If{$\pi[i] == m$}
+                            \State $matchPos = \textsc{Calculate-Position}(idxString, m, R, i)$
+                            \State \text{append } $matchPos$ \text{ to } $pos[pIdx]$
+                        \EndIf
+                    \EndFor
+                \EndFor
+            \EndFor
+            \State \Return $pos$
+            \end{algorithmic}
+    
+    \subsubsection{Step-by-step trace\cite{CLRS2022}}
+    \indent \textbf{Notation:}
+        \begin{itemize}
+            \item \textbf{Text $T$ (length $n$)}: The main text being searched.
+            \item \textbf{Pattern $P$}: The string that we are looking for.
+            \item \textbf{Shift ($s$)}: The current offset of the text T.
+            \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
+        \end{itemize}
+
+    \indent \textbf{Example:} text $T = [a, a, b, c, a, b, b]$ and pattern $P = [a, b, c]$
+    \begin{itemize}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force1.pdf}
+            \caption{Step 1}
+        \end{figure}
+        \item The first character 'a' matches in both arrays.
+        
+        The second character in text $T$ ('a') does not match the second character in pattern $P$ ('b').
+        
+        Text at the bottom shows the current shift is $s = 0$ and the list of found matches is empty ($Positions = []$).
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force2.pdf}
+            \caption{Step 2}
+        \end{figure}
+        \item All characters in pattern $P$ ('a', 'b', 'c') successfully match the corresponding characters in text $T$ ('a', 'b', 'c').
+        
+        Shift is $s = 1$ and the list of found matches is updated to record this position ($Positions = [(1, 3)]$).
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force3.pdf}
+            \caption{Step 3}
+        \end{figure}
+        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('b') at the current shift position $s = 2$.
+        
+        Skip to the next shift without updating $Positions$.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force4.pdf}
+            \caption{Step 4}
+        \end{figure}
+        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('c') at the current shift position $s = 2$.
+        
+        Skip to the next shift without updating $Positions$.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force5.pdf}
+            \caption{Step 5}
+        \end{figure}
+
+        \item The first two characters in pattern $P$ ('a', 'b') match the corresponding characters in text $T$,
+        but the third character in pattern $P$ ('c') does not match the character in text $T$ ('b') at the current shift position $s = 4$.
+
+        Skip to the next shift without updating $Positions$.
+
+        \item After that, $s$ increases by 1. Because $s = 5$ and $n - m = 7 - 3 = 4$, we have $s > n - m$. The algorithm terminates and returns the list of found matches: $\text{Positions} = [(1, 3)]$.
+    \end{itemize}
+    
+
+    \subsubsection{Complexity}
+        \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|l|c|p{8cm}|}
+        \hline
+        \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
+        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when patterns and text share many prefix characters (e.g., all 'A's). \\ \hline
+        \textbf{Time (Average)} & $O(K \cdot R \cdot C)$ & In practice, a mismatch usually occurs after only a few character comparisons. \\ \hline
+        \textbf{Time (Best)} & $O(K \cdot R \cdot C)$ & The first character of the pattern always results in a mismatch at every shift. \\ \hline
+        \textbf{Auxiliary Space} & $O(1)$ & The algorithm uses only a constant amount of extra memory for loop indices. \\ \hline
+        \end{tabular}
+        \caption{Complexity Analysis of 2D Brute Force Algorithm}
+        \end{table}
+
+    \subsubsection{Discussion}
+    \begin{itemize}
+        \item In scenarios 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
+        Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
+        \item In scenarios 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
+        This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
+        which is much longer compared to scenario 1.
+        \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
+        It is worse for scenarios with a large number of one.
+    \end{itemize}
+        

@@ -2,14 +2,15 @@
 #include "all_headers.h"
 #include "cli_parser.h"
 
-bool test(int K, int R, int C) {
-    Data data;
+bool test(Data data) {
+   /* Data data;
     data.R = R;
     data.C = C;
     data.K = K;
     data.patterns = getPatterns(K, R, C);
     data.text = getText(R, C, data.patterns);
-    cout << "Data(K, R, C): " << K << ' ' << R << ' ' << C << endl;
+    */
+    cout << "Data(K, R, C): " << data.K << ' ' << data.R << ' ' << data.C << endl;
     Result ans = getAlgorithm("bf",  data);
     cout << "Brute_force\n" << "Time ms: " << ans.runningTime << "\nComparisons: " << ans.comparisons << '\n';
     ans = getAlgorithm("kmp",  data);
@@ -110,6 +111,7 @@ int main(int argc, char* argv[]) {
     // scenario1(config);
     // scenario2(config);
     // Test moi thuat
+    /*
     int K = 1, R = 0, C = 0;
     int ArraySizeRC [] = {10, 50, 100, 500};
     int ArraySizeK [] = {1, 10, 50, 100};
@@ -119,22 +121,36 @@ int main(int argc, char* argv[]) {
     bool flag = 1;
     //cout << "tESTT\n";
     //while(cnt < 100 && flag == 1){
-        for(int i = 0; i < n; ++i){
-            R = C = ArraySizeRC[i];
-            flag &= test(K, R, C);
-        }
+       // for(int i = 0; i < n; ++i){
+      //      R = C = ArraySizeRC[i];
+      //      flag &= test(K, R, C);
+      //  }
         
-        R = C = 100;
+     //   R = C = 100;
 
-        for(int i = 0; i < m; ++i){
-            K = ArraySizeK[i];
-            flag &= test(K, R, C);
-        }
+     //   for(int i = 0; i < m; ++i){
+    //        K = ArraySizeK[i];
+    //        flag &= test(K, R, C);
+     //   }
         //if(flag) cout << "Test lan thu " << cnt << " dung!\n";
         //else cout << "Test lan thu " << cnt << " sai!\n";
         //cout << cnt << ' ' << flag << endl;
         //++cnt;
     //}
+    */
+    Data data;
+    Config config;
+    string S = "source/data/scenario";
+    for(int i = 1; i <= 4; ++i){
+        config.inputFile = S + to_string(1) + '_' + to_string(i) + ".txt";
+        readFile(config.inputFile, data);
+        test(data);
+    }
+    for(int i = 1; i <= 4; ++i){
+        config.inputFile = S + to_string(2) + '_' + to_string(i) + ".txt";
+        readFile(config.inputFile, data);
+        test(data);
+    }
 
     return 0;
 }
