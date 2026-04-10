@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.13)  10 APR 2026 22:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.13)  10 APR 2026 23:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -818,14 +818,22 @@ Package hyperref Info: Link coloring ON on input line 4.
 
 \c@lstlisting=\count382
 (content/title.tex
-<img/hcmus-logo.png, id=30, 597.9138pt x 597.9138pt>
+<img/hcmus-logo.png, id=62, 597.9138pt x 597.9138pt>
 File: img/hcmus-logo.png Graphic file (type png)
 <use img/hcmus-logo.png>
 Package pdftex.def Info: img/hcmus-logo.png  used on input line 20.
 (pdftex.def)             Requested size: 179.37552pt x 179.37552pt.
  [1
 
-{C:/Users/nguye/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/hcmus-logo.png>]) (main.toc)
+{C:/Users/nguye/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/hcmus-logo.png>]) (main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (C:\AppDownload\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+ (C:\AppDownload\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -835,14 +843,6 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.16     \newpage
                   [1] (content/group-information.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
- (C:\AppDownload\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
- (C:\AppDownload\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Overfull \hbox (403.74461pt too wide) in paragraph at lines 10--10
 []|[]| 
  []
@@ -881,15 +881,9 @@ Package lettrine.sty Info: Targeted height = 20.66666pt
 (lettrine.sty)             Lettrine height = 23.89851pt (\scalebox {1.4}{\textbf {S}});
 (lettrine.sty)             reported on input line 3.
 
-LaTeX Warning: Citation `hakak2019exact' on page 3 undefined on input line 6.
-
-
-LaTeX Warning: Citation `CLRS2022' on page 3 undefined on input line 11.
-
-
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/problem-statement1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/problem-statement1.pdf, id=52, 963.6pt x 542.025pt>
+<data/Illustrations/problem-statement1.pdf, id=100, 963.6pt x 542.025pt>
 File: data/Illustrations/problem-statement1.pdf Graphic file (type pdf)
 <use data/Illustrations/problem-statement1.pdf>
 Package pdftex.def Info: data/Illustrations/problem-statement1.pdf  used on input line 18.
@@ -897,23 +891,15 @@ Package pdftex.def Info: data/Illustrations/problem-statement1.pdf  used on inpu
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/problem-statement2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/problem-statement2.pdf, id=54, 963.6pt x 542.025pt>
+<data/Illustrations/problem-statement2.pdf, id=102, 963.6pt x 542.025pt>
 File: data/Illustrations/problem-statement2.pdf Graphic file (type pdf)
 <use data/Illustrations/problem-statement2.pdf>
 Package pdftex.def Info: data/Illustrations/problem-statement2.pdf  used on input line 24.
 (pdftex.def)             Requested size: 391.28378pt x 249.57437pt.
-) [3 <./data/Illustrations/problem-statement1.pdf> <./data/Illustrations/problem-statement2.pdf>] (content/algorithms.tex (content/algorithms/brute-force.tex
-
-LaTeX Warning: Citation `abdeen2011algorithm' on page 4 undefined on input line 4.
-
-[4]
-
-LaTeX Warning: Citation `CLRS2022' on page 5 undefined on input line 54.
-
-
+) [3 <./data/Illustrations/problem-statement1.pdf> <./data/Illustrations/problem-statement2.pdf>] (content/algorithms.tex (content/algorithms/brute-force.tex [4]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force1.pdf, id=90, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force1.pdf, id=143, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force1.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force1.pdf>
 Package pdftex.def Info: data/Illustrations/brute-force1.pdf  used on input line 68.
@@ -921,7 +907,7 @@ Package pdftex.def Info: data/Illustrations/brute-force1.pdf  used on input line
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force2.pdf, id=92, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force2.pdf, id=145, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force2.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force2.pdf>
 Package pdftex.def Info: data/Illustrations/brute-force2.pdf  used on input line 79.
@@ -929,7 +915,7 @@ Package pdftex.def Info: data/Illustrations/brute-force2.pdf  used on input line
 [5 <./data/Illustrations/brute-force1.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force3.pdf, id=109, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force3.pdf, id=162, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force3.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force3.pdf>
 Package pdftex.def Info: data/Illustrations/brute-force3.pdf  used on input line 88.
@@ -937,7 +923,7 @@ Package pdftex.def Info: data/Illustrations/brute-force3.pdf  used on input line
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force4.pdf, id=111, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force4.pdf, id=164, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force4.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force4.pdf>
 Package pdftex.def Info: data/Illustrations/brute-force4.pdf  used on input line 97.
@@ -945,7 +931,7 @@ Package pdftex.def Info: data/Illustrations/brute-force4.pdf  used on input line
 [6 <./data/Illustrations/brute-force2.pdf> <./data/Illustrations/brute-force3.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/brute-force5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/brute-force5.pdf, id=138, 963.6pt x 542.025pt>
+<data/Illustrations/brute-force5.pdf, id=191, 963.6pt x 542.025pt>
 File: data/Illustrations/brute-force5.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force5.pdf>
 Package pdftex.def Info: data/Illustrations/brute-force5.pdf  used on input line 106.
@@ -955,19 +941,12 @@ Overfull \hbox (50.84692pt too wide) in paragraph at lines 123--130
  [][] 
  []
 
-[7 <./data/Illustrations/brute-force4.pdf> <./data/Illustrations/brute-force5.pdf>]) (content/algorithms/kmp.tex
-
-LaTeX Warning: Citation `abdeen2011algorithm' on page 8 undefined on input line 4.
-
-[8] [9]
-
-LaTeX Warning: Citation `CLRS2022' on page 10 undefined on input line 101.
-
+[7 <./data/Illustrations/brute-force4.pdf> <./data/Illustrations/brute-force5.pdf>]) (content/algorithms/kmp.tex [8] [9]
 File: data/Illustrations/brute-force1.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force1.pdf>
 Package pdftex.def Info: data/Illustrations/brute-force1.pdf  used on input line 114.
 (pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
-[10]
+ [10]
 File: data/Illustrations/brute-force2.pdf Graphic file (type pdf)
 <use data/Illustrations/brute-force2.pdf>
 Package pdftex.def Info: data/Illustrations/brute-force2.pdf  used on input line 125.
@@ -988,7 +967,7 @@ Package pdftex.def Info: data/Illustrations/brute-force5.pdf  used on input line
  [12] [13]) (content/algorithms/boyer-moore.tex [14]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/Bad_Char_Table.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/Bad_Char_Table.pdf, id=220, 214.12999pt x 135.18504pt>
+<data/Illustrations/Bad_Char_Table.pdf, id=275, 214.12999pt x 135.18504pt>
 File: data/Illustrations/Bad_Char_Table.pdf Graphic file (type pdf)
 <use data/Illustrations/Bad_Char_Table.pdf>
 Package pdftex.def Info: data/Illustrations/Bad_Char_Table.pdf  used on input line 77.
@@ -996,7 +975,7 @@ Package pdftex.def Info: data/Illustrations/Bad_Char_Table.pdf  used on input li
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/good-suffix-table_cropped.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/good-suffix-table_cropped.pdf, id=222, 339.3478pt x 170.57727pt>
+<data/Illustrations/good-suffix-table_cropped.pdf, id=277, 339.3478pt x 170.57727pt>
 File: data/Illustrations/good-suffix-table_cropped.pdf Graphic file (type pdf)
 <use data/Illustrations/good-suffix-table_cropped.pdf>
 Package pdftex.def Info: data/Illustrations/good-suffix-table_cropped.pdf  used on input line 83.
@@ -1004,7 +983,7 @@ Package pdftex.def Info: data/Illustrations/good-suffix-table_cropped.pdf  used 
 [15 <./data/Illustrations/Bad_Char_Table.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/Boyer_moore_step1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/Boyer_moore_step1.pdf, id=239, 547.13411pt x 321.2pt>
+<data/Illustrations/Boyer_moore_step1.pdf, id=294, 547.13411pt x 321.2pt>
 File: data/Illustrations/Boyer_moore_step1.pdf Graphic file (type pdf)
 <use data/Illustrations/Boyer_moore_step1.pdf>
 Package pdftex.def Info: data/Illustrations/Boyer_moore_step1.pdf  used on input line 94.
@@ -1012,7 +991,7 @@ Package pdftex.def Info: data/Illustrations/Boyer_moore_step1.pdf  used on input
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/boyer_moore_step2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/boyer_moore_step2.pdf, id=241, 536.2434pt x 174.21085pt>
+<data/Illustrations/boyer_moore_step2.pdf, id=296, 536.2434pt x 174.21085pt>
 File: data/Illustrations/boyer_moore_step2.pdf Graphic file (type pdf)
 <use data/Illustrations/boyer_moore_step2.pdf>
 Package pdftex.def Info: data/Illustrations/boyer_moore_step2.pdf  used on input line 109.
@@ -1020,7 +999,7 @@ Package pdftex.def Info: data/Illustrations/boyer_moore_step2.pdf  used on input
 [16 <./data/Illustrations/good-suffix-table_cropped.pdf> <./data/Illustrations/Boyer_moore_step1.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/boyer_moore_step3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/boyer_moore_step3.pdf, id=268, 543.50049pt x 197.79897pt>
+<data/Illustrations/boyer_moore_step3.pdf, id=323, 543.50049pt x 197.79897pt>
 File: data/Illustrations/boyer_moore_step3.pdf Graphic file (type pdf)
 <use data/Illustrations/boyer_moore_step3.pdf>
 Package pdftex.def Info: data/Illustrations/boyer_moore_step3.pdf  used on input line 120.
@@ -1028,33 +1007,187 @@ Package pdftex.def Info: data/Illustrations/boyer_moore_step3.pdf  used on input
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/boyer_moore_lastStep.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/boyer_moore_lastStep.pdf, id=270, 566.18527pt x 215.94678pt>
+<data/Illustrations/boyer_moore_lastStep.pdf, id=325, 566.18527pt x 215.94678pt>
 File: data/Illustrations/boyer_moore_lastStep.pdf Graphic file (type pdf)
 <use data/Illustrations/boyer_moore_lastStep.pdf>
 Package pdftex.def Info: data/Illustrations/boyer_moore_lastStep.pdf  used on input line 131.
 (pdftex.def)             Requested size: 366.82715pt x 139.9156pt.
-[17 <./data/Illustrations/boyer_moore_step2.pdf> <./data/Illustrations/boyer_moore_step3.pdf> <./data/Illustrations/boyer_moore_lastStep.pdf>])
+[17 <./data/Illustrations/boyer_moore_step2.pdf> <./data/Illustrations/boyer_moore_step3.pdf> <./data/Illustrations/boyer_moore_lastStep.pdf>]) (content/algorithms/aho-corasick.tex [18] [19]
+File: data/Illustrations/brute-force1.pdf Graphic file (type pdf)
+<use data/Illustrations/brute-force1.pdf>
+Package pdftex.def Info: data/Illustrations/brute-force1.pdf  used on input line 126.
+(pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
+ [20]
+File: data/Illustrations/brute-force2.pdf Graphic file (type pdf)
+<use data/Illustrations/brute-force2.pdf>
+Package pdftex.def Info: data/Illustrations/brute-force2.pdf  used on input line 137.
+(pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
+File: data/Illustrations/brute-force3.pdf Graphic file (type pdf)
+<use data/Illustrations/brute-force3.pdf>
+Package pdftex.def Info: data/Illustrations/brute-force3.pdf  used on input line 146.
+(pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
+ [21]
+File: data/Illustrations/brute-force4.pdf Graphic file (type pdf)
+<use data/Illustrations/brute-force4.pdf>
+Package pdftex.def Info: data/Illustrations/brute-force4.pdf  used on input line 155.
+(pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
+File: data/Illustrations/brute-force5.pdf Graphic file (type pdf)
+<use data/Illustrations/brute-force5.pdf>
+Package pdftex.def Info: data/Illustrations/brute-force5.pdf  used on input line 164.
+(pdftex.def)             Requested size: 391.28378pt x 219.18993pt.
+ [22] [23]) (content/algorithms/rabin-karp.tex [24]
+content/algorithms/rabin-karp.tex:68: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}a
+l.68 ...multicolumn{1}{c|}{\cellcolor{lightgray}a}
+                                                   & \multicolumn{1}{c|}{\ce...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! LaTeX Error: File `content/algorithms/rabin-karp.tex' not found.
+content/algorithms/rabin-karp.tex:68: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}a
+l.68 ...multicolumn{1}{c|}{\cellcolor{lightgray}a}
+                                                   & \multicolumn{1}{c|}{\ce...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
+content/algorithms/rabin-karp.tex:68: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}b
+l.68 ...multicolumn{1}{c|}{\cellcolor{lightgray}b}
+                                                   & \multicolumn{1}{c|}{c} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Enter file name: 
-content/algorithms.tex:7: Emergency stop.
-<read *> 
-         
-l.7     \input{content/algorithms/rabin-karp}
-                                             ^^M
-*** (cannot \read from terminal in nonstop modes)
+content/algorithms/rabin-karp.tex:95: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}a
+l.95 ...multicolumn{1}{c|}{\cellcolor{lightgray}a}
+                                                   & \multicolumn{1}{c|}{\ce...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- 
+content/algorithms/rabin-karp.tex:95: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}b
+l.95 ...multicolumn{1}{c|}{\cellcolor{lightgray}b}
+                                                   & \multicolumn{1}{c|}{\ce...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+content/algorithms/rabin-karp.tex:95: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}c
+l.95 ...multicolumn{1}{c|}{\cellcolor{lightgray}c}
+                                                   & \multicolumn{1}{c|}{a} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+content/algorithms/rabin-karp.tex:100: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}a
+l.100 ...ulticolumn{1}{c|}{\cellcolor{lightgray}a}
+                                                   & \multicolumn{1}{c|}{\ce...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+content/algorithms/rabin-karp.tex:100: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}b
+l.100 ...ulticolumn{1}{c|}{\cellcolor{lightgray}b}
+                                                   & \multicolumn{1}{c|}{\ce...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+content/algorithms/rabin-karp.tex:100: Undefined control sequence.
+\@sharp ->\cellcolor 
+                     {lightgray}c
+l.100 ...ulticolumn{1}{c|}{\cellcolor{lightgray}c}
+                                                   & \multicolumn{3}{l}{} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[25] [26])) [27] (content/experimental-results.tex [28] [29] [30]
+<data/Graph/time1.pdf, id=461, 602.25pt x 372.39125pt>
+File: data/Graph/time1.pdf Graphic file (type pdf)
+<use data/Graph/time1.pdf>
+Package pdftex.def Info: data/Graph/time1.pdf  used on input line 115.
+(pdftex.def)             Requested size: 489.10287pt x 302.44212pt.
+<data/Graph/comp1.pdf, id=462, 602.25pt x 372.39125pt>
+File: data/Graph/comp1.pdf Graphic file (type pdf)
+<use data/Graph/comp1.pdf>
+Package pdftex.def Info: data/Graph/comp1.pdf  used on input line 122.
+(pdftex.def)             Requested size: 489.10287pt x 302.44212pt.
+ [31 <./data/Graph/time1.pdf> <./data/Graph/comp1.pdf
+
+pdfTeX warning: pdflatex (file ./data/Graph/comp1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<data/Graph/time2.pdf, id=500, 602.25pt x 372.39125pt>
+File: data/Graph/time2.pdf Graphic file (type pdf)
+<use data/Graph/time2.pdf>
+Package pdftex.def Info: data/Graph/time2.pdf  used on input line 129.
+(pdftex.def)             Requested size: 489.10287pt x 302.44212pt.
+<data/Graph/comp2.pdf, id=501, 602.25pt x 372.39125pt>
+File: data/Graph/comp2.pdf Graphic file (type pdf)
+<use data/Graph/comp2.pdf>
+Package pdftex.def Info: data/Graph/comp2.pdf  used on input line 136.
+(pdftex.def)             Requested size: 489.10287pt x 302.44212pt.
+) [32 <./data/Graph/time2.pdf> <./data/Graph/comp2.pdf
+
+pdfTeX warning: pdflatex (file ./data/Graph/comp2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (content/acknowledgements.tex) [33] (content/reference.tex (main.bbl)) [34] (main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 5.26317pt have occurred.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 1355F00B3655F8838F9EFE13A11A2C17;2143.
+ ) 
 Here is how much of TeX's memory you used:
- 27287 strings out of 467871
- 501280 string characters out of 5429439
- 911054 words of memory out of 5000000
- 55595 multiletter control sequences out of 15000+600000
- 637436 words of font info for 75 fonts, out of 8000000 for 9000
+ 27434 strings out of 467871
+ 504707 string characters out of 5429439
+ 916109 words of memory out of 5000000
+ 55663 multiletter control sequences out of 15000+600000
+ 638057 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 95i,12n,97p,567b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
-content/algorithms.tex:7:  ==> Fatal error occurred, no output PDF file produced!
+ 95i,20n,97p,782b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nguye\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/AppDownload/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (35 pages, 978968 bytes).
+PDF statistics:
+ 625 PDF objects out of 1000 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
+ 353 words of extra memory for PDF output out of 10000 (max. 10000000)
+
