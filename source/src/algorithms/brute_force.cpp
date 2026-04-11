@@ -33,7 +33,7 @@ std::vector<std::vector<Position>> bruteForce(Data data) {
                 int k = 0;
                 bool isMatched = true;
                 while (k < keyword.size()) {
-                    if (data.text[j + k][i] == keyword[k]) {
+                    if (data.text[j + k][i] != keyword[k]) {
                         isMatched = false;
                     }
                     ++k;
@@ -58,7 +58,7 @@ std::vector<std::vector<Position>> bruteForce(Data data, long long& comparisons)
                 int k = 0;
                 bool isMatched = true;
                 while (k < keyword.size()) {
-                    if (++comparisons && data.text[i][j + k] == keyword[k]) {
+                    if (++comparisons && data.text[i][j + k] != keyword[k]) {
                         isMatched = false;
                     }
                     ++k;
@@ -78,7 +78,7 @@ std::vector<std::vector<Position>> bruteForce(Data data, long long& comparisons)
                 int k = 0;
                 bool isMatched = true;
                 while (k < keyword.size()) {
-                    if (++comparisons && data.text[j + k][i] == keyword[k]) {
+                    if (++comparisons && data.text[j + k][i] != keyword[k]) {
                         isMatched = false;
                     }
                     ++k;
