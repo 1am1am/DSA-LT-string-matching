@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <chrono>
 #include <random>
-#include "algorithms.h"
+#include "../../include/algorithms.h"
 
 #include "data_generator.h"
 

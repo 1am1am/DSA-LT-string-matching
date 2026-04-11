@@ -1,5 +1,5 @@
 #include <iostream>
-#include "algorithms.h"
+#include "../../include/algorithms.h"
 #include <string>
 #include <vector>
 #include <algorithm>

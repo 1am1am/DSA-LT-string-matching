@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "algorithms.h"
-#include "data_generator.h"
+#include "../../include/algorithms.h"
+#include "../../include/data_generator.h"
 
 std::vector<std::vector<Position>> bruteForce(Data data) {
     std::vector<std::vector<Position>> pos(data.K);
