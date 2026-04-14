@@ -1,9 +1,9 @@
-dz: (3,3) -> (3,4); (1,1) -> (2,1); (4,8) -> (5,8);
-kyumiusbn: not found
-xsnthd: (1,3) -> (1,8);
-jgojl: not found
-wnaezm: (9,3) -> (9,8);
+oktxsbnmlfkfxl: not found
+modvsiqnpnzfsvetasdqqnrsyxaidektfcmidxrs: not found
+nndprslhefmdnmjhdcebvthguuftbtijabbfy: not found
+ccwxjiye: (4,27) -> (4,34); (7,38) -> (7,45); (15,11) -> (15,18); (17,6) -> (17,13); (39,10) -> (46,10);
+nipcqozmkfxehhhujsikxgjjydidzxhpeybfzk: (30,0) -> (30,37);
 -------------------------
 Algorithm: Brute Force
-Comparisons: 574
-Execution Time: 0.01 ms.
+Comparisons: 12371
+Execution Time: 0.21 ms.

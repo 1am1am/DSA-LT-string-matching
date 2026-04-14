@@ -99,13 +99,13 @@ bool test(Data data) {
 
 int main(int argc, char* argv[]) {
     //g++ -I source/include source/src/algorithms/*.cpp source/src/processing/*.cpp source/main.cpp -o source/07.exe -std=c++17
-   /* Config config = getCommand(argc, argv);
+   Config config = getCommand(argc, argv);
     Data data;
     readFile(config.inputFile, data);
     Result result = getAlgorithm(config.algorithm, data);
-    writeOutputFile(config.outputFile, config.algorithm, data, result);*/
+    writeOutputFile(config.outputFile, config.algorithm, data, result);
 
-    //crossword.exe -a bf -i source/data/scenario1_1.txt -o output.txt --> command de chay
+    //crossword.exe -a bf -i source/data/scenario1_2.txt -o output.txt --> command de chay
 
  
     // scenario1(config);
@@ -138,19 +138,19 @@ int main(int argc, char* argv[]) {
         //++cnt;
     //}
     */
-    Data data;
-    Config config;
-    string S = "source/data/scenario";
-    for(int i = 1; i <= 4; ++i){
-        config.inputFile = S + to_string(1) + '_' + to_string(i) + ".txt";
-        readFile(config.inputFile, data);
-        test(data);
-    }
-    for(int i = 1; i <= 4; ++i){
-        config.inputFile = S + to_string(2) + '_' + to_string(i) + ".txt";
-        readFile(config.inputFile, data);
-        test(data);
-    }
+    // Data data;
+    // Config config;
+    // string S = "source/data/scenario";
+    // for(int i = 1; i <= 4; ++i){
+    //     config.inputFile = S + to_string(1) + '_' + to_string(i) + ".txt";
+    //     readFile(config.inputFile, data);
+    //     test(data);
+    // }
+    // for(int i = 1; i <= 4; ++i){
+    //     config.inputFile = S + to_string(2) + '_' + to_string(i) + ".txt";
+    //     readFile(config.inputFile, data);
+    //     test(data);
+    // }
 
     return 0;
 }
