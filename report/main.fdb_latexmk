@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1775899834.21206 "main.aux" "main.bbl" "main" 1775899834.5347 2
+["bibtex main"] 1775899834.21206 "main.aux" "main.bbl" "main" 1776247039.4688 2
   "./bibliography/bibliography.bib" 1775400048 973 a70797653ab79fde376947c03980063e ""
   "C:/Users/Lam/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1775899826 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.aux" 1776247038 10500 89690c5da2956a7693b6c745625cce47 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1775899335.08838 "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" "main.pdf" "main" 1775899338.83002 2
+["pdflatex"] 1776247032.31164 "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" "main.pdf" "main" 1776247039.46959 2
   "C:/Users/Lam/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775832007 88569 856d9e47966de67c09a5002b03bd4e44 ""
   "C:/Users/Lam/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1767538571 14064 66704dd2a8dd29001f9f2fbfb85c1247 ""
   "C:/Users/Lam/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1767538303 13332518 e8d974c03b4027776d43f9479ed866db ""
@@ -214,13 +214,13 @@
   "content/algorithms/boyer-moore.tex" 1775654912 8215 e79eb9cc92d9478ca8353970ebe259d0 ""
   "content/algorithms/brute-force.tex" 1775741261 8149 eddbeb7729717c1d7523ad4c538a9c16 ""
   "content/algorithms/kmp.tex" 1775740078 10150 07f2a9ebf4c7a2416456c70bc57d6911 ""
-  "content/algorithms/rabin-karp.tex" 1775899323 8004 2689cf75ac52a0e04964419a8aa1247f ""
+  "content/algorithms/rabin-karp.tex" 1775899832 8004 2689cf75ac52a0e04964419a8aa1247f ""
   "content/experimental-results.tex" 1775899323 8303 1bbb5e428672f252dbdad2f2af9b442e ""
   "content/group-information.tex" 1775386212 1352 446d6bb391aab3cb6013b479b7fa22b8 ""
   "content/problem-statement.tex" 1775400269 1796 d68a645d5af17ce7aa4ad024857c3990 ""
   "content/reference.tex" 1773671398 90 f5cff3b0c5d1f7bf4229caf30ff79be0 ""
   "content/title.tex" 1775655062 1491 8160d3c6ecaa809d630b737b748dee72 ""
-  "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" 1775399979 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
+  "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" 1776247035 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
   "data/Graph/comp1.pdf" 1775899323 42276 63c50d7a92e32d9f7012c354bb0a974b ""
   "data/Graph/comp2.pdf" 1775899323 40390 f7daa8a6bb4461a1236ec7ea87b312ef ""
   "data/Graph/time1.pdf" 1775899323 42336 cc5c3697f32d5232f657352a077f09ee ""
@@ -240,11 +240,11 @@
   "data/Illustrations/problem-statement2.pdf" 1775316941 18369 1a636083e92e434030c7af4b74c4bd03 ""
   "hcmus-report-template.sty" 1775400235 4845 9e82a6379fb1b5b173c406a8e1fd2a12 ""
   "img/hcmus-logo.png" 1773419248 258629 122747e63e393f11b7f15571540c7d20 ""
-  "main.aux" 1775899826 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.aux" 1776247038 10500 89690c5da2956a7693b6c745625cce47 "pdflatex"
   "main.bbl" 1775899834 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
-  "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1775399979 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
-  "main.toc" 0 -1 0 "pdflatex"
+  "main.out" 1776247038 2143 1355f00b3655f8838f9efe13a11a2c17 "pdflatex"
+  "main.tex" 1776247035 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
+  "main.toc" 1776247038 3519 1d186d0863d338ea7ffe2d877af3d1bc "pdflatex"
   "preamble.tex" 1775384169 595 615fd0392fb7cfa11d353c04dac369d9 ""
   (generated)
   "main.aux"
