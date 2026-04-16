@@ -2,7 +2,10 @@
 
 \subsubsection{Introduction \& Application}
 \begin{itemize}
-    \item \textbf{Core idea}: The Rabin-Karp algorithm uses a rolling hash function to find occurrences of a pattern $P$ within a text $T$. Instead of comparing the pattern character by character for all possible shifts, it calculates a hash value for the pattern and a hash value for each window of the text. If the hash values match, it performs a character-by-character comparison to verify if it is a true match or a hash collision. The key advantage is that the hash value of the next window can be computed in $\mathcal{O}(1)$ time by dropping the first character and appending the new character.
+    \item \textbf{Core idea}: The Rabin-Karp algorithm uses a rolling hash function to find occurrences of a pattern $P$ within a text $T$.
+    Instead of comparing the pattern character by character for all possible shifts, it calculates a hash value for the pattern and a hash value for each window of the text.
+    If the hash values match, it performs a character-by-character comparison to verify if it is a true match or a hash collision.
+    The key advantage is that the hash value of the next window can be computed in $\mathcal{O}(1)$ time by dropping the first character and appending the new character.
     \item \textbf{Real-world applications}:
     \begin{itemize}
         \item Plagiarism Detection: Comparing documents to find exact matches of sentences or paragraphs in a large database of academic papers.
@@ -19,32 +22,50 @@
     \item \textbf{Base $d$}: The number of characters in the alphabet (e.g., $d = 256$ for ASCII).
 \end{itemize}
 
-\textsc{Rabin-Karp-Matcher}($T, P, d, q$)
+\textsc{Rabin-Karp-2D-Matcher}($T, P, d, q$)
 \begin{algorithmic}[1]
-\State $n = \mathrm{length}[T]$
-\State $m = \mathrm{length}[P]$
-\State $h = d^{m-1} \bmod q$
-\State $p\_hash = 0$ 
-\State $t\_hash = 0$ 
-\For{$i = 1$ \textbf{to} $m$}
-    \State $p\_hash = (d \cdot p\_hash + P[i]) \bmod q$
-    \State $t\_hash = (d \cdot t\_hash + T[i]) \bmod q$
-\EndFor
-\For{$s = 0$ \textbf{to} $n - m$}
-    \If{$p\_hash == t\_hash$}
-        \If{$P[1..m] == T[s+1 .. s+m]$}
-            \State append $s$ to $Positions$
-        \EndIf
+\State $R = \mathrm{rows}[T]$, $C = \mathrm{cols}[T]$, $K = \mathrm{count}[P]$
+\For{$p\_idx = 0$ \textbf{to} $K - 1$}
+    \State $pat = P[p\_idx]$
+    \State $M = \mathrm{length}[pat]$
+    \State $h = d^{M-1} \bmod q$
+    \State $p\_hash = \text{hash of } pat$
+    
+    \State \Comment{\textbf{Horizontal Search}}
+    \If{$M \le C$} 
+        \For{$r = 0$ \textbf{to} $R - 1$}
+            \State $t\_hash = \text{hash of } T[r][0..M-1]$
+            \For{$c = 0$ \textbf{to} $C - M$}
+                \If{$p\_hash == t\_hash$ \textbf{and} $pat == T[r][c..c+M-1]$}
+                    \State append $(r, c)$ to $Positions$
+                \EndIf
+                \If{$c < C - M$}
+                    \State $t\_hash = (d \cdot (t\_hash - T[r][c] \cdot h) + T[r][c+M]) \bmod q$
+                    \If{$t\_hash < 0$} $t\_hash = t\_hash + q$ \EndIf
+                \EndIf
+            \EndFor
+        \EndFor
     \EndIf
-    \If{$s < n - m$}
-        \State $t\_hash = (d \cdot (t\_hash - T[s+1] \cdot h) + T[s+m+1]) \bmod q$
-        \If{$t\_hash < 0$}
-            \State $t\_hash = t\_hash + q$
-        \EndIf
+    
+    \State \Comment{\textbf{Vertical Search}}
+    \If{$M \le R$} 
+        \For{$c = 0$ \textbf{to} $C - 1$}
+            \State $t\_hash = \text{hash of } T[0..M-1][c]$
+            \For{$r = 0$ \textbf{to} $R - M$}
+                \If{$p\_hash == t\_hash$ \textbf{and} $pat == T[r..r+M-1][c]$}
+                    \State append $(r, c)$ to $Positions$
+                \EndIf
+                \If{$r < R - M$}
+                    \State $t\_hash = (d \cdot (t\_hash - T[r][c] \cdot h) + T[r+M][c]) \bmod q$
+                    \If{$t\_hash < 0$} $t\_hash = t\_hash + q$ \EndIf
+                \EndIf
+            \EndFor
+        \EndFor
     \EndIf
 \EndFor
 \end{algorithmic}
-\subsubsection{Step-by-step trace}
+
+\subsubsection{Step-by-step trace (1D Example for Simplicity)}
 
 \textbf{Notation:}
 \begin{itemize}
@@ -54,10 +75,11 @@
     \item \textbf{Positions ($[s_1, s_2, \dots]$)}: A list storing the indices where a complete match is found.
 \end{itemize}
 
-\textbf{Example:} text $T = [a, a, b, c, a, b, b]$ and pattern $P = [a, b, c]$. \\
-For simplicity, we map characters to integers ($a=1, b=2, c=3$), set base $d=10$, and prime $q=13$. \\
+\textbf{Example:} text $T = [a, a, b, c, a, b, b]$ and pattern $P = [a, b, c]$.
+\\
+For simplicity, we map characters to integers ($a=1, b=2, c=3$), set base $d=10$, and prime $q=13$.
+\\
 Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bmod 13 = \mathbf{6}$.
-
 \vspace{0.5cm}
 \begin{table}[H]
 \centering
@@ -68,7 +90,7 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \multicolumn{1}{c|}{text T} & \multicolumn{1}{c|}{\cellcolor{lightgray}a} & \multicolumn{1}{c|}{\cellcolor{lightgray}a} & \multicolumn{1}{c|}{\cellcolor{lightgray}b} & \multicolumn{1}{c|}{c} & \multicolumn{1}{c|}{a} & \multicolumn{1}{c|}{b} & \multicolumn{1}{c|}{b} \\
 \cline{2-8}
 \multicolumn{8}{c}{} \\[-1ex]
-\multicolumn{1}{c}{} & \multicolumn{3}{c}{$t\_hash = 4 \neq p\_hash$} & \multicolumn{4}{l}{} \\
+\multicolumn{1}{c}{} & \multicolumn{3}{c}{$t\_hash = \mathbf{8} \neq p\_hash$} & \multicolumn{4}{l}{} \\
 \cline{2-4}
 \multicolumn{1}{c|}{pattern P $\xrightarrow{s=0}$} & \multicolumn{1}{c|}{a} & \multicolumn{1}{c|}{b} & \multicolumn{1}{c|}{c} & \multicolumn{4}{l}{} \\
 \cline{2-4}
@@ -80,8 +102,9 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \end{figure}
 
 \begin{itemize}
-    \item The current text window is $T[0..2] = [a, a, b]$. The calculated hash is $t\_hash = 4$.
-    \item Since $t\_hash \neq p\_hash$ ($4 \neq 6$), there is no need to compare characters.
+    \item The current text window is $T[0..2] = [a, a, b]$.
+    The calculated hash is $t\_hash = (1\cdot 10^2 + 1\cdot 10 + 2) \bmod 13 = 112 \bmod 13 = \mathbf{8}$.
+    \item Since $t\_hash \neq p\_hash$ ($8 \neq 6$), there is no need to compare characters.
     \item Text at the bottom shows the current shift is $s=0$ and the list of found matches is empty ($Positions = []$).
 \end{itemize}
 
@@ -107,7 +130,8 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \end{figure}
 
 \begin{itemize}
-    \item The rolling hash is updated in $\mathcal{O}(1)$ time. The new window is $T[1..3] = [a, b, c]$ with $t\_hash = 6$.
+    \item The rolling hash is updated in $\mathcal{O}(1)$ time.
+    The new window is $T[1..3] = [a, b, c]$ with $t\_hash = 6$.
     \item Since $t\_hash == p\_hash$ ($6 == 6$), the algorithm performs a secondary character-by-character check. All characters match successfully.
     \item Shift is $s=1$ and the list of found matches is updated to record this position ($Positions = [1]$).
 \end{itemize}
@@ -136,8 +160,6 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \subsubsection{Discussion}
 \begin{itemize}
     \item In \textbf{Scenario 1} (Impact of Grid Size), where the number of patterns $K$ is small and the grid scales from $10 \times 10$ to $500 \times 500$, the Rabin-Karp algorithm is highly efficient. Due to its $\mathcal{O}(1)$ rolling hash update, the running time behaves almost linearly, similar to $\mathcal{O}(R \cdot C)$.
-    
     \item In \textbf{Scenario 2} (Impact of Dictionary Size), where the grid is fixed at $100 \times 100$ and $K$ increases, our specific implementation loops through the grid separately for each pattern. Therefore, the execution time scales linearly with $K$. While this is faster than Brute-Force in terms of raw character comparisons, it does not fully exploit Rabin-Karp's multi-pattern matching potential (which could theoretically search all patterns simultaneously using a unified hash table).
-    
     \item \textbf{In conclusion}, the Rabin-Karp algorithm provides a significant speedup over Brute-Force by using mathematical hashing to filter out unnecessary comparisons. It is an excellent choice when dealing with large texts, provided a robust prime number $q$ is chosen to avoid worst-case hash collision degradation.
 \end{itemize}
