@@ -5,9 +5,9 @@
 #include <algorithm>
 #include <chrono>
 #include <random>
-#include "algorithms.h"
+#include "../../include/algorithms.h"
 
-#include "data_generator.h"
+#include "../../include/data_generator.h"
 
 const int RANDOM_CHAR = 'z' - 'a';
 const int MAX_RANDOM_POS = 10; 

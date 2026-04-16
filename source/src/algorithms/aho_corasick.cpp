@@ -1,6 +1,6 @@
 #include <iostream>
-#include "algorithms.h"
-#include "data_generator.h"
+#include "../../include/algorithms.h"
+#include "../../include/data_generator.h"
 
 using namespace std;
 

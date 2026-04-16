@@ -1,4 +1,4 @@
-#include "algorithms.h"
+#include "../../include/algorithms.h"
 using namespace std;
 
 vector<vector<Position>> rabinKarp(Data data, long long& comparisons) {
