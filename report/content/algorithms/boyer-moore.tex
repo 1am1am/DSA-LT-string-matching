@@ -1,4 +1,4 @@
-\subsection[The Boyer Moore Algorithm]{The Boyer Moore Algorithm}
+\subsection[The Boyer Moore Algorithm]{The Boyer Moore Algorithm}{\cite{ElMabrouk1996}}
     \subsubsection{Introduction \& Application}
         \begin{itemize}
             \item \textbf{Core idea:} The Boyer Moore Algorithm is a practical method to find patterns. This algorithm is the combination of three main ideas comprising scanning the pattern in reverse order, bad character heuristic and good suffix heuristic. This speeds up the searching process
@@ -91,7 +91,7 @@
         \item Step 2: Compare the patterns and make shifts based on preprocessing values.
          \begin{figure}[H]
             \centering
-            \includegraphics[width=0.75\textwidth, clip]{data/Illustrations/Boyer_moore_step1.pdf}
+            \includegraphics[width=0.85\textwidth, clip]{data/Illustrations/Boyer_moore_step1.pdf}
             \caption{compare pattern from right to left}
 
         \end{figure}
@@ -106,7 +106,7 @@
         \item \textbf{Continue searching process}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.75\textwidth, clip]{data/Illustrations/boyer_moore_step2.pdf}
+            \includegraphics[width=0.85\textwidth, clip]{data/Illustrations/boyer_moore_step2.pdf}
             \caption{compare pattern}
 
         \end{figure}
@@ -117,7 +117,7 @@
         \item  \textbf{Shift by 4 characters}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.75\textwidth, clip]{data/Illustrations/boyer_moore_step3.pdf}
+            \includegraphics[width=0.85\textwidth, clip]{data/Illustrations/boyer_moore_step3.pdf}
             \caption{Make larger shift by using good suffix heuristic}
 
         \end{figure}
