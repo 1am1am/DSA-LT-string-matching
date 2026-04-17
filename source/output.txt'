@@ -1,0 +1,14 @@
+aylpxlcwaprfpujcigbabycqdodfrkzmmszonvmxddoy: (90,1) -> (90,44);
+fjvvhxowwkwsxmqqgx: (4,67) -> (4,84); (71,1) -> (88,1);
+dtxtxikhmqdsnilxqpwjgcolpwtkyxcsbxqfohacdyxnpyrgxxsyrtpoyikmvspwijfimcxzgfwcebqrihhdr: not found
+ppqerwebljgqscnianlwyhtmtewkckmicyjpwtiaywflsycjpbthvuzimmdeinvkduhzymqttgyiubgwsh: not found
+cbkdvgeqlkjdtanhzktsxtlrbitmftksijhtfjpbwjritekcdtgozxpxjgcjyacepqncasqqnbqplefprrntrpbxftmuvobqtu: not found
+boodlavidgafqwdkwoiiqqigoswyyyrutpcrvogclpxgaaqwlkxepxhqqmgnenniow: not found
+lyrwdlqeysntrqgoyzbeotznawjcwldsnyhyjtadzlrivmqdsos: not found
+ecprktgdbltouefoqemn: (8,3) -> (8,22); (16,70) -> (16,89); (19,67) -> (19,86); (16,10) -> (35,10); (79,54) -> (98,54);
+mnulprkqlczqlvqpzifjaqvlnoueofqtejyqqmdeaen: (73,8) -> (73,50); (0,12) -> (42,12); (55,68) -> (97,68);
+iefbeqsofryfanqauxelmqyqrlfilwdpileqhtnhvwowoegojduewufcqpumecyijteqhyk: (51,1) -> (51,71); (64,13) -> (64,83);
+-------------------------
+Algorithm: Boyer-Moore
+Comparisons: 7001
+Execution Time: 2.09 ms.

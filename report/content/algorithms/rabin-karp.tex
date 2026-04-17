@@ -1,5 +1,5 @@
+% !TEX root = ../../main.tex
 \subsection{The Rabin-Karp Algorithm}
-
 \subsubsection{Introduction \& Application}
 \begin{itemize}
     \item \textbf{Core idea}: The Rabin-Karp algorithm uses a rolling hash function to find occurrences of a pattern $P$ within a text $T$.
@@ -32,7 +32,7 @@
     \State $p\_hash = \text{hash of } pat$
     
     \State \Comment{\textbf{Horizontal Search}}
-    \If{$M \le C$} 
+    \If{$M \le C$}  
         \For{$r = 0$ \textbf{to} $R - 1$}
             \State $t\_hash = \text{hash of } T[r][0..M-1]$
             \For{$c = 0$ \textbf{to} $C - M$}
@@ -41,7 +41,9 @@
                 \EndIf
                 \If{$c < C - M$}
                     \State $t\_hash = (d \cdot (t\_hash - T[r][c] \cdot h) + T[r][c+M]) \bmod q$
-                    \If{$t\_hash < 0$} $t\_hash = t\_hash + q$ \EndIf
+                    \If{$t\_hash < 0$}
+                        \State $t\_hash = t\_hash + q$
+                    \EndIf
                 \EndIf
             \EndFor
         \EndFor

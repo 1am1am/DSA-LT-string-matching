@@ -14,8 +14,8 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Step-by-step trace\cite {CLRS2022}}{10}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.4}Complexity}{13}{subsubsection.3.2.4}%
 \contentsline {subsubsection}{\numberline {3.2.5}Discussion}{13}{subsubsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.3}The Boyer Moore Algorithm}{14}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Introduction \& Application}{14}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3}The Boyer Moore Algorithm}{13}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Introduction \& Application}{13}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Pseudocode}{14}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Step-by-step trace}{15}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}Complexity}{18}{subsubsection.3.3.4}%
