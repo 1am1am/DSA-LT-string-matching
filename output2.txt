@@ -1,0 +1,9 @@
+pplwhyvkzhvumnltnlcsnuldbvmnwqibvsvvuuwfzhesdmwkwcanhdwtitphhsoenuqantxbrrwwefiyuqkaswgntqxmvipsadzq: (70,0) -> (70,99); (88,209) -> (187,209); (336,400) -> (435,400);
+lhufzzvv: (441,236) -> (448,236);
+luerwcrqitzqucgljylosnyzhslhdbzjowekavwbsfrtutxecqzzcnmkdlhbbixqjdkxcioeyopficmscdjjvrauscjmwlmbincdmllmmyhybjthvdyyxvderihkeleidtiqcuuuddfguawtehfktwprgefayvtaocgthqiydzidlivumuqznvahwppabdbzfkvbrooolyxwcntvmvoppryyhkurfodtgzszrlkdpjkochinbjgnxvggsrvlrzmkezjoaqzyfoshwsfmcqvlycgqrgegjtiybk: (158,475) -> (447,475);
+woyyfgmxfnueftdzdjtysbjwltehxoazpnlnsdfunaagxkazwpnmugrymmbwvnmkwnshdlezqbfcnylqbpovkwwiyiwbpslkkhxmhhohshlpmwubrbnpyksouhuaahfhafaly: (105,60) -> (237,60);
+jjwjcgmpaytktljebboexnnrlrbwddcybsqhvmilzlefknrajbuedldeeivtuhpvoqwtemkaatjmcqsnsvzxrwmehohqhulsoseynhzedbkkijyeszflkzkewdgdlovbdfepexzyounidbpdgjowndgeumhqmzzwagpdmltczndslvwjlxlglmkkgtyeljtybfinfcamwpkkcciysgikeqingjmdhlqxcqumzmuvslmgdzs: (55,66) -> (55,304); (301,182) -> (301,420); (460,193) -> (460,431);
+-------------------------
+Algorithm: KMP
+Comparisons: 6669643
+Execution Time: 19.21 ms.
