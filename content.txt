@@ -1,0 +1,19 @@
+KMP
+Concept:
+Explanation
+Time complexity: O(s + d) (length of string S and D):
+Pseudo code:
+References: 
+VNOI
+CPP AlGORITHM
+file:///C:/Users/Admin/Downloads/introduction-to-algorithms-3rd-edition.pdf
+
+Aho corasick
+Concept:
+Explanation
+Time complexity:
+Pseudo code:
+References:
+VNOI
+CPP AlGORITHM
+file:///C:/Users/Admin/Downloads/introduction-to-algorithms-3rd-edition.pdf
