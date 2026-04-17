@@ -11,6 +11,16 @@ Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT Press, Cambridge, MA, 4th edition, 2022.
 
+\bibitem{cormen2022introduction}
+Thomas~H Cormen, Charles~E Leiserson, Ronald~L Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT press, 4th edition, 2022.
+
+\bibitem{ElMabrouk1996}
+Nadia El-Mabrouk and Maxime Crochemore.
+\newblock Boyer-moore strategy to efficient approximate string matching.
+\newblock October 1996.
+
 \bibitem{hakak2019exact}
 Saqib~Iqbal Hakak, Amirrudin Kamsin, Palaiahnakote Shivakumara, Gulshan~Amin
   Gilkar, Wazir~Zada Khan, and Muhammad Imran.
