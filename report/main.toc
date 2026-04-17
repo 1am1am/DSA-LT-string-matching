@@ -14,8 +14,8 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Step-by-step trace\cite {CLRS2022}}{10}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.4}Complexity}{13}{subsubsection.3.2.4}%
 \contentsline {subsubsection}{\numberline {3.2.5}Discussion}{13}{subsubsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.3}The Boyer Moore Algorithm}{14}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Introduction \& Application}{14}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3}The Boyer Moore Algorithm}{13}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Introduction \& Application}{13}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Pseudocode}{14}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Step-by-step trace}{15}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}Complexity}{18}{subsubsection.3.3.4}%
@@ -29,15 +29,9 @@
 \contentsline {subsection}{\numberline {3.5}The Rabin-Karp Algorithm}{24}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Introduction \& Application}{24}{subsubsection.3.5.1}%
 \contentsline {subsubsection}{\numberline {3.5.2}Pseudocode}{24}{subsubsection.3.5.2}%
-<<<<<<< HEAD
 \contentsline {subsubsection}{\numberline {3.5.3}Step-by-step trace (1D Example for Simplicity)}{25}{subsubsection.3.5.3}%
 \contentsline {subsubsection}{\numberline {3.5.4}Complexity}{27}{subsubsection.3.5.4}%
 \contentsline {subsubsection}{\numberline {3.5.5}Discussion}{27}{subsubsection.3.5.5}%
-=======
-\contentsline {subsubsection}{\numberline {3.5.3}Step-by-step trace}{25}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Complexity}{26}{subsubsection.3.5.4}%
-\contentsline {subsubsection}{\numberline {3.5.5}Discussion}{26}{subsubsection.3.5.5}%
->>>>>>> 2cd69c766d960ee5003110024748c078d74174c1
 \contentsline {section}{\numberline {4}Experimental Results}{28}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Experimental Data}{28}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Evaluation}{29}{subsection.4.2}%
