@@ -14,7 +14,7 @@ Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
 \bibitem{ElMabrouk1996}
 Nadia El-Mabrouk and Maxime Crochemore.
 \newblock Boyer-moore strategy to efficient approximate string matching.
-\newblock October 1996.
+\newblock {\em Lecture Notes in Computer Science}, October 1996.
 
 \bibitem{hakak2019exact}
 Saqib~Iqbal Hakak, Amirrudin Kamsin, Palaiahnakote Shivakumara, Gulshan~Amin
