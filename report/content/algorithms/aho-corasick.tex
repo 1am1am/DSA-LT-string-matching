@@ -1,12 +1,10 @@
 \subsection[The Aho-Corasick algorithm]{The Aho-Corasick algorithm}
     \subsubsection{Introduction \& Application}
         \begin{itemize}
-            \item \textbf{Core idea:} According to Abdeen\cite{abdeen2011algorithm}, the brute-force algorithm works with two pointers; a "text pointer" i
-        and a "pattern pointer" j. For all possible shifts of the pattern P over the text T,
-        compare the pattern characters with the corresponding text characters.
-        If mismatch occurs, i is incremented by 1, and j is reset to 0 and the comparing
-        process is restarted. In the case that all characters match, the algorithm records
-        the position of the match and continues searching for the next possible match.
+            \item \textbf{Core idea:} Aho-Corasick is a Trie with KMP failure links added in. 
+            It builds a Trie tree for all given patterns and links nodes to the longest proper suffix that is also a prefix in the Trie. 
+            If the algorithm hits a mismatch while processing, it just jumps to the next possible suffix by following the link instead of starting over. 
+            This keeps the search moving forward in one pass and if it reaches a output-node,and if it reaches an output-node, it identifies a pattern match within the text.
             \item \textbf{Real-world applications:}
             \begin{itemize}
                 \item Text Editors: Using in "Search" or "Find and Replace" features to locate destination words.
@@ -173,30 +171,31 @@
         \item After that, $s$ increases by 1. Because $s = 5$ and $n - m = 7 - 3 = 4$, we have $s > n - m$. The algorithm terminates and returns the list of found matches: $\text{Positions} = [(1, 3)]$.
     \end{itemize}
     
-
     \subsubsection{Complexity}
-        \begin{table}[H]
-        \centering
-        \renewcommand{\arraystretch}{1.5}
-        \begin{tabular}{|l|c|p{8cm}|}
-        \hline
-        \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
-        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when patterns and text share many prefix characters (e.g., all 'A's). \\ \hline
-        \textbf{Time (Average)} & $O(K \cdot R \cdot C)$ & In practice, a mismatch usually occurs after only a few character comparisons. \\ \hline
-        \textbf{Time (Best)} & $O(K \cdot R \cdot C)$ & The first character of the pattern always results in a mismatch at every shift. \\ \hline
-        \textbf{Auxiliary Space} & $O(1)$ & The algorithm uses only a constant amount of extra memory for loop indices. \\ \hline
-        \end{tabular}
-        \caption{Complexity Analysis of 2D Brute Force Algorithm}
-        \end{table}
+    \begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|c|p{8cm}|}
+    \hline
+    \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
+    \textbf{Time (Worst)} & $O(m \cdot R \cdot C)$ & Without dictionary links, we must traverse failure links back to the root at every step. 
+    In the worst case (e.g., patterns are prefixes of each other), we might check $m$ nodes for every character in the grid. \\ \hline
+    \textbf{Time (Average)} & $O(R \cdot C)$ & In a random text, most steps do not find a match. This means we rarely need to climb the failure links, and the search stays near the root of the Trie. \\ \hline
+    \textbf{Time (Best)} & $O(R \cdot C)$ & Occurs when characters in the grid never match any first character in the Trie, so the algorithm only does one comparison per index. \\ \hline
+    \textbf{Auxiliary Space} & $O(\sum |P|)$ & The algorithm requires memory to store the Trie tree. The number of nodes is equal to the total length of all patterns added to the system. \\ \hline
+    \end{tabular}
+    \caption{Complexity Analysis of Aho-Corasick Algorithm}
+    \end{table}
 
     \subsubsection{Discussion}
     \begin{itemize}
-        \item In scenarios 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
-        Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
-        \item In scenarios 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
-        This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
-        which is much longer compared to scenario 1.
-        \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
-        It is worse for scenarios with a large number of one.
+        \item In Scenario 1, the number of patterns $K$ is small and the text size ranges from $10 \times 10$ to $500 \times 500$. 
+        The Aho-Corasick algorithm is not time-efficient in this case, and it takes second place among algorithms that consume the most time to run.
+        \item In Scenario 2, the number of patterns $K$ is large and the text is fixed at $100 \times 100$. 
+        This scenario is the opposite of the last case; when $K$ becomes larger, Aho-Corasick's running time remains stable, which makes it the fastest algorithm as $K$ increases.
+        \item In conclusion, the Aho-Corasick algorithm is more suitable for scenarios where $K$ increases over time. 
+        When there are many patterns to query, it is more efficient because it is usually used for cases with many string matching queries on a set of patterns.
+        \item Besides that, in both scenarios, it does not rely on character comparisons, so it is efficient for string-matching problems with a high comparison cost.
+        \item So the Aho-Corasick algorithm is one of the best solutions for this problem.
     \end{itemize}
         

@@ -1,12 +1,11 @@
 \subsection[The Knuth-Morris-Pratt algorithm]{The Knuth-Morris-Pratt algorithm (KMP algorithm)}
     \subsubsection{Introduction \& Application} %khai niem finite automaton trich tu introduction to algorithm
-        \begin{itemize}
-            \item \textbf{Core idea:} According to Abdeen\cite{abdeen2011algorithm}, the brute-force algorithm works with two pointers; a "text pointer" i
-        and a "pattern pointer" j. For all possible shifts of the pattern P over the text T,
-        compare the pattern characters with the corresponding text characters.
-        If mismatch occurs, i is incremented by 1, and j is reset to 0 and the comparing
-        process is restarted. In the case that all characters match, the algorithm records
-        the position of the match and continues searching for the next possible match.
+        \begin{itemize}%https://www.almabetter.com/bytes/articles/kmp-algorithm#%22Practical%20Applications%20of%20the%20KMP%20Algorithm%22 https://www.naukri.com/code360/library/kmp-string-matching-algorithm https://www.researchgate.net/publication/279442892_A_Survey_of_String_Matching_Algorithms https://www.reddit.com/r/learnprogramming/comments/1bk9ura/whats_the_best_stringmatching_algorithm_for/
+            \item \textbf{Core idea:} % introduction-to-algorithms-3rd-edition
+            The Knuth-Morris-Pratt (KMP) algorithm is a finite automaton which utilizes a prefix array (also known as the $\pi$). 
+            For each substring $P[0 \dots \text{currentIndex}]$, the algorithm determines the longest proper prefix that is equal to a suffix of that same substring.            
+            The construction of this array is an iterative process based on prior states. 
+            When a mismatch occurs at the current index, the algorithm does not restart from the beginning; instead, it recursively consults previous prefix values until a matching character is found or the process reverts to the base state (0).
             \item \textbf{Real-world applications:}
             \begin{itemize}
                 \item Text Editors: Using in "Search" or "Find and Replace" features to locate destination words.
@@ -107,84 +106,101 @@
             \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
         \end{itemize}
 
-    \indent \textbf{Example:} text $T = [a, a, b, c, a, b, b]$ and pattern $P = [a, b, c]$
+    \indent \textbf{Example:} text $T = [b, a, n, a, b, a]$, pattern $P = [b, a, n, a]$ and string $S = [b, a, n, a, \#, b, a, n, a, b, a]$\\
+    \indent Note: String $S$ is the concatenation of the pattern, the sentinel character $\#$, and the text. 
+    \indent Any character can be used instead of $\#$, provided it does not appear in $T$ or $P$.
     \begin{itemize}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force1.pdf}
+            \includegraphics[page = 1, width=0.8\textwidth, trim={2cm 5cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
             \caption{Step 1}
         \end{figure}
-        \item The first character 'a' matches in both arrays.
-        
-        The second character in text $T$ ('a') does not match the second character in pattern $P$ ('b').
-        
-        Text at the bottom shows the current shift is $s = 0$ and the list of found matches is empty ($Positions = []$).
+        \item Assuming we have calculated the $\pi$ array up to index 6, while the remaining indices are set to -1 (indicating they have not yet been calculated).\\
+        Note that $\pi[0]$ is always $0$ because a single-character string has no proper prefixes.
         
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force2.pdf}
+            \includegraphics[page = 2, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
             \caption{Step 2}
         \end{figure}
-        \item All characters in pattern $P$ ('a', 'b', 'c') successfully match the corresponding characters in text $T$ ('a', 'b', 'c').
-        
-        Shift is $s = 1$ and the list of found matches is updated to record this position ($Positions = [(1, 3)]$).
+        \item To find the answer for index 5, we must look at the previous result at $\pi[4]$ first. 
+        Because $\pi[4]$ is 0, it tells us that there are no smaller matches to check, so we can stop looking back immediately. 
+        Now, we only need to compare $S[5]$ with the very first letter $S[0]$. 
+        Since both are 'b', they match, and we add 1 to get $\pi[5] = 1$.
+        The calculation of the $\pi$ array depends only on the array itself, and character comparisons are performed only when necessary.\\ 
+        Note: To make this process easier to understand, the author provides an illustration showing the comparison between the current prefix and suffix at each step.
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force3.pdf}
+            \includegraphics[page = 3, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
             \caption{Step 3}
         \end{figure}
-        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('b') at the current shift position $s = 2$.
-        
-        Skip to the next shift without updating $Positions$.
+        \item Similar to step 2, we look at the previous result at $\pi[5]$ first.
+        We see that $S[6]$ matches $S[1]$ (both are 'a'), so the search stops there.
+        Because they match, we increase the value from 1 to 2; therefore, $\pi[6] = 2$.
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force4.pdf}
+            \includegraphics[page = 6, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
             \caption{Step 4}
         \end{figure}
-        \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('c') at the current shift position $s = 2$.
-        
-        Skip to the next shift without updating $Positions$.
+
+        \item We skip to index 9 because indices 7 and 8 follow the same logic as indices 5 and 6 in the previous step.
+        Now, we continue with index 9. We do the same steps as before and get a mismatch, because $S[9]$ is 'b' but $S[4]$ is $'\#'$.
+        According to the KMP algorithm, we find the next possible position until it matches with $S[9]$ or the value reaches 0.
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force5.pdf}
+            \includegraphics[page = 7, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
             \caption{Step 5}
         \end{figure}
+        \item Following the KMP algorithm's instruction, we try with $\pi[current\_value]$, which is $\pi[4]$. 
+        This gives us a value of 0, so we stop there. 
+        After finding the position, we must check whether that position matches the current index and we increase the value by 1 if it is a match. 
+        Fortunately, $S[9]$ matches $S[0]$, so $\pi[9] = 1$.
 
-        \item The first two characters in pattern $P$ ('a', 'b') match the corresponding characters in text $T$,
-        but the third character in pattern $P$ ('c') does not match the character in text $T$ ('b') at the current shift position $s = 4$.
-
-        Skip to the next shift without updating $Positions$.
-
-        \item After that, $s$ increases by 1. Because $s = 5$ and $n - m = 7 - 3 = 4$, we have $s > n - m$. The algorithm terminates and returns the list of found matches: $\text{Positions} = [(1, 3)]$.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[page = 8, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
+            \caption{Step 6}
+        \end{figure}
+        \item In the same way as the previous step, we take the value from the last index 9, which is 1. 
+        Because $S[10]$ matches $S[1]$, the algorithm stops looking back right now. 
+        Moving to the comparison step, since we know $S[10]$ and $S[1]$ match, we increase the value from 1 to 2, resulting in $\pi[10] = 2$.\\
+        We have now traversed to the end of array $S$, and the algorithm terminates. \\
+        Based on the $\pi$ array, we find that there is 1 substring from the text $T$ that matches pattern $P$ by counting how many indices have a value equal to the length of $P$. 
+        The matching substring starts at index 5 (index 8 minus the length of $P$ plus 1) and ends at index 8.
     \end{itemize}
     
 
     \subsubsection{Complexity}
-        \begin{table}[H]
-        \centering
-        \renewcommand{\arraystretch}{1.5}
-        \begin{tabular}{|l|c|p{8cm}|}
-        \hline
-        \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
-        \textbf{Time (Worst)} & $O(K \cdot m \cdot R \cdot C)$ & Occurs when patterns and text share many prefix characters (e.g., all 'A's). \\ \hline
-        \textbf{Time (Average)} & $O(K \cdot R \cdot C)$ & In practice, a mismatch usually occurs after only a few character comparisons. \\ \hline
-        \textbf{Time (Best)} & $O(K \cdot R \cdot C)$ & The first character of the pattern always results in a mismatch at every shift. \\ \hline
-        \textbf{Auxiliary Space} & $O(1)$ & The algorithm uses only a constant amount of extra memory for loop indices. \\ \hline
-        \end{tabular}
-        \caption{Complexity Analysis of 2D Brute Force Algorithm}
-        \end{table}
+    \begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|c|p{8cm}|}
+    \hline
+    \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
+    \textbf{Time (Average)} & $O(K \cdot (R + C) \cdot (m + D))$ & The Knuth-Morris-Pratt algorithm is a finite automaton that finds all matching positions. 
+    Although the process of finding the next match may take several steps at some indices, it will take at most $2n$ comparisons in total. 
+    This means the Big O is $O(n)$ and the runtime is very stable. 
+    Note: $D = \max(R, C)$. \\ 
+    \hline
+    \textbf{Auxiliary Space} & $O(m + D)$ & The algorithm uses extra memory for the prefix array ($\pi$ table). 
+    Note: $D = \max(R, C)$. \\
+    \hline
+    \end{tabular}
+    \caption{Complexity Analysis of 2D Knuth-Morris-Pratt Algorithm}
+    \end{table}
 
     \subsubsection{Discussion}
     \begin{itemize}
-        \item In scenarios 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
-        Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
-        \item In scenarios 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
-        This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
-        which is much longer compared to scenario 1.
-        \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
-        It is worse for scenarios with a large number of one.
+        \item In scenario 1, the number of patterns $K$ is small, and the grid size is from $10 \times 10$ to $500 \times 500$. 
+        The Knuth-Morris-Pratt algorithm is an efficient algorithm for this scenario because it ranks third among the five fastest algorithms. 
+        \item In scenario 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$. 
+        In this case, the Knuth-Morris-Pratt algorithm takes more time to run because KMP is better for problems that don't have too many patterns to find. 
+        So, it takes the second rank of the slowest algorithms in this test.
+        \item Although scenario 1 has a larger theoretical time complexity than scenario 2, scenario 2 consumes more time in practice. 
+        This is because the process of concatenating the grid strings and patterns must be done 20,000 times ($100 \cdot 100 \cdot 2$), while in case 1 it is only 5,000 times ($500 \cdot 2 \cdot 5$).
+        \item In conclusion, the Knuth-Morris-Pratt algorithm is a suitable algorithm for string-matching, but it runs more efficiently when there are fewer patterns to find.
     \end{itemize}
         
