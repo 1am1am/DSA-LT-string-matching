@@ -1,6 +1,6 @@
 \section{Problem Statement}
 \label{sec:problem-statement}
-    \lettrine[lines=2]{\scalebox{1.4}{\textbf{S}}}{TRING} matching is a problem that 
+    \lettrine[lines=2]{\scalebox{1.1}{\textbf{S}}}{TRING} matching is a problem that 
     find all occurrences of a pattern in the text.
     This problem is an indispensable technique in computer science for solving various crucial problems,
     such as text editing, text searching, and symbol manipulation.\cite{hakak2019exact}
@@ -10,7 +10,7 @@
     which $m \le n$. The problem is to find all occurrences of $P$ in $T$ by shifting $P$ along $T$ such that
     $0 \le s \le n-m$ ($s$ is the shift amount) and $T[s+1..s+m] = P[1..m]$ (that is, if $T[s+i]=P[i]$, for $1 \le i \le m$).\cite{CLRS2022}
     
-    \indent For instance:
+    \indent \textbf{For instance:}
     \begin{itemize}
         \item If $T = \text{``ababcab''}$ and $P = \text{``abc''}$, then the output is $(3 \rightarrow 5)$ because the pattern occurs at position 3 in the text.
         \begin{figure}[h]
