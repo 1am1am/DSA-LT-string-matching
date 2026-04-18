@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1776476290.7236 "main.aux" "main.bbl" "main" 1776476295.49049 0
+["bibtex main"] 1776477297.37782 "main.aux" "main.bbl" "main" 1776477302.20141 0
   "./bibliography/bibliography.bib" 1776476279 2066 6259af6b43e3664411870ceb530fbc38 ""
   "C:/Users/Lam/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1776476294 12087 938835b5361f8ec5ba6949f780fbbbea "pdflatex"
+  "main.aux" 1776477301 12076 5313b245b70bc9685034e5642a17ee24 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776476291.0623 "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" "main.pdf" "main" 1776476295.49125 0
+["pdflatex"] 1776477297.73304 "d:/COLLEGE/Lectures/HK2/DSA/String Matching Project/report/main.tex" "main.pdf" "main" 1776477302.20221 0
   "C:/Users/Lam/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775832007 88569 856d9e47966de67c09a5002b03bd4e44 ""
   "C:/Users/Lam/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1767538571 14064 66704dd2a8dd29001f9f2fbfb85c1247 ""
   "C:/Users/Lam/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1767538303 13332518 e8d974c03b4027776d43f9479ed866db ""
@@ -234,10 +234,10 @@
   "C:/Users/Lam/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "content/acknowledgements.tex" 1775400728 748 4322ec8cf1e4e2d73de5fa1f113715f3 ""
   "content/algorithms.tex" 1776423499 321 3496918762f2bd9127a09d8949408bbc ""
-  "content/algorithms/aho-corasick.tex" 1776476279 16177 865f0152cad88864e70c14ac23e7b4f2 ""
-  "content/algorithms/boyer-moore.tex" 1776423453 8245 f8321ae0eba6fec48848d5f40b97c15d ""
-  "content/algorithms/brute-force.tex" 1776476279 8163 cb34c96122e05e78d99512177d04acf5 ""
-  "content/algorithms/kmp.tex" 1776476279 12823 31cb1fa289c4af5d9965b0374334d8b7 ""
+  "content/algorithms/aho-corasick.tex" 1776477292 16177 37d0287b3d429d8c603de2ae60482d9d ""
+  "content/algorithms/boyer-moore.tex" 1776477266 8245 f26b1c663b02f73b728e7eb3a4a4196c ""
+  "content/algorithms/brute-force.tex" 1776477246 8140 9fecdcc60c72bfd241103d7092ec7726 ""
+  "content/algorithms/kmp.tex" 1776477281 12823 33ea3e5c078edaf82fc7acc63c489620 ""
   "content/algorithms/rabin-karp.tex" 1776476252 8832 58fc20fdc41af7982ec329cc7d7a77e1 ""
   "content/experimental-results.tex" 1776476252 8335 5a05c2aa044ad99ef152a6297d2f6cf9 ""
   "content/group-information.tex" 1776476252 1368 47b33ffa0494dcbe906a4da094daf797 ""
@@ -270,11 +270,11 @@
   "data/Illustrations/step2.png" 1776447975 12170 eca4b2696bf82aaee0677910a191c8e6 ""
   "hcmus-report-template.sty" 1775400235 4845 9e82a6379fb1b5b173c406a8e1fd2a12 ""
   "img/hcmus-logo.png" 1773419248 258629 122747e63e393f11b7f15571540c7d20 ""
-  "main.aux" 1776476294 12087 938835b5361f8ec5ba6949f780fbbbea "pdflatex"
-  "main.bbl" 1776476290 1648 d78ffda0c09be7727c92f215a53499d2 "bibtex main"
-  "main.out" 1776476294 2143 674174ac1a373e4d268f2e5c0ee611d5 "pdflatex"
+  "main.aux" 1776477301 12076 5313b245b70bc9685034e5642a17ee24 "pdflatex"
+  "main.bbl" 1776477297 1648 d78ffda0c09be7727c92f215a53499d2 "bibtex main"
+  "main.out" 1776477301 2084 ce2c7b47df6a0a65c8e4b2607dab80db "pdflatex"
   "main.tex" 1776425146 825 5495d5d35df8f1cfc08735d2b37e50d0 ""
-  "main.toc" 1776476294 3529 2bdf5005e1438267bc375992264e5664 "pdflatex"
+  "main.toc" 1776477301 3518 d9e53c6c312268a73b8b057c013dcee1 "pdflatex"
   "preamble.tex" 1776476279 687 4b16b250401bc74313e594c573cdd166 ""
   (generated)
   "main.aux"
