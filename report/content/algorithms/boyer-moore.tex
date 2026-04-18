@@ -3,7 +3,7 @@
         \begin{itemize}
             \item \textbf{Core idea:} The Boyer Moore Algorithm is a practical method to find patterns. This algorithm is the combination of three main ideas comprising scanning the pattern in reverse order, bad character heuristic and good suffix heuristic. This speeds up the searching process
              considerably by skipping a plenty of characters. 
-            \item \textbf{Reality applications:}
+            \item \textbf{Real-world applications:}
             \begin{itemize}
                 \item Text Editors: Using in "Search" or "Find and Replace" features to locate the destination of the words.
                 \item Intrusion Detection Systems (Network Security): use Boyer-Moore to scan network traffic in real-time for "malicious signatures"—specific byte patterns that indicate a cyberattack or virus.
@@ -85,7 +85,7 @@
         \end{figure}
         \textbf{Note:}
         \begin{itemize}
-            \item \textbf{Bad character table:} Choose the index for characters from 0 to n - 1. In this case, T appears two times, only the last appearance are regconized.
+            \item \textbf{Bad character table:} Choose the index for characters from 0 to n - 1. In this case, T appears two times, only the last appearance are recognized.
             \item \textbf{Good suffix table:} For index j from 3 to 0, if the suffix of the character at index j is found, the shift value will be decreased. In this example, index 3 is the exception since there is no suffix and the shift value is 1, other suffixes including g, tg, atg are not found in the prefix of the pattern, then their pattern shifts is the length of the pattern.
         \end{itemize}
         \item Step 2: Compare the patterns and make shifts based on preprocessing values.

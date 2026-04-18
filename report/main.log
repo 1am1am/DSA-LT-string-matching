@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.22)  18 APR 2026 20:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.22)  18 APR 2026 21:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1436,7 +1436,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  95i,12n,120p,703b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vntt12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnr10.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vncsc10.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1513\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnti12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi864\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnsl12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnr12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnr12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1244\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi864\vncsc10.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1244\vncsc10.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (44 pages, 1245400 bytes).
+Output written on main.pdf (44 pages, 1245389 bytes).
 PDF statistics:
  1333 PDF objects out of 1440 (max. 8388607)
  144 named destinations out of 1000 (max. 500000)

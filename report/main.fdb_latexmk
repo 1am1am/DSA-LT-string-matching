@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1776514725.38907 "main.aux" "main.bbl" "main" 1776517552.9922 0
+["bibtex main"] 1776514725.38907 "main.aux" "main.bbl" "main" 1776521741.30658 0
   "./bibliography/bibliography.bib" 1776490804 2066 6259af6b43e3664411870ceb530fbc38 ""
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1776517552 12304 c1a8f397b78a9733c1a89c3ca610910b "pdflatex"
+  "main.aux" 1776521740 12304 c1a8f397b78a9733c1a89c3ca610910b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776517550.62804 "d:/HCMUS/DSA/LAB/git_string/report/main.tex" "main.pdf" "main" 1776517552.99269 0
+["pdflatex"] 1776521739.09013 "d:/HCMUS/DSA/LAB/git_string/report/main.tex" "main.pdf" "main" 1776521741.30689 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -247,7 +247,7 @@
   "content/acknowledgements.tex" 1776431520 748 4322ec8cf1e4e2d73de5fa1f113715f3 ""
   "content/algorithms.tex" 1776439097 321 3496918762f2bd9127a09d8949408bbc ""
   "content/algorithms/aho-corasick.tex" 1776513607 17162 394fd97c15999540a2662291a270f275 ""
-  "content/algorithms/boyer-moore.tex" 1776513960 8738 edaeff6635f14fd96aebdcbe8af17985 ""
+  "content/algorithms/boyer-moore.tex" 1776521740 8741 1a23fd07f797a1d075e521f3b438639b ""
   "content/algorithms/brute-force.tex" 1776510724 8157 5c2eea083d5b5245f733f1619aa658ab ""
   "content/algorithms/kmp.tex" 1776512899 13025 50d1aa2e6762ff01a70a019369c024cc ""
   "content/algorithms/rabin-karp.tex" 1776516556 8433 d2fee087c6a7ed20d2f0e073fe4b4f9d ""
@@ -279,12 +279,12 @@
   "data/Illustrations/rabinkarp.pdf" 1776517549 25602 186b6f4611013f3eba68c9e328b9efbc ""
   "hcmus-report-template.sty" 1776431520 4845 9e82a6379fb1b5b173c406a8e1fd2a12 ""
   "img/hcmus-logo.png" 1776431520 258629 122747e63e393f11b7f15571540c7d20 ""
-  "main.aux" 1776517552 12304 c1a8f397b78a9733c1a89c3ca610910b "pdflatex"
+  "main.aux" 1776521740 12304 c1a8f397b78a9733c1a89c3ca610910b "pdflatex"
   "main.bbl" 1776514725 1648 d78ffda0c09be7727c92f215a53499d2 "bibtex main"
-  "main.lot" 1776517552 1216 4b5de3b375741ada1caa0c6d31dd16a9 "pdflatex"
-  "main.out" 1776517552 2084 7ed2ba5949f0b9e4b2ad462d06611f60 "pdflatex"
+  "main.lot" 1776521740 1216 4b5de3b375741ada1caa0c6d31dd16a9 "pdflatex"
+  "main.out" 1776521740 2084 7ed2ba5949f0b9e4b2ad462d06611f60 "pdflatex"
   "main.tex" 1776495488 906 8810154ab8647c825b3ed1ca86133d13 ""
-  "main.toc" 1776517552 3493 84713b2bfd4422115dd447dc05b3ae7e "pdflatex"
+  "main.toc" 1776521740 3493 84713b2bfd4422115dd447dc05b3ae7e "pdflatex"
   "preamble.tex" 1776490805 687 4b16b250401bc74313e594c573cdd166 ""
   (generated)
   "main.aux"
