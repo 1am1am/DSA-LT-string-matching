@@ -75,13 +75,13 @@
          \begin{figure}[H]
             \centering
             \includegraphics[width=0.4\textwidth, clip]{data/Illustrations/Bad_Char_Table.pdf}
-            \caption{Bad character table}
+            \caption[Figure \thefigure]{Bad character table}
         \end{figure}
         
          \begin{figure}[H]
             \centering
             \includegraphics[width=0.5\textwidth, clip]{data/Illustrations/good-suffix-table_cropped.pdf}
-            \caption{Good suffix table}
+            \caption[Figure \thefigure]{Good suffix table}
         \end{figure}
         \textbf{Note:}
         \begin{itemize}
@@ -92,7 +92,7 @@
          \begin{figure}[H]
             \centering
             \includegraphics[width=0.85\textwidth, clip]{data/Illustrations/Boyer_moore_step1.pdf}
-            \caption{compare pattern from right to left}
+            \caption[Figure \thefigure]{compare pattern from right to left}
 
         \end{figure}
         Mismatch at index j = 3, then calculate the shift value.
@@ -107,7 +107,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.85\textwidth, clip]{data/Illustrations/boyer_moore_step2.pdf}
-            \caption{compare pattern}
+            \caption[Figure \thefigure]{compare pattern}
 
         \end{figure}
         Mismatch at index 0, continue calculate the pattern shift
@@ -118,7 +118,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.85\textwidth, clip]{data/Illustrations/boyer_moore_step3.pdf}
-            \caption{Make larger shift by using good suffix heuristic}
+            \caption[Figure \thefigure]{Make larger shift by using good suffix heuristic}
 
         \end{figure}
         Mismatch at index 3, continue calculate shift value
@@ -129,7 +129,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.75\textwidth, clip]{data/Illustrations/boyer_moore_lastStep.pdf}
-            \caption{Make bigger shift by using bad character heuristic}
+            \caption[Figure \thefigure]{Make bigger shift by using bad character heuristic}
 
         \end{figure}
         The algorithm stops since the pattern is out of text's range.

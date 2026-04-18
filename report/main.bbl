@@ -11,12 +11,6 @@ Thomas~H Cormen, Charles~E Leiserson, Ronald~L Rivest, and Clifford Stein.
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT press, 4th edition, 2022.
 
-<<<<<<< HEAD
-\bibitem{CLRS2022}
-Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
-\newblock {\em Introduction to Algorithms}.
-\newblock MIT Press, Cambridge, MA, 4th edition, 2022.
-=======
 \bibitem{cpalgorithms_ahocorasick}
 {CP-Algorithms contributors}.
 \newblock Aho-corasick algorithm.
@@ -28,7 +22,6 @@ Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
 \newblock Prefix function - knuth-morris-pratt.
 \newblock \url{https://cp-algorithms.com/string/prefix-function.html}, 2025.
 \newblock Accessed: April 18, 2026.
->>>>>>> 4ddc151e347e99a3484fcf10b2e79f0f9b74b4f0
 
 \bibitem{ElMabrouk1996}
 Nadia El-Mabrouk and Maxime Crochemore.

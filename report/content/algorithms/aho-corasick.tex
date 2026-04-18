@@ -1,4 +1,4 @@
-\subsection[The Aho-Corasick Algorithm]{The Aho-Corasick Algorithm\cite{cpalgorithms_ahocorasick}}
+\subsection[The Aho-Corasick algorithm]{The Aho-Corasick algorithm\cite{cpalgorithms_ahocorasick}}
     \subsubsection{Introduction \& Application}
         \begin{itemize}
             \item \textbf{Core idea:} Aho-Corasick is a DFA (Deterministic Finite Automaton) which uses a Trie with KMP suffix links added in.
@@ -123,14 +123,14 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 1, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 1}
+            \caption[Figure \thefigure]{Step 1}
         \end{figure}
         \item We build a Trie based on the list of patterns. Grey nodes are output nodes, which means that the node represents an existing pattern from the list.
         
         \begin{figure}[H]
             \centering
             \includegraphics[page = 2, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 2}
+            \caption[Figure \thefigure]{Step 2}
         \end{figure}
         \item In this operation, we process the text $T$ character by character.
         If the current character matches a path from the previous node, we transition to a child node, which effectively updates the substring we have matched so far. 
@@ -141,7 +141,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 3, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 3}
+            \caption[Figure \thefigure]{Step 3}
         \end{figure}
         \item In the second operation, we identify all suffix substrings of the current substring (currently "i") that exist in the Trie. 
         Since "i" has no proper suffix other than the empty string, we create a link pointing to the root, which represents the null state. \\
@@ -150,7 +150,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 4, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 4}
+            \caption[Figure \thefigure]{Step 4}
         \end{figure}
         \item Repeating the previous steps, we first attempt to move to the next node to match the substring 'im'. 
         However, because the Trie lacks an edge from 'i' for the character 'm', we must identify the longest suffix of 'im' that exists in the tree. 
@@ -161,7 +161,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 5, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 5}
+            \caption[Figure \thefigure]{Step 5}
         \end{figure}
         \item Following the second operation of the previous step, we look for all suffixes of 'm'. 
         Just as in step 1, the only proper suffix is the empty string; therefore, the new green link for node 'm' points to the root.
@@ -169,14 +169,14 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 6, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 6}
+            \caption[Figure \thefigure]{Step 6}
         \end{figure}
         \item The next character is $T[2] = i$. Since node 'm' has a path for character 'i', the current substring becomes "mi".
 
         \begin{figure}[H]
             \centering
             \includegraphics[page = 7, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 7}
+            \caption[Figure \thefigure]{Step 7}
         \end{figure}
         \item To find the longest suffix of "mi", we check its parent node 'm'. 
         Since the green link of 'm' points to the root and the root has a path for character 'i', we create a new green link from "mi" to node 'i".
@@ -185,7 +185,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 12, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 8}
+            \caption[Figure \thefigure]{Step 8}
         \end{figure}
         \item We will skip the steps for the next character, $T[3] = s$, to get the tree shown above.
         Following the next character, $T[4] = s$, we get the first pattern that matches to the substring of text is "miss".
@@ -193,7 +193,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 13, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 9}
+            \caption[Figure \thefigure]{Step 9}
         \end{figure}
         \item Using the green link of the parent of "miss", we go to node "is". 
         Since node "is" has a path for character 's' pointing to node "iss", we create a new green link from "miss" to "iss".
@@ -201,14 +201,14 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 15, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 10}
+            \caption[Figure \thefigure]{Step 10}
         \end{figure}
         \item Traversing the green links starting from node "iss", we find all suffixes of "miss": "iss", "ss", "s", and the root.
         
         \begin{figure}[H]
             \centering
             \includegraphics[page = 16, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 11}
+            \caption[Figure \thefigure]{Step 11}
         \end{figure}
         \item At node "miss", there is no path for the next character, $T[5] = u$. 
         Therefore, we follow its green link to node "iss", which has a path for 'u'. 
@@ -218,7 +218,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 17, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 12}
+            \caption[Figure \thefigure]{Step 12}
         \end{figure}
         \item Following the previous step, we search for all suffixes. 
         First, we go to the parent node ("iss") and follow its green link to node "ss". 
@@ -231,7 +231,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 18, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
-            \caption{Step 13}
+            \caption[Figure \thefigure]{Step 13}
         \end{figure}
         \item After completing the Aho-Corasick algorithm, we have established all the green links for each node in the Trie. 
         We also identified four patterns that match substrings of the given text: "issu", "miss", "ss", and "u".
@@ -244,11 +244,15 @@
     \begin{tabular}{|l|c|p{8cm}|}
     \hline
     \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
-    \textbf{Time (Worst)} & $O(m \cdot R \cdot C)$ & Without exit links, we must traverse suffix links back to the root at every step. 
-    In the worst case (e.g., patterns are prefixes of each other), we might check $m$ nodes ($m$ is the length of the longest pattern) for every character in the grid. \\ \hline
-    \textbf{Time (Average)} & $O(R \cdot C)$ & In a random text, most steps do not find a match. This means we rarely need to climb the suffix links, and the search stays near the root of the Trie. \\ \hline
-    \textbf{Time (Best)} & $O(R \cdot C)$ & Occurs when characters in the grid never match any first character in the Trie, so the algorithm only does one comparison per index. \\ \hline
-    \textbf{Auxiliary Space} & $O(\sum |P|)$ & The algorithm requires memory to store the Trie tree. The number of nodes is equal to the total length of all patterns added to the system. \\ \hline
+    \textbf{Time Building Trie} & $O(\sum |P| \cdot 26)$ & This process happens before the search.
+    We traverse every character of each pattern to build the Trie.
+    For every node created, we must initialize an array of 26 pointers (equivalent to the alphabet size) to \texttt{nullptr}. \\ \hline    
+    \textbf{Time Searching (Worst)} & $O(m \cdot R \cdot C)$ & Without exit links, we must traverse suffix links back to the root at every step.
+    In the worst case (e.g., patterns are suffixes of each other), we might check $m$ nodes ($m$ is the length of the longest pattern) for every character in the grid. \\ \hline
+    \textbf{Time Searching (Average)} & $O(R \cdot C)$ & In a random text, most steps do not find a match. This means we rarely need to climb the suffix links, and the search stays near the root of the Trie. \\ \hline
+    \textbf{Time Searching (Best)} & $O(R \cdot C)$ & Occurs when characters in the grid never match any first character in the Trie, so the algorithm only does one comparison per index. \\ \hline
+    \textbf{Auxiliary Space} & $O(\sum |P| \cdot 26)$ & The algorithm requires memory to store the Trie. The total number of nodes is determined by the total length of all patterns. 
+    Each node contains an array of 26 pointers (equivalent to the alphabet size) that are initialized to \texttt{nullptr} upon creation. \\ \hline    
     \end{tabular}
     \caption{Complexity Analysis of Aho-Corasick Algorithm}
     \end{table}
@@ -262,7 +266,7 @@
         \item In conclusion, the Aho-Corasick algorithm is more suitable for scenarios where $K$ increases over time. 
         When there are many patterns to query, it is more efficient because it is usually used for cases with many string matching queries on a set of patterns.
         \item Besides that, in both scenarios, it does not rely on character comparisons, so it is efficient for string-matching problems with a high comparison cost.
-        \item So the Aho-Corasick algorithm is one of the best solutions for this problem.
+        So the Aho-Corasick algorithm is one of the best solutions for this problem.
         \item Optimization: We can add exit links that point directly to the nearest output node. 
         This means we do not need to traverse every node while following the green links to find a match. 
         By using this optimization, we improve the efficiency of the search phase, especially in the worst-case scenarios.

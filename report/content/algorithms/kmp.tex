@@ -114,7 +114,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 1, width=0.8\textwidth, trim={2cm 5cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
-            \caption{Step 1}
+            \caption[Figure \thefigure]{Step 1}
         \end{figure}
         \item Assuming we have calculated the $\pi$ array up to index 6, while the remaining indices are set to -1 (indicating they have not yet been calculated).\\
         Note that $\pi[0]$ is always $0$ because a single-character string has no proper prefixes.
@@ -122,7 +122,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 2, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
-            \caption{Step 2}
+            \caption[Figure \thefigure]{Step 2}
         \end{figure}
         \item To find the answer for index 5, we must look at the previous result at $\pi[4]$ first. 
         Because $\pi[4]$ is 0, it tells us that there are no smaller matches to check, so we can stop looking back immediately. 
@@ -134,7 +134,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 3, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
-            \caption{Step 3}
+            \caption[Figure \thefigure]{Step 3}
         \end{figure}
         \item Similar to step 2, we look at the previous result at $\pi[5]$ first.
         We see that $S[6]$ matches $S[1]$ (both are 'a'), so the search stops there.
@@ -143,7 +143,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 6, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
-            \caption{Step 4}
+            \caption[Figure \thefigure]{Step 4}
         \end{figure}
 
         \item We skip to index 9 because indices 7 and 8 follow the same logic as indices 5 and 6 in the previous step.
@@ -153,7 +153,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 7, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
-            \caption{Step 5}
+            \caption[Figure \thefigure]{Step 5}
         \end{figure}
         \item Following the KMP algorithm's instruction, we try with $\pi[current\_value]$, which is $\pi[4]$. 
         This gives us a value of 0, so we stop there. 
@@ -163,7 +163,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[page = 8, width=0.8\textwidth, trim={2cm 2cm 0cm 2cm}, clip]{data/Illustrations/kmp.pdf}
-            \caption{Step 6}
+            \caption[Figure \thefigure]{Step 6}
         \end{figure}
         \item In the same way as the previous step, we take the value from the last index 9, which is 1. 
         Because $S[10]$ matches $S[1]$, the algorithm stops looking back right now. 
