@@ -1,11 +1,11 @@
 \babel@toc {english}{}\relax 
 \contentsline {table}{\numberline {1}{\ignorespaces Group Information}}{3}{table.caption.3}%
-\contentsline {table}{\numberline {2}{\ignorespaces Complexity Analysis of 2D Brute Force Algorithm}}{9}{table.caption.11}%
+\contentsline {table}{\numberline {2}{\ignorespaces Complexity Analysis of 2D Brute-Force Algorithm}}{9}{table.caption.11}%
 \contentsline {table}{\numberline {3}{\ignorespaces Complexity Analysis of 2D Rabin-Karp Algorithm}}{13}{table.caption.15}%
-\contentsline {table}{\numberline {4}{\ignorespaces Complexity Analysis of 2D Knuth-Morris-Pratt Algorithm}}{20}{table.caption.22}%
-\contentsline {table}{\numberline {5}{\ignorespaces Complexity Analysis of 2D Boyer-Moore Algorithm}}{25}{table.caption.29}%
-\contentsline {table}{\numberline {6}{\ignorespaces Complexity Analysis of Aho-Corasick Algorithm}}{35}{table.caption.43}%
-\contentsline {table}{\numberline {7}{\ignorespaces Running time measurements for Scenario 1}}{37}{table.caption.45}%
-\contentsline {table}{\numberline {8}{\ignorespaces Number of comparisons for Scenario 1}}{37}{table.caption.46}%
-\contentsline {table}{\numberline {9}{\ignorespaces Running time measurements for Scenario 2}}{37}{table.caption.48}%
-\contentsline {table}{\numberline {10}{\ignorespaces Number of comparisons for Scenario 2}}{37}{table.caption.49}%
+\contentsline {table}{\numberline {4}{\ignorespaces Complexity Analysis of 2D Knuth-Morris-Pratt Algorithm}}{19}{table.caption.22}%
+\contentsline {table}{\numberline {5}{\ignorespaces Complexity Analysis of 2D Boyer-Moore Algorithm}}{24}{table.caption.29}%
+\contentsline {table}{\numberline {6}{\ignorespaces Complexity Analysis of Aho-Corasick Algorithm}}{34}{table.caption.43}%
+\contentsline {table}{\numberline {7}{\ignorespaces Running time measurements for Scenario 1}}{36}{table.caption.45}%
+\contentsline {table}{\numberline {8}{\ignorespaces Number of comparisons for Scenario 1}}{36}{table.caption.46}%
+\contentsline {table}{\numberline {9}{\ignorespaces Running time measurements for Scenario 2}}{36}{table.caption.48}%
+\contentsline {table}{\numberline {10}{\ignorespaces Number of comparisons for Scenario 2}}{36}{table.caption.49}%
