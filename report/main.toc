@@ -8,48 +8,33 @@
 \contentsline {subsubsection}{\numberline {3.1.3}Step-by-step trace\cite {CLRS2022}}{5}{subsubsection.3.1.3}%
 \contentsline {subsubsection}{\numberline {3.1.4}Complexity}{8}{subsubsection.3.1.4}%
 \contentsline {subsubsection}{\numberline {3.1.5}Discussion}{8}{subsubsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.2}The Rabin-Karp Algorithm}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}The Rabin-Karp Algorithm \cite {cormen2022introduction}}{9}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Introduction \& Application}{9}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Pseudocode}{9}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Step-by-step trace (1D Example for Simplicity)}{10}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Complexity}{12}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Discussion}{12}{subsubsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.3}The Knuth-Morris-Pratt algorithm}{13}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Introduction \& Application}{13}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Pseudocode}{13}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Step-by-step trace\cite {CLRS2022}}{14}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Complexity}{18}{subsubsection.3.3.4}%
-\contentsline {subsubsection}{\numberline {3.3.5}Discussion}{18}{subsubsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.4}The Boyer Moore Algorithm}{19}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Introduction \& Application}{19}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Pseudocode}{19}{subsubsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.3}Step-by-step trace}{20}{subsubsection.3.4.3}%
-\contentsline {subsubsection}{\numberline {3.4.4}Complexity}{23}{subsubsection.3.4.4}%
-\contentsline {subsubsection}{\numberline {3.4.5}Discussion}{23}{subsubsection.3.4.5}%
-<<<<<<< HEAD
-\contentsline {subsection}{\numberline {3.5}The Rabin-Karp Algorithm \cite {cormen2022introduction}}{24}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Introduction \& Application}{24}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Pseudocode}{24}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Step-by-step trace (1D Example for Simplicity)}{25}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Complexity}{28}{subsubsection.3.5.4}%
-\contentsline {subsubsection}{\numberline {3.5.5}Discussion}{28}{subsubsection.3.5.5}%
-\contentsline {section}{\numberline {4}Experimental Results}{29}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Experimental Data}{29}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Evaluation}{30}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Graphs}{32}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Acknowledgements}{34}{section.5}%
-\contentsline {section}{\numberline {6}References}{35}{section.6}%
-=======
-\contentsline {subsection}{\numberline {3.5}The Aho-Corasick algorithm}{24}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Introduction \& Application}{24}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Pseudocode}{24}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Step-by-step trace\cite {CLRS2022}}{26}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Complexity}{29}{subsubsection.3.5.4}%
-\contentsline {subsubsection}{\numberline {3.5.5}Discussion}{29}{subsubsection.3.5.5}%
-\contentsline {section}{\numberline {4}Experimental Results}{30}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Experimental Data}{30}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Evaluation}{31}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Graphs}{33}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Acknowledgements}{35}{section.5}%
-\contentsline {section}{\numberline {6}References}{36}{section.6}%
->>>>>>> 4c8c8f484e670da7726be81c85093c564b815345
+\contentsline {subsubsection}{\numberline {3.2.4}Complexity}{13}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Discussion}{13}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}The Knuth-Morris-Pratt algorithm}{14}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Introduction \& Application}{14}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Pseudocode}{14}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Step-by-step trace\cite {CLRS2022}}{15}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Complexity}{19}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Discussion}{19}{subsubsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.4}The Boyer Moore Algorithm}{20}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Introduction \& Application}{20}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Pseudocode}{20}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Step-by-step trace}{21}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Complexity}{24}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.5}Discussion}{24}{subsubsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.5}The Aho-Corasick algorithm}{25}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Introduction \& Application}{25}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Pseudocode}{25}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Step-by-step trace\cite {CLRS2022}}{27}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}Complexity}{30}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.5}Discussion}{30}{subsubsection.3.5.5}%
+\contentsline {section}{\numberline {4}Experimental Results}{31}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Experimental Data}{31}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Evaluation}{32}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Graphs}{34}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Acknowledgements}{36}{section.5}%
+\contentsline {section}{\numberline {6}References}{37}{section.6}%
