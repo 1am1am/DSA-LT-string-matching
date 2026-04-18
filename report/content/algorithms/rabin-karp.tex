@@ -89,13 +89,8 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \vspace{0.5cm}
 \begin{figure}[H]
     \centering
-<<<<<<< HEAD
     \includegraphics[trim=1cm 2.5cm 1cm 0.2cm, clip, width=0.85\textwidth]{data/Illustrations/rabin1.pdf}
-    \caption*{ Step 1 ($s=0$)}
-=======
-    \includegraphics[width=0.8\textwidth]{data/Illustrations/rabin1.pdf}
-    \caption*[Figure \thefigure]{Figure 1: Step 1 ($s=0$)}
->>>>>>> 0f495131d41ca9f2f7711cbfef4a472b2bb1152e
+    \caption[Figure \thefigure]{ Step 1 ($s=0$)}
 \end{figure}
 \begin{itemize}
     \item The current text window is $T[0..2] = [a, a, b]$.
@@ -107,13 +102,8 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \vspace{0.5cm}
 \begin{figure}[H]
     \centering
-<<<<<<< HEAD
     \includegraphics[trim=1cm 2.5cm 1cm 0.2cm, clip, width=0.85\textwidth]{data/Illustrations/rabin2.pdf}
-    \caption*{ Step 2 ($s=1$, Hash match check)}
-=======
-    \includegraphics[width=0.8\textwidth]{data/Illustrations/rabin2.pdf}
-    \caption*[Figure \thefigure]{Figure 2: Step 2 ($s=0$)}
->>>>>>> 0f495131d41ca9f2f7711cbfef4a472b2bb1152e
+    \caption[Figure \thefigure]{ Step 2 ($s=1$, Hash match check)}
 \end{figure}
 \begin{itemize}
     \item The rolling hash is updated in $\mathcal{O}(1)$ time. The new window is $T[1..3] = [a, b, c]$ with $t\_hash = 6$.
@@ -124,13 +114,8 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \vspace{0.5cm}
 \begin{figure}[H]
     \centering
-<<<<<<< HEAD
     \includegraphics[trim=1cm 2.5cm 1cm 0.2cm, clip, width=0.85\textwidth]{data/Illustrations/rabin3.pdf}
-    \caption*{ Step 3 ($s=2$, Final trace)}
-=======
-    \includegraphics[width=0.8\textwidth]{data/Illustrations/rabin3.pdf}
-    \caption*[Figure \thefigure]{Figure 3: Step 3 ($s=1$)}
->>>>>>> 0f495131d41ca9f2f7711cbfef4a472b2bb1152e
+    \caption[Figure \thefigure]{ Step 3 ($s=2$, Final trace)}
 \end{figure}
 \begin{itemize}
     \item The current text window shifts to $T[2..4] = [b, c, a]$.
@@ -161,18 +146,10 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 
 \subsubsection{Discussion}
 \begin{itemize}
-<<<<<<< HEAD
-    \item In \textbf{Scenario 1} (Impact of Grid Size), where the number of patterns $K$ is small and the grid scales, the Rabin-Karp algorithm is highly efficient due to its $\mathcal{O}(1)$ rolling hash update.
-    \item In \textbf{Scenario 2} (Impact of Dictionary Size), where the grid is fixed and $K$ increases, our specific implementation loops through the grid separately for each pattern. 
+    \item In Scenario 1 (Impact of Grid Size), where the number of patterns $K$ is small and the grid scales, the Rabin-Karp algorithm is highly efficient due to its $\mathcal{O}(1)$ rolling hash update.
+    \item In Scenario 2 (Impact of Dictionary Size), where the grid is fixed and $K$ increases, our specific implementation loops through the grid separately for each pattern. 
     Therefore, the execution time scales linearly with $K$. While this is faster than Brute-Force, it does not fully exploit Rabin-Karp's multi-pattern matching potential.
-    \item \textbf{In conclusion}, the Rabin-Karp algorithm provides a significant speedup over Brute-Force by using mathematical hashing to filter out unnecessary comparisons. 
+    \item In conclusion, the Rabin-Karp algorithm provides a significant speedup over Brute-Force by using mathematical hashing to filter out unnecessary comparisons. 
     It is an excellent choice when dealing with large texts, provided a robust prime number $q$ is chosen.
-    
-    \item \textbf{Further Reading:} For a more rigorous mathematical proof regarding the probability of false positive hash collisions, please refer to the primary literature cited in Section \ref{sec:reference}.
-=======
-    \item In Scenario 1 (Impact of Grid Size), where the number of patterns $K$ is small and the grid scales from $10 \times 10$ to $500 \times 500$, the Rabin-Karp algorithm is highly efficient. Due to its $\mathcal{O}(1)$ rolling hash update, the running time behaves almost linearly, similar to $\mathcal{O}(R \cdot C)$.
-    \item In Scenario 2 (Impact of Dictionary Size), where the grid is fixed at $100 \times 100$ and $K$ increases, our specific implementation loops through the grid separately for each pattern. Therefore, the execution time scales linearly with $K$. While this is faster than Brute-Force in terms of raw character comparisons, it does not fully exploit Rabin-Karp's multi-pattern matching potential (which could theoretically search all patterns simultaneously using a unified hash table).
-    \item In conclusion, the Rabin-Karp algorithm provides a significant speedup over Brute-Force by using mathematical hashing to filter out unnecessary comparisons. It is an excellent choice when dealing with large texts, provided a robust prime number $q$ is chosen to avoid worst-case hash collision degradation.
     \item Further Reading: For a more rigorous mathematical proof regarding the probability of false positive hash collisions, please refer to the primary literature cited in Section \ref{sec:reference}.
->>>>>>> 0f495131d41ca9f2f7711cbfef4a472b2bb1152e
 \end{itemize}

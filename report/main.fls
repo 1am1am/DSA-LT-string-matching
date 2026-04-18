@@ -410,10 +410,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 OUTPUT main.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnsl12.tfm
-INPUT .\main.lof
-INPUT .\main.lof
-INPUT main.lof
-OUTPUT main.lof
 INPUT .\main.lot
 INPUT .\main.lot
 INPUT main.lot

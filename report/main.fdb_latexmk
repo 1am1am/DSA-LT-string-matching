@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1776493162.02758 "main.aux" "main.bbl" "main" 1776493164.58682 0
+["bibtex main"] 1776495490.94306 "main.aux" "main.bbl" "main" 1776495493.5021 0
   "./bibliography/bibliography.bib" 1776490804 2066 6259af6b43e3664411870ceb530fbc38 ""
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1776493163 12213 2d04447ad545d2a990ebdf38555d2d2a "pdflatex"
+  "main.aux" 1776495492 12332 6405624a7e982574dff5c56fb11bbe95 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776493162.22193 "d:/HCMUS/DSA/LAB/git_string/report/main.tex" "main.pdf" "main" 1776493164.58767 0
+["pdflatex"] 1776495491.12808 "d:/HCMUS/DSA/LAB/git_string/report/main.tex" "main.pdf" "main" 1776495493.50297 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -250,13 +250,13 @@
   "content/algorithms/boyer-moore.tex" 1776492989 8359 7df02d1a1d7b5b27ef5cd2bb432b2070 ""
   "content/algorithms/brute-force.tex" 1776493029 8157 7063287e37fa16688957de8f1385cceb ""
   "content/algorithms/kmp.tex" 1776493005 12937 d0a6c57651ffb32e329391e962bf0a61 ""
-  "content/algorithms/rabin-karp.tex" 1776492954 8572 bbb28a8cb7e307a267b4378c610e06a4 ""
+  "content/algorithms/rabin-karp.tex" 1776495476 8126 cad3d87fd09ccca4323e067833ee7258 ""
   "content/experimental-results.tex" 1776490804 8335 5a05c2aa044ad99ef152a6297d2f6cf9 ""
   "content/group-information.tex" 1776490804 1368 47b33ffa0494dcbe906a4da094daf797 ""
   "content/problem-statement.tex" 1776493036 1857 c6568ff0f633a1c194dad4d3b88223d6 ""
   "content/reference.tex" 1776439068 111 6f4eaef25fc4c823c44660022b01bf43 ""
   "content/title.tex" 1776431520 1491 8160d3c6ecaa809d630b737b748dee72 ""
-  "d:/HCMUS/DSA/LAB/git_string/report/main.tex" 1776493159 904 73f2267fd227afa648a458efc14b27ca ""
+  "d:/HCMUS/DSA/LAB/git_string/report/main.tex" 1776495488 906 8810154ab8647c825b3ed1ca86133d13 ""
   "data/Graph/Comparisons - Scenario 1.pdf" 1776490804 44604 dacdcb81edbd816a07a4f2207a338902 ""
   "data/Graph/Comparisons - Scenario 2.pdf" 1776490804 44823 b50b22831750bc0b68b91072c75e72a0 ""
   "data/Graph/Running Time - Scenario 1.pdf" 1776490804 44691 e697e9ec10fd3dbc18236bef5b346a20 ""
@@ -281,17 +281,15 @@
   "data/Illustrations/rabin3.pdf" 1776492737 43007 f09e36c5df0c8a6a76ff65c6494f4faa ""
   "hcmus-report-template.sty" 1776431520 4845 9e82a6379fb1b5b173c406a8e1fd2a12 ""
   "img/hcmus-logo.png" 1776431520 258629 122747e63e393f11b7f15571540c7d20 ""
-  "main.aux" 1776493163 12213 2d04447ad545d2a990ebdf38555d2d2a "pdflatex"
-  "main.bbl" 1776493162 1648 d78ffda0c09be7727c92f215a53499d2 "bibtex main"
-  "main.lof" 1776493163 2880 05e15a7a55a928a4b18bf6ce530a68d2 "pdflatex"
-  "main.lot" 1776493163 1217 5a57486d3dc26a1730da959e34d41b2c "pdflatex"
-  "main.out" 1776493163 2202 c6cd3f72ef1d34cd8cf231fbe78e4846 "pdflatex"
-  "main.tex" 1776493159 904 73f2267fd227afa648a458efc14b27ca ""
-  "main.toc" 1776493163 3554 553c0162a1e1579bf89e90875a585201 "pdflatex"
+  "main.aux" 1776495492 12332 6405624a7e982574dff5c56fb11bbe95 "pdflatex"
+  "main.bbl" 1776495491 1648 d78ffda0c09be7727c92f215a53499d2 "bibtex main"
+  "main.lot" 1776495492 1216 fbc1acabdd29e4425c10f8888678fa33 "pdflatex"
+  "main.out" 1776495492 2084 7ed2ba5949f0b9e4b2ad462d06611f60 "pdflatex"
+  "main.tex" 1776495488 906 8810154ab8647c825b3ed1ca86133d13 ""
+  "main.toc" 1776495492 3521 d316c3630616ae4b836e1b839df4beca "pdflatex"
   "preamble.tex" 1776490805 687 4b16b250401bc74313e594c573cdd166 ""
   (generated)
   "main.aux"
-  "main.lof"
   "main.log"
   "main.lot"
   "main.out"
