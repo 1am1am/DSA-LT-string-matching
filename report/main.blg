@@ -5,89 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 26 items.
 Database file #1: bibliography/bibliography.bib
-<<<<<<< HEAD
-Warning--empty journal in ElMabrouk1996
 You've used 5 entries,
             2118 wiz_defined-function locations,
-            528 strings with 4848 characters,
-and the built_in function-call counts, 1676 in all, are:
-= -- 156
+            529 strings with 4881 characters,
+and the built_in function-call counts, 1677 in all, are:
+= -- 157
 > -- 99
 < -- 0
 + -- 40
 - -- 34
 * -- 127
-:= -- 298
+:= -- 299
 add.period$ -- 15
 call.type$ -- 5
 change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 6
+cite$ -- 5
 duplicate$ -- 56
 empty$ -- 117
 format.name$ -- 34
-if$ -- 331
+if$ -- 332
 int.to.chr$ -- 0
 int.to.str$ -- 5
 missing$ -- 7
 newline$ -- 28
 num.names$ -- 10
-pop$ -- 35
+pop$ -- 33
 preamble$ -- 1
 purify$ -- 27
 quote$ -- 0
 skip$ -- 34
 stack$ -- 0
 substring$ -- 82
-=======
-You've used 4 entries,
-            2118 wiz_defined-function locations,
-            526 strings with 4768 characters,
-and the built_in function-call counts, 1356 in all, are:
-= -- 129
-> -- 76
-< -- 0
-+ -- 31
-- -- 26
-* -- 104
-:= -- 242
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 25
-chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 44
-empty$ -- 95
-format.name$ -- 26
-if$ -- 267
-int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 5
-newline$ -- 23
-num.names$ -- 8
-pop$ -- 23
-preamble$ -- 1
-purify$ -- 21
-quote$ -- 0
-skip$ -- 28
-stack$ -- 0
-substring$ -- 77
->>>>>>> 4c8c8f484e670da7726be81c85093c564b815345
-swap$ -- 4
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-<<<<<<< HEAD
 type$ -- 16
-warning$ -- 1
+warning$ -- 0
 while$ -- 14
 width$ -- 6
-write$ -- 56
-(There was 1 warning)
-=======
-type$ -- 14
-warning$ -- 0
-while$ -- 12
-width$ -- 5
-write$ -- 46
->>>>>>> 4c8c8f484e670da7726be81c85093c564b815345
+write$ -- 57

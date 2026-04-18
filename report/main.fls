@@ -477,6 +477,34 @@ INPUT content\algorithms\rabin-karp.tex
 INPUT C:\Users\Lam\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Lam\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Users\Lam\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
+INPUT .\data\Illustrations\step11.png
+INPUT .\data\Illustrations\step11.png
+INPUT .\data\Illustrations\step11.png
+INPUT .\data\Illustrations\step11.png
+INPUT .\data\Illustrations\step11.png
+INPUT .\data\Illustrations\step11.png
+INPUT .\data\Illustrations\step11.png
+INPUT .\data\Illustrations\step12.png
+INPUT .\data\Illustrations\step12.png
+INPUT .\data\Illustrations\step12.png
+INPUT .\data\Illustrations\step12.png
+INPUT .\data\Illustrations\step12.png
+INPUT .\data\Illustrations\step12.png
+INPUT .\data\Illustrations\step12.png
+INPUT .\data\Illustrations\step13.png
+INPUT .\data\Illustrations\step13.png
+INPUT .\data\Illustrations\step13.png
+INPUT .\data\Illustrations\step13.png
+INPUT .\data\Illustrations\step13.png
+INPUT .\data\Illustrations\step13.png
+INPUT .\data\Illustrations\step13.png
+INPUT .\data\Illustrations\step2.png
+INPUT .\data\Illustrations\step2.png
+INPUT .\data\Illustrations\step2.png
+INPUT .\data\Illustrations\step2.png
+INPUT .\data\Illustrations\step2.png
+INPUT .\data\Illustrations\step2.png
+INPUT .\data\Illustrations\step2.png
 INPUT .\content\algorithms\kmp.tex
 INPUT .\content\algorithms\kmp.tex
 INPUT .\content\algorithms\kmp.tex
@@ -591,30 +619,30 @@ INPUT .\data\Illustrations\brute-force5.pdf
 INPUT .\content\experimental-results.tex
 INPUT .\content\experimental-results.tex
 INPUT content\experimental-results.tex
-INPUT .\data\Graph\time1.pdf
-INPUT .\data\Graph\time1.pdf
-INPUT .\data\Graph\time1.pdf
-INPUT .\data\Graph\time1.pdf
-INPUT .\data\Graph\time1.pdf
-INPUT .\data\Graph\time1.pdf
-INPUT .\data\Graph\comp1.pdf
-INPUT .\data\Graph\comp1.pdf
-INPUT .\data\Graph\comp1.pdf
-INPUT .\data\Graph\comp1.pdf
-INPUT .\data\Graph\comp1.pdf
-INPUT .\data\Graph\comp1.pdf
-INPUT .\data\Graph\time2.pdf
-INPUT .\data\Graph\time2.pdf
-INPUT .\data\Graph\time2.pdf
-INPUT .\data\Graph\time2.pdf
-INPUT .\data\Graph\time2.pdf
-INPUT .\data\Graph\time2.pdf
-INPUT .\data\Graph\comp2.pdf
-INPUT .\data\Graph\comp2.pdf
-INPUT .\data\Graph\comp2.pdf
-INPUT .\data\Graph\comp2.pdf
-INPUT .\data\Graph\comp2.pdf
-INPUT .\data\Graph\comp2.pdf
+INPUT .\data\Graph\Running Time - Scenario 1.pdf
+INPUT .\data\Graph\Running Time - Scenario 1.pdf
+INPUT .\data\Graph\Running Time - Scenario 1.pdf
+INPUT .\data\Graph\Running Time - Scenario 1.pdf
+INPUT .\data\Graph\Running Time - Scenario 1.pdf
+INPUT .\data\Graph\Running Time - Scenario 1.pdf
+INPUT .\data\Graph\Comparisons - Scenario 1.pdf
+INPUT .\data\Graph\Comparisons - Scenario 1.pdf
+INPUT .\data\Graph\Comparisons - Scenario 1.pdf
+INPUT .\data\Graph\Comparisons - Scenario 1.pdf
+INPUT .\data\Graph\Comparisons - Scenario 1.pdf
+INPUT .\data\Graph\Comparisons - Scenario 1.pdf
+INPUT .\data\Graph\Running Time - Scenario 2.pdf
+INPUT .\data\Graph\Running Time - Scenario 2.pdf
+INPUT .\data\Graph\Running Time - Scenario 2.pdf
+INPUT .\data\Graph\Running Time - Scenario 2.pdf
+INPUT .\data\Graph\Running Time - Scenario 2.pdf
+INPUT .\data\Graph\Running Time - Scenario 2.pdf
+INPUT .\data\Graph\Comparisons - Scenario 2.pdf
+INPUT .\data\Graph\Comparisons - Scenario 2.pdf
+INPUT .\data\Graph\Comparisons - Scenario 2.pdf
+INPUT .\data\Graph\Comparisons - Scenario 2.pdf
+INPUT .\data\Graph\Comparisons - Scenario 2.pdf
+INPUT .\data\Graph\Comparisons - Scenario 2.pdf
 INPUT .\content\acknowledgements.tex
 INPUT .\content\acknowledgements.tex
 INPUT content\acknowledgements.tex
