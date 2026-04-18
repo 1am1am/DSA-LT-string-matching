@@ -1,6 +1,6 @@
-\subsection[The Knuth-Morris-Pratt algorithm]{The Knuth-Morris-Pratt algorithm (KMP algorithm)}
+\subsection[The Knuth-Morris-Pratt Algorithm]{The Knuth-Morris-Pratt Algorithm (KMP Algorithm)\cite{cpalgorithms_prefixfunction}\cite{knuth1977fast}}
     \subsubsection{Introduction \& Application} %khai niem finite automaton trich tu introduction to algorithm
-        \begin{itemize}%https://www.almabetter.com/bytes/articles/kmp-algorithm#%22Practical%20Applications%20of%20the%20KMP%20Algorithm%22 https://www.naukri.com/code360/library/kmp-string-matching-algorithm https://www.researchgate.net/publication/279442892_A_Survey_of_String_Matching_Algorithms https://www.reddit.com/r/learnprogramming/comments/1bk9ura/whats_the_best_stringmatching_algorithm_for/
+        \begin{itemize}% https://www.naukri.com/code360/library/kmp-string-matching-algorithm https://www.researchgate.net/publication/279442892_A_Survey_of_String_Matching_Algorithms https://www.reddit.com/r/learnprogramming/comments/1bk9ura/whats_the_best_stringmatching_algorithm_for/
             \item \textbf{Core idea:} % introduction-to-algorithms-3rd-edition
             The Knuth-Morris-Pratt (KMP) algorithm is a finite automaton which utilizes a prefix array (also known as the $\pi$). 
             For each substring $P[0 \dots \text{currentIndex}]$, the algorithm determines the longest proper prefix that is equal to a suffix of that same substring.            
@@ -11,6 +11,7 @@
                 \item Text Editors: Using in "Search" or "Find and Replace" features to locate destination words.
                 \item Bioinformatics: Searching for specific DNA.
                 \item Checking for Plagiarism: Comparing documents to find and compare a script or a piece of code with the exact match in a large database.
+                \item Spam Detection: Scanning emails against a "blacklist" of thousands of forbidden phrases to filter out unwanted content.
             \end{itemize}
         \end{itemize}
 
@@ -97,7 +98,7 @@
             \State \Return $pos$
             \end{algorithmic}
     
-    \subsubsection{Step-by-step trace\cite{CLRS2022}}
+    \subsubsection{Step-by-step trace}
     \indent \textbf{Notation:}
         \begin{itemize}
             \item \textbf{Text $T$ (length $n$)}: The main text being searched.
@@ -167,8 +168,8 @@
         \item In the same way as the previous step, we take the value from the last index 9, which is 1. 
         Because $S[10]$ matches $S[1]$, the algorithm stops looking back right now. 
         Moving to the comparison step, since we know $S[10]$ and $S[1]$ match, we increase the value from 1 to 2, resulting in $\pi[10] = 2$.\\
-        We have now traversed to the end of array $S$, and the algorithm terminates. \\
-        Based on the $\pi$ array, we find that there is 1 substring from the text $T$ that matches pattern $P$ by counting how many indices have a value equal to the length of $P$. 
+        We have now traversed to the end of array $S$, and the algorithm terminates.
+        \item Based on the $\pi$ array, we find that there is 1 substring from the text $T$ that matches pattern $P$ by counting how many indices have a value equal to the length of $P$. 
         The matching substring starts at index 5 (index 8 minus the length of $P$ plus 1) and ends at index 8.
     \end{itemize}
     
