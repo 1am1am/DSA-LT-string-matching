@@ -1,10 +1,11 @@
 % !TEX root = ../../main.tex
 \subsection{The Rabin-Karp Algorithm}
+
 \subsubsection{Introduction \& Application}
 \begin{itemize}
-    \item \textbf{Core idea}: The Rabin-Karp algorithm uses a rolling hash function to find occurrences of a pattern $P$ within a text $T$.
-    Instead of comparing the pattern character by character for all possible shifts, it calculates a hash value for the pattern and a hash value for each window of the text.
-    If the hash values match, it performs a character-by-character comparison to verify if it is a true match or a hash collision.
+    \item \textbf{Core idea}: The Rabin-Karp algorithm uses a rolling hash function to find occurrences of a pattern $P$ within a text $T$ \cite{cormen2022introduction}. 
+    Instead of comparing the pattern character by character for all possible shifts, it calculates a hash value for the pattern and a hash value for each window of the text. 
+    If the hash values match, it performs a character-by-character comparison to verify if it is a true match or a hash collision. 
     The key advantage is that the hash value of the next window can be computed in $\mathcal{O}(1)$ time by dropping the first character and appending the new character.
     \item \textbf{Real-world applications}:
     \begin{itemize}
@@ -59,7 +60,9 @@
                 \EndIf
                 \If{$r < R - M$}
                     \State $t\_hash = (d \cdot (t\_hash - T[r][c] \cdot h) + T[r+M][c]) \bmod q$
-                    \If{$t\_hash < 0$} $t\_hash = t\_hash + q$ \EndIf
+                    \If{$t\_hash < 0$}
+                        \State $t\_hash = t\_hash + q$
+                    \EndIf
                 \EndIf
             \EndFor
         \EndFor
@@ -67,7 +70,7 @@
 \EndFor
 \end{algorithmic}
 
-\subsubsection{Step-by-step trace (1D Example for Simplicity)}
+\subsubsection{Step-by-step trace}
 
 \textbf{Notation:}
 \begin{itemize}
@@ -82,27 +85,13 @@
 For simplicity, we map characters to integers ($a=1, b=2, c=3$), set base $d=10$, and prime $q=13$.
 \\
 Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bmod 13 = \mathbf{6}$.
+
 \vspace{0.5cm}
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{cccccccc}
-& 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
-\cline{2-8}
-\multicolumn{1}{c|}{text T} & \multicolumn{1}{c|}{\cellcolor{lightgray}a} & \multicolumn{1}{c|}{\cellcolor{lightgray}a} & \multicolumn{1}{c|}{\cellcolor{lightgray}b} & \multicolumn{1}{c|}{c} & \multicolumn{1}{c|}{a} & \multicolumn{1}{c|}{b} & \multicolumn{1}{c|}{b} \\
-\cline{2-8}
-\multicolumn{8}{c}{} \\[-1ex]
-\multicolumn{1}{c}{} & \multicolumn{3}{c}{$t\_hash = \mathbf{8} \neq p\_hash$} & \multicolumn{4}{l}{} \\
-\cline{2-4}
-\multicolumn{1}{c|}{pattern P $\xrightarrow{s=0}$} & \multicolumn{1}{c|}{a} & \multicolumn{1}{c|}{b} & \multicolumn{1}{c|}{c} & \multicolumn{4}{l}{} \\
-\cline{2-4}
-\end{tabular}
-\end{table}
-
 \begin{figure}[H]
-    \caption*{Figure X: Step 1}
+    \centering
+    \includegraphics[trim=1cm 5cm 1cm 3.5cm, clip, width=0.85\textwidth]{data/Illustrations/rabin1.pdf}
+    \caption[Figure \thefigure]{ Step 1 ($s=0$)}
 \end{figure}
-
 \begin{itemize}
     \item The current text window is $T[0..2] = [a, a, b]$.
     The calculated hash is $t\_hash = (1\cdot 10^2 + 1\cdot 10 + 2) \bmod 13 = 112 \bmod 13 = \mathbf{8}$.
@@ -111,31 +100,27 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \end{itemize}
 
 \vspace{0.5cm}
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{cccccccc}
-& 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
-\cline{2-8}
-\multicolumn{1}{c|}{text T} & \multicolumn{1}{c|}{a} & \multicolumn{1}{c|}{\cellcolor{lightgray}a} & \multicolumn{1}{c|}{\cellcolor{lightgray}b} & \multicolumn{1}{c|}{\cellcolor{lightgray}c} & \multicolumn{1}{c|}{a} & \multicolumn{1}{c|}{b} & \multicolumn{1}{c|}{b} \\
-\cline{2-8}
-\multicolumn{8}{c}{} \\[-1ex]
-\multicolumn{1}{c}{} & & \multicolumn{3}{c}{$t\_hash = 6 == p\_hash$} & \multicolumn{3}{l}{} \\
-\cline{3-5}
-\multicolumn{1}{c|}{pattern P $\xrightarrow{s=1}$} & & \multicolumn{1}{c|}{\cellcolor{lightgray}a} & \multicolumn{1}{c|}{\cellcolor{lightgray}b} & \multicolumn{1}{c|}{\cellcolor{lightgray}c} & \multicolumn{3}{l}{} \\
-\cline{3-5}
-\end{tabular}
-\end{table}
-
 \begin{figure}[H]
-    \caption*{Figure Y: Step 2}
+    \centering
+    \includegraphics[trim=1cm 5cm 1cm 3.5cm, clip, width=0.85\textwidth]{data/Illustrations/rabin2.pdf}
+    \caption[Figure \thefigure]{ Step 2 ($s=1$, Hash match check)}
 \end{figure}
-
 \begin{itemize}
-    \item The rolling hash is updated in $\mathcal{O}(1)$ time.
-    The new window is $T[1..3] = [a, b, c]$ with $t\_hash = 6$.
+    \item The rolling hash is updated in $\mathcal{O}(1)$ time. The new window is $T[1..3] = [a, b, c]$ with $t\_hash = 6$.
     \item Since $t\_hash == p\_hash$ ($6 == 6$), the algorithm performs a secondary character-by-character check. All characters match successfully.
     \item Shift is $s=1$ and the list of found matches is updated to record this position ($Positions = [1]$).
+\end{itemize}
+
+\vspace{0.5cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[trim=1cm 5cm 1cm 3.5cm, clip, width=0.85\textwidth]{data/Illustrations/rabin3.pdf}
+    \caption[Figure \thefigure]{ Step 3 ($s=2$, Final trace)}
+\end{figure}
+\begin{itemize}
+    \item The current text window shifts to $T[2..4] = [b, c, a]$.
+    \item The rolling hash is updated in $\mathcal{O}(1)$ time. The new calculated hash is $t\_hash = \mathbf{10}$.
+    \item Since $t\_hash \neq p\_hash$ ($10 \neq 6$), there is no need to compare characters.
 \end{itemize}
 
 \subsubsection{Complexity}
@@ -147,13 +132,13 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 \hline
 \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\
 \hline
-\textbf{Time (Worst)} & $\mathcal{O}(K \cdot m \cdot R \cdot C)$ & Occurs when the hash function generates frequent collisions (e.g., text and patterns share many identical substrings or all 'A's), forcing a full character comparison at every shift. \\
+\textbf{Time (Worst)} & $\mathcal{O}(K \cdot m \cdot R \cdot C)$ & Occurs when the hash function generates frequent collisions, forcing a full character comparison at every shift. \\
 \hline
-\textbf{Time (Average)} & $\mathcal{O}(K \cdot R \cdot C)$ & In practice, with a strong hash function and large prime $q$, collisions are rare. The hash updates in $\mathcal{O}(1)$ time, skipping most character comparisons. \\
+\textbf{Time (Average)} & $\mathcal{O}(K \cdot R \cdot C)$ & In practice, with a strong hash function, collisions are rare. The hash updates in $\mathcal{O}(1)$ time. \\
 \hline
-\textbf{Time (Best)} & $\mathcal{O}(K \cdot R \cdot C)$ & The hash values never match (except on actual occurrences). The algorithm glides through the text in constant time per shift. \\
+\textbf{Time (Best)} & $\mathcal{O}(K \cdot R \cdot C)$ & The hash values never match (except on actual occurrences). The algorithm glides through the text. \\
 \hline
-\textbf{Auxiliary Space} & $\mathcal{O}(1)$ & The algorithm uses only a constant amount of extra memory for storing hash values and loop indices (excluding the space needed to store the output results). \\
+\textbf{Auxiliary Space} & $\mathcal{O}(1)$ & The algorithm uses only a constant amount of extra memory for storing hash values and loop indices. \\
 \hline
 \end{tabular}
 \caption{Complexity Analysis of 2D Rabin-Karp Algorithm}
@@ -161,7 +146,10 @@ Hash of pattern $P$: $p\_hash = (1\cdot 10^2 + 2\cdot 10 + 3) \bmod 13 = 123 \bm
 
 \subsubsection{Discussion}
 \begin{itemize}
-    \item In \textbf{Scenario 1} (Impact of Grid Size), where the number of patterns $K$ is small and the grid scales from $10 \times 10$ to $500 \times 500$, the Rabin-Karp algorithm is highly efficient. Due to its $\mathcal{O}(1)$ rolling hash update, the running time behaves almost linearly, similar to $\mathcal{O}(R \cdot C)$.
-    \item In \textbf{Scenario 2} (Impact of Dictionary Size), where the grid is fixed at $100 \times 100$ and $K$ increases, our specific implementation loops through the grid separately for each pattern. Therefore, the execution time scales linearly with $K$. While this is faster than Brute-Force in terms of raw character comparisons, it does not fully exploit Rabin-Karp's multi-pattern matching potential (which could theoretically search all patterns simultaneously using a unified hash table).
-    \item \textbf{In conclusion}, the Rabin-Karp algorithm provides a significant speedup over Brute-Force by using mathematical hashing to filter out unnecessary comparisons. It is an excellent choice when dealing with large texts, provided a robust prime number $q$ is chosen to avoid worst-case hash collision degradation.
+    \item In Scenario 1 (Impact of Grid Size), where the number of patterns $K$ is small and the grid scales, the Rabin-Karp algorithm is highly efficient due to its $\mathcal{O}(1)$ rolling hash update.
+    \item In Scenario 2 (Impact of Dictionary Size), where the grid is fixed and $K$ increases, our specific implementation loops through the grid separately for each pattern. 
+    Therefore, the execution time scales linearly with $K$. While this is faster than Brute-Force, it does not fully exploit Rabin-Karp's multi-pattern matching potential.
+    \item In conclusion, the Rabin-Karp algorithm provides a significant speedup over Brute-Force by using mathematical hashing to filter out unnecessary comparisons. 
+    It is an excellent choice when dealing with large texts, provided a robust prime number $q$ is chosen.
+    \item Further Reading: For a more rigorous mathematical proof regarding the probability of false positive hash collisions, please refer to the primary literature cited in Section \ref{sec:reference}.
 \end{itemize}

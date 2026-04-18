@@ -1,4 +1,4 @@
-\subsection[The Naïve string-matching algorithm]{The Naïve string-matching algorithm (Brute-Force approach)}
+\subsection[The Brute-Force Algorithm]{The Brute-Force Algorithm (The Naïve Approach)}
     \subsubsection{Introduction \& Application}
         \begin{itemize}
             \item \textbf{Core idea:} According to Abdeen\cite{abdeen2011algorithm}, the brute-force algorithm works with two pointers; a "text pointer" i
@@ -51,7 +51,7 @@
         \EndFor
         \State \Return $pos$
         \end{algorithmic}
-    \subsubsection{Step-by-step trace\cite{CLRS2022}}
+    \subsubsection{Step-by-step trace\cite{cormen2022introduction}}
 
     \indent \textbf{Notation:}
         \begin{itemize}
@@ -66,7 +66,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force1.pdf}
-            \caption{Step 1}
+            \caption[Figure \thefigure]{Step 1}
         \end{figure}
         \item The first character 'a' matches between the pattern and the text.
         
@@ -77,7 +77,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force2.pdf}
-            \caption{Step 2}
+            \caption[Figure \thefigure]{Step 2}
         \end{figure}
         \item All characters in pattern $P$ ('a', 'b', 'c') successfully match the corresponding characters in text $T$ ('a', 'b', 'c').
         
@@ -86,7 +86,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force3.pdf}
-            \caption{Step 3}
+            \caption[Figure \thefigure]{Step 3}
         \end{figure}
         \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('b') at the current shift position $s = 2$.
         
@@ -95,7 +95,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force4.pdf}
-            \caption{Step 4}
+            \caption[Figure \thefigure]{Step 4}
         \end{figure}
         \item The first character in pattern $P$ ('a') does not match the character in text $T$ ('c') at the current shift position $s = 2$.
         
@@ -104,7 +104,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth, trim={2cm 2cm 5cm 2cm}, clip]{data/Illustrations/brute-force5.pdf}
-            \caption{Step 5}
+            \caption[Figure \thefigure]{Step 5}
         \end{figure}
 
         \item The first two characters in pattern $P$ ('a', 'b') match the corresponding characters in text $T$,
@@ -127,22 +127,19 @@
         \textbf{Time (Best with flag optimization)} & $O(K \cdot R \cdot C)$ & The first character of the pattern always results in a mismatch at every shift. \\ \hline
         \textbf{Auxiliary Space} & $O(1)$ & The algorithm uses only a constant amount of extra memory for loop indices. \\ \hline
         \end{tabular}
-        \caption{Complexity Analysis of 2D Brute Force Algorithm}
+        \caption{Complexity Analysis of 2D Brute-Force Algorithm}
         \end{table}
 
     \subsubsection{Discussion}
     \begin{itemize}
         \item In the basic brute-force implementation, the time complexity remains consistent across different scenarios.
-
         \item However, there is a way to optimize the brute-force algorithm by skipping some shifts when a mismatch occurs. This can be achieved by using a flag.
-        \begin{itemize}
-            \item In Scenario 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
-            Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
-            \item In Scenario 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
-            This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
-            which is much longer compared to scenario 1.
-            \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
-            It is worse for scenarios with a large number of patterns.
-        \end{itemize}
+        \item In Scenario 1, the number of patterns $K$ is small, and the text is from $10 \times 10$ to $500 \times500$.
+        Brute-force approach is efficient and likely linear running time $O(R \cdot C)$.
+        \item In Scenario 2, the number of patterns $K$ is large, and the text is fixed at $100 \times 100$.
+        This scenario is more challenging for the brute-force approach, as the running time multiplies by $K$ times,
+        which is much longer compared to scenario 1.
+        \item In conclusion, the brute-force approach is more suitable for scenarios with a small number of patterns.
+        It is worse for scenarios with a large number of patterns.
     \end{itemize}
         
