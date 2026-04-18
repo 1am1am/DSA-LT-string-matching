@@ -62,9 +62,9 @@
     \indent \textbf{Notation:}
         \begin{itemize}
             \item \textbf{Text $T$ (length $n$)}: The main text being searched.
-            \item \textbf{Pattern $P$}: The string that we are looking for.
-            \item \textbf{Shift ($s$)}: The current offset of the text T.
-            \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
+            \item \textbf{Pattern $P$ (length $m$)}: The string that we are looking for.
+            \item \textbf{Bad Character Rule}: When a mismatch occurs at $T[s+i] = c \neq P[i]$, this rule suggests a shift such that the rightmost occurrence of character $c$ in $P$ is aligned with $T[s+i]$. If $c$ does not exist in $P$, the pattern is shifted entirely past the mismatch.
+            \item \textbf{Good Suffix Rule}: When a suffix of $P$ matches a substring of $T$ but the preceding character mismatches, this rule shifts $P$ to the right to align the matching part of $T$ with the next possible occurrence of that suffix (or a prefix of that suffix) within $P$.
         \end{itemize}
 
     \textbf{Example:} text $T = [G, C, A, T, G, C, C, T, A, G]$ and pattern $P = [T, A, T, G]$
