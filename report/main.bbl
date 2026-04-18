@@ -6,15 +6,22 @@ Rawan~Ali Abdeen.
 \newblock {\em IJCSNS International Journal of Computer Science and Network
   Security}, 11(7):24--27, 2011.
 
-\bibitem{CLRS2022}
-Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
-\newblock {\em Introduction to Algorithms}.
-\newblock MIT Press, Cambridge, MA, 4th edition, 2022.
-
 \bibitem{cormen2022introduction}
 Thomas~H Cormen, Charles~E Leiserson, Ronald~L Rivest, and Clifford Stein.
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT press, 4th edition, 2022.
+
+\bibitem{cpalgorithms_ahocorasick}
+{CP-Algorithms contributors}.
+\newblock Aho-corasick algorithm.
+\newblock \url{https://cp-algorithms.com/string/aho_corasick.html}, 2025.
+\newblock Accessed: April 18, 2026.
+
+\bibitem{cpalgorithms_prefixfunction}
+{CP-Algorithms contributors}.
+\newblock Prefix function - knuth-morris-pratt.
+\newblock \url{https://cp-algorithms.com/string/prefix-function.html}, 2025.
+\newblock Accessed: April 18, 2026.
 
 \bibitem{ElMabrouk1996}
 Nadia El-Mabrouk and Maxime Crochemore.
@@ -27,5 +34,10 @@ Saqib~Iqbal Hakak, Amirrudin Kamsin, Palaiahnakote Shivakumara, Gulshan~Amin
 \newblock Exact string matching algorithms: survey, issues, and future research
   directions.
 \newblock {\em IEEE access}, 7:69614--69637, 2019.
+
+\bibitem{knuth1977fast}
+Donald~E Knuth, James~H Morris, Jr, and Vaughan~R Pratt.
+\newblock Fast pattern matching in strings.
+\newblock {\em SIAM journal on computing}, 6(2):323--350, 1977.
 
 \end{thebibliography}
