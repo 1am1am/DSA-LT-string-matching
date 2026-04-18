@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.22)  18 APR 2026 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.22)  18 APR 2026 19:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1136,29 +1136,29 @@ Overfull \hbox (51.15471pt too wide) in paragraph at lines 123--130
 
 [8 <./data/Illustrations/brute-force4.pdf> <./data/Illustrations/brute-force5.pdf>]) [9] (content/algorithms/rabin-karp.tex [10]
 
-pdfTeX warning: pdflatex (file ./data/Illustrations/rabin1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/rabin1.pdf, id=265, 963.6pt x 542.025pt>
-File: data/Illustrations/rabin1.pdf Graphic file (type pdf)
-<use data/Illustrations/rabin1.pdf>
-Package pdftex.def Info: data/Illustrations/rabin1.pdf  used on input line 95.
-(pdftex.def)             Requested size: 415.74042pt x 137.63861pt.
+pdfTeX warning: pdflatex (file ./data/Illustrations/rabinkarp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<data/Illustrations/rabinkarp.pdf, id=265, page=1, 963.6pt x 542.025pt>
+File: data/Illustrations/rabinkarp.pdf Graphic file (type pdf)
+<use data/Illustrations/rabinkarp.pdf, page 1>
+Package pdftex.def Info: data/Illustrations/rabinkarp.pdf , page1 used on input line 95.
+(pdftex.def)             Requested size: 415.74042pt x 153.81413pt.
 [11]
 
-pdfTeX warning: pdflatex (file ./data/Illustrations/rabin2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/rabin2.pdf, id=273, 963.6pt x 542.025pt>
-File: data/Illustrations/rabin2.pdf Graphic file (type pdf)
-<use data/Illustrations/rabin2.pdf>
-Package pdftex.def Info: data/Illustrations/rabin2.pdf  used on input line 108.
-(pdftex.def)             Requested size: 415.74042pt x 137.63861pt.
+pdfTeX warning: pdflatex (file ./data/Illustrations/rabinkarp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<data/Illustrations/rabinkarp.pdf, id=273, page=2, 963.6pt x 542.025pt>
+File: data/Illustrations/rabinkarp.pdf Graphic file (type pdf)
+<use data/Illustrations/rabinkarp.pdf, page 2>
+Package pdftex.def Info: data/Illustrations/rabinkarp.pdf , page2 used on input line 108.
+(pdftex.def)             Requested size: 415.74042pt x 153.81413pt.
 
 
-pdfTeX warning: pdflatex (file ./data/Illustrations/rabin3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/rabin3.pdf, id=275, 963.6pt x 542.025pt>
-File: data/Illustrations/rabin3.pdf Graphic file (type pdf)
-<use data/Illustrations/rabin3.pdf>
-Package pdftex.def Info: data/Illustrations/rabin3.pdf  used on input line 120.
-(pdftex.def)             Requested size: 415.74042pt x 137.63861pt.
-[12 <./data/Illustrations/rabin1.pdf> <./data/Illustrations/rabin2.pdf>] [13 <./data/Illustrations/rabin3.pdf>]) [14] (content/algorithms/kmp.tex [15] [16]
+pdfTeX warning: pdflatex (file ./data/Illustrations/rabinkarp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<data/Illustrations/rabinkarp.pdf, id=275, page=3, 963.6pt x 542.025pt>
+File: data/Illustrations/rabinkarp.pdf Graphic file (type pdf)
+<use data/Illustrations/rabinkarp.pdf, page 3>
+Package pdftex.def Info: data/Illustrations/rabinkarp.pdf , page3 used on input line 120.
+(pdftex.def)             Requested size: 415.74042pt x 153.81413pt.
+[12 <./data/Illustrations/rabinkarp.pdf> <./data/Illustrations/rabinkarp.pdf>] [13 <./data/Illustrations/rabinkarp.pdf>]) [14] (content/algorithms/kmp.tex [15] [16]
 Overfull \hbox (28.67001pt too wide) in paragraph at lines 112--113
 []\T5/cmr/bx/n/12 Example: \T5/cmr/m/n/12 text $\OML/cmm/m/it/12 T \OT1/cmr/m/n/12 = [\OML/cmm/m/it/12 b; a; n; a; b; a\OT1/cmr/m/n/12 ]$\T5/cmr/m/n/12 , pat-tern $\OML/cmm/m/it/12 P \OT1/cmr/m/n/12 = [\OML/cmm/m/it/12 b; a; n; a\OT1/cmr/m/n/12 ]$ \T5/cmr/m/n/12 and string $\OML/cmm/m/it/12 S \OT1/cmr/m/n/12 = [\OML/cmm/m/it/12 b; a; n; a; \OT1/cmr/m/n/12 #\OML/cmm/m/it/12 ; b; a; n; a; b; a\OT1/cmr/m/n/12 ]$ 
  []
@@ -1171,7 +1171,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/kmp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/kmp.pdf, id=362, page=1, 963.6pt x 542.025pt>
+<data/Illustrations/kmp.pdf, id=324, page=1, 963.6pt x 542.025pt>
 File: data/Illustrations/kmp.pdf Graphic file (type pdf)
 <use data/Illustrations/kmp.pdf, page 1>
 Package pdftex.def Info: data/Illustrations/kmp.pdf , page1 used on input line 116.
@@ -1179,7 +1179,7 @@ Package pdftex.def Info: data/Illustrations/kmp.pdf , page1 used on input line 1
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/kmp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/kmp.pdf, id=364, page=2, 963.6pt x 542.025pt>
+<data/Illustrations/kmp.pdf, id=326, page=2, 963.6pt x 542.025pt>
 File: data/Illustrations/kmp.pdf Graphic file (type pdf)
 <use data/Illustrations/kmp.pdf, page 2>
 Package pdftex.def Info: data/Illustrations/kmp.pdf , page2 used on input line 124.
@@ -1187,7 +1187,7 @@ Package pdftex.def Info: data/Illustrations/kmp.pdf , page2 used on input line 1
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/kmp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/kmp.pdf, id=366, page=3, 963.6pt x 542.025pt>
+<data/Illustrations/kmp.pdf, id=328, page=3, 963.6pt x 542.025pt>
 File: data/Illustrations/kmp.pdf Graphic file (type pdf)
 <use data/Illustrations/kmp.pdf, page 3>
 Package pdftex.def Info: data/Illustrations/kmp.pdf , page3 used on input line 136.
@@ -1195,7 +1195,7 @@ Package pdftex.def Info: data/Illustrations/kmp.pdf , page3 used on input line 1
 [17 <./data/Illustrations/kmp.pdf> <./data/Illustrations/kmp.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/kmp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/kmp.pdf, id=393, page=6, 963.6pt x 542.025pt>
+<data/Illustrations/kmp.pdf, id=355, page=6, 963.6pt x 542.025pt>
 File: data/Illustrations/kmp.pdf Graphic file (type pdf)
 <use data/Illustrations/kmp.pdf, page 6>
 Package pdftex.def Info: data/Illustrations/kmp.pdf , page6 used on input line 145.
@@ -1203,7 +1203,7 @@ Package pdftex.def Info: data/Illustrations/kmp.pdf , page6 used on input line 1
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/kmp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/kmp.pdf, id=395, page=7, 963.6pt x 542.025pt>
+<data/Illustrations/kmp.pdf, id=357, page=7, 963.6pt x 542.025pt>
 File: data/Illustrations/kmp.pdf Graphic file (type pdf)
 <use data/Illustrations/kmp.pdf, page 7>
 Package pdftex.def Info: data/Illustrations/kmp.pdf , page7 used on input line 155.
@@ -1211,7 +1211,7 @@ Package pdftex.def Info: data/Illustrations/kmp.pdf , page7 used on input line 1
 [18 <./data/Illustrations/kmp.pdf> <./data/Illustrations/kmp.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/kmp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/kmp.pdf, id=408, page=8, 963.6pt x 542.025pt>
+<data/Illustrations/kmp.pdf, id=370, page=8, 963.6pt x 542.025pt>
 File: data/Illustrations/kmp.pdf Graphic file (type pdf)
 <use data/Illustrations/kmp.pdf, page 8>
 Package pdftex.def Info: data/Illustrations/kmp.pdf , page8 used on input line 165.
@@ -1229,7 +1229,7 @@ Overfull \hbox (2.47404pt too wide) in paragraph at lines 203--204
 ) [20] (content/algorithms/boyer-moore.tex [21]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/Bad_Char_Table.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/Bad_Char_Table.pdf, id=434, 214.12999pt x 135.18504pt>
+<data/Illustrations/Bad_Char_Table.pdf, id=396, 214.12999pt x 135.18504pt>
 File: data/Illustrations/Bad_Char_Table.pdf Graphic file (type pdf)
 <use data/Illustrations/Bad_Char_Table.pdf>
 Package pdftex.def Info: data/Illustrations/Bad_Char_Table.pdf  used on input line 77.
@@ -1237,7 +1237,7 @@ Package pdftex.def Info: data/Illustrations/Bad_Char_Table.pdf  used on input li
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/good-suffix-table_cropped.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/good-suffix-table_cropped.pdf, id=436, 339.3478pt x 170.57727pt>
+<data/Illustrations/good-suffix-table_cropped.pdf, id=398, 339.3478pt x 170.57727pt>
 File: data/Illustrations/good-suffix-table_cropped.pdf Graphic file (type pdf)
 <use data/Illustrations/good-suffix-table_cropped.pdf>
 Package pdftex.def Info: data/Illustrations/good-suffix-table_cropped.pdf  used on input line 83.
@@ -1245,7 +1245,7 @@ Package pdftex.def Info: data/Illustrations/good-suffix-table_cropped.pdf  used 
 [22 <./data/Illustrations/Bad_Char_Table.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/Boyer_moore_step1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/Boyer_moore_step1.pdf, id=453, 547.13411pt x 321.2pt>
+<data/Illustrations/Boyer_moore_step1.pdf, id=415, 547.13411pt x 321.2pt>
 File: data/Illustrations/Boyer_moore_step1.pdf Graphic file (type pdf)
 <use data/Illustrations/Boyer_moore_step1.pdf>
 Package pdftex.def Info: data/Illustrations/Boyer_moore_step1.pdf  used on input line 94.
@@ -1253,7 +1253,7 @@ Package pdftex.def Info: data/Illustrations/Boyer_moore_step1.pdf  used on input
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/boyer_moore_step2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/boyer_moore_step2.pdf, id=455, 536.2434pt x 174.21085pt>
+<data/Illustrations/boyer_moore_step2.pdf, id=417, 536.2434pt x 174.21085pt>
 File: data/Illustrations/boyer_moore_step2.pdf Graphic file (type pdf)
 <use data/Illustrations/boyer_moore_step2.pdf>
 Package pdftex.def Info: data/Illustrations/boyer_moore_step2.pdf  used on input line 109.
@@ -1261,7 +1261,7 @@ Package pdftex.def Info: data/Illustrations/boyer_moore_step2.pdf  used on input
 [23 <./data/Illustrations/good-suffix-table_cropped.pdf> <./data/Illustrations/Boyer_moore_step1.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/boyer_moore_step3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/boyer_moore_step3.pdf, id=482, 543.50049pt x 197.79897pt>
+<data/Illustrations/boyer_moore_step3.pdf, id=444, 543.50049pt x 197.79897pt>
 File: data/Illustrations/boyer_moore_step3.pdf Graphic file (type pdf)
 <use data/Illustrations/boyer_moore_step3.pdf>
 Package pdftex.def Info: data/Illustrations/boyer_moore_step3.pdf  used on input line 120.
@@ -1269,7 +1269,7 @@ Package pdftex.def Info: data/Illustrations/boyer_moore_step3.pdf  used on input
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/boyer_moore_lastStep.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/boyer_moore_lastStep.pdf, id=484, 566.18527pt x 215.94678pt>
+<data/Illustrations/boyer_moore_lastStep.pdf, id=446, 566.18527pt x 215.94678pt>
 File: data/Illustrations/boyer_moore_lastStep.pdf Graphic file (type pdf)
 <use data/Illustrations/boyer_moore_lastStep.pdf>
 Package pdftex.def Info: data/Illustrations/boyer_moore_lastStep.pdf  used on input line 131.
@@ -1277,7 +1277,7 @@ Package pdftex.def Info: data/Illustrations/boyer_moore_lastStep.pdf  used on in
 [24 <./data/Illustrations/boyer_moore_step2.pdf> <./data/Illustrations/boyer_moore_step3.pdf> <./data/Illustrations/boyer_moore_lastStep.pdf>]) [25] (content/algorithms/aho-corasick.tex [26] [27]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=542, page=1, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=504, page=1, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 1>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page1 used on input line 131.
@@ -1285,7 +1285,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page1 used on inpu
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=544, page=2, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=506, page=2, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 2>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page2 used on input line 138.
@@ -1298,7 +1298,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--145
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=561, page=3, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=523, page=3, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 3>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page3 used on input line 148.
@@ -1311,7 +1311,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=563, page=4, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=525, page=4, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 4>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page4 used on input line 156.
@@ -1319,7 +1319,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page4 used on inpu
 [29 <./data/Illustrations/ahocorasick.pdf> <./data/Illustrations/ahocorasick.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=575, page=5, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=537, page=5, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 5>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page5 used on input line 167.
@@ -1327,7 +1327,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page5 used on inpu
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=577, page=6, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=539, page=6, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 6>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page6 used on input line 175.
@@ -1335,7 +1335,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page6 used on inpu
 [30 <./data/Illustrations/ahocorasick.pdf> <./data/Illustrations/ahocorasick.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=590, page=7, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=552, page=7, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 7>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page7 used on input line 182.
@@ -1343,7 +1343,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page7 used on inpu
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=592, page=12, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=554, page=12, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 12>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page12 used on input line 191.
@@ -1351,7 +1351,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page12 used on inp
 [31 <./data/Illustrations/ahocorasick.pdf> <./data/Illustrations/ahocorasick.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=604, page=13, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=566, page=13, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 13>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page13 used on input line 199.
@@ -1359,7 +1359,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page13 used on inp
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=606, page=15, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=568, page=15, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 15>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page15 used on input line 207.
@@ -1367,7 +1367,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page15 used on inp
 [32 <./data/Illustrations/ahocorasick.pdf> <./data/Illustrations/ahocorasick.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=618, page=16, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=580, page=16, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 16>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page16 used on input line 214.
@@ -1375,7 +1375,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page16 used on inp
 
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=620, page=17, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=582, page=17, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 17>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page17 used on input line 224.
@@ -1383,7 +1383,7 @@ Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page17 used on inp
 [33 <./data/Illustrations/ahocorasick.pdf> <./data/Illustrations/ahocorasick.pdf>]
 
 pdfTeX warning: pdflatex (file ./data/Illustrations/ahocorasick.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<data/Illustrations/ahocorasick.pdf, id=632, page=18, 963.6pt x 542.025pt>
+<data/Illustrations/ahocorasick.pdf, id=594, page=18, 963.6pt x 542.025pt>
 File: data/Illustrations/ahocorasick.pdf Graphic file (type pdf)
 <use data/Illustrations/ahocorasick.pdf, page 18>
 Package pdftex.def Info: data/Illustrations/ahocorasick.pdf , page18 used on input line 237.
@@ -1392,12 +1392,12 @@ LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 25
 (C:\Program Files\MiKTeX\tex/latex/vntex\t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [34 <./data/Illustrations/ahocorasick.pdf> <./data/Illustrations/ahocorasick.pdf>] [35])) [36] (content/experimental-results.tex [37] [38] [39]
-<data/Graph/Running Time - Scenario 1.pdf, id=671, 602.25pt x 372.39125pt>
+<data/Graph/Running Time - Scenario 1.pdf, id=633, 602.25pt x 372.39125pt>
 File: data/Graph/Running Time - Scenario 1.pdf Graphic file (type pdf)
 <use data/Graph/Running Time - Scenario 1.pdf>
 Package pdftex.def Info: data/Graph/Running Time - Scenario 1.pdf  used on input line 113.
 (pdftex.def)             Requested size: 489.10287pt x 302.44212pt.
-<data/Graph/Comparisons - Scenario 1.pdf, id=672, 602.25pt x 372.39125pt>
+<data/Graph/Comparisons - Scenario 1.pdf, id=634, 602.25pt x 372.39125pt>
 File: data/Graph/Comparisons - Scenario 1.pdf Graphic file (type pdf)
 <use data/Graph/Comparisons - Scenario 1.pdf>
 Package pdftex.def Info: data/Graph/Comparisons - Scenario 1.pdf  used on input line 120.
@@ -1406,12 +1406,12 @@ Package pdftex.def Info: data/Graph/Comparisons - Scenario 1.pdf  used on input 
 
 pdfTeX warning: pdflatex (file ./data/Graph/Comparisons - Scenario 1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<data/Graph/Running Time - Scenario 2.pdf, id=712, 602.25pt x 372.39125pt>
+<data/Graph/Running Time - Scenario 2.pdf, id=674, 602.25pt x 372.39125pt>
 File: data/Graph/Running Time - Scenario 2.pdf Graphic file (type pdf)
 <use data/Graph/Running Time - Scenario 2.pdf>
 Package pdftex.def Info: data/Graph/Running Time - Scenario 2.pdf  used on input line 127.
 (pdftex.def)             Requested size: 489.10287pt x 302.44212pt.
-<data/Graph/Comparisons - Scenario 2.pdf, id=713, 602.25pt x 372.39125pt>
+<data/Graph/Comparisons - Scenario 2.pdf, id=675, 602.25pt x 372.39125pt>
 File: data/Graph/Comparisons - Scenario 2.pdf Graphic file (type pdf)
 <use data/Graph/Comparisons - Scenario 2.pdf>
 Package pdftex.def Info: data/Graph/Comparisons - Scenario 2.pdf  used on input line 134.
@@ -1428,17 +1428,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7ED2BA5949F0B9E4B2AD462D06611F60;2084.
  ) 
 Here is how much of TeX's memory you used:
- 29960 strings out of 474486
- 549464 string characters out of 5753569
+ 29952 strings out of 474486
+ 549240 string characters out of 5753569
  1949542 words of memory out of 5000000
- 51513 multiletter control sequences out of 15000+600000
+ 51505 multiletter control sequences out of 15000+600000
  585911 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  95i,12n,120p,703b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vntt12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnr10.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vncsc10.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1513\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnti12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi864\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnsl12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnr12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnr12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1244\vnbx12.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi864\vncsc10.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1244\vncsc10.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (44 pages, 1339634 bytes).
+Output written on main.pdf (44 pages, 1245372 bytes).
 PDF statistics:
- 1371 PDF objects out of 1440 (max. 8388607)
+ 1333 PDF objects out of 1440 (max. 8388607)
  144 named destinations out of 1000 (max. 500000)
  535 words of extra memory for PDF output out of 10000 (max. 10000000)
 
