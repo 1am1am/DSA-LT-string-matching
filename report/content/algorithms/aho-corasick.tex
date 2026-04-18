@@ -113,9 +113,15 @@
     \indent \textbf{Notation:}
         \begin{itemize}
             \item \textbf{Text $T$ (length $n$)}: The main text being searched.
-            \item \textbf{Pattern $P$}: The string that we are looking for.
-            \item \textbf{Shift ($s$)}: The current offset of the text T.
-            \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
+            \item \textbf{Pattern $P$ (length $m$)}: The string that we are looking for.
+            \item \textbf{Trie tree}:
+            \begin{itemize}
+                \item \textbf{Root Node}: The starting point of the Trie, representing an empty string / null state.
+                \item \textbf{White Node}: Represents a state in the Trie that is a prefix but not a complete pattern.
+                \item \textbf{Grey Node (Output Node)}: Represents a complete pattern from the list of patterns $P$.
+                \item \textbf{Yellow Node (Active Node)}: Indicates the current node (substring) reached.                
+                \item \textbf{Green Link}: A suffix link pointing to the longest proper suffix of the current prefix that is also present in the Trie.
+            \end{itemize}
         \end{itemize}
 
     \indent \textbf{Example:} text $T = [i, m, i, s, s, u]$ and list of pattern $P = [[u], [i, s, s, u], [s, s], [m, i, s, s]]$
@@ -125,7 +131,7 @@
             \includegraphics[page = 1, width=0.8\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{data/Illustrations/ahocorasick.pdf}
             \caption[Figure \thefigure]{Step 1}
         \end{figure}
-        \item We build a Trie based on the list of patterns. Grey nodes are output nodes, which means that the node represents an existing pattern from the list.
+        \item We build a Trie based on the list of patterns. 
         
         \begin{figure}[H]
             \centering
@@ -136,7 +142,6 @@
         If the current character matches a path from the previous node, we transition to a child node, which effectively updates the substring we have matched so far. 
         However, if no such path exists, we must follow a failure link to find the longest proper suffix and continue the search. 
         For example, when $T[0]$ is 'i', we move from the root to node 'i', updating our current state to represent the substring "i". \\
-        Note: The yellow node indicates the current node (substring) reached.
 
         \begin{figure}[H]
             \centering
@@ -145,7 +150,6 @@
         \end{figure}
         \item In the second operation, we identify all suffix substrings of the current substring (currently "i") that exist in the Trie. 
         Since "i" has no proper suffix other than the empty string, we create a link pointing to the root, which represents the null state. \\
-        Note: The green links are the longest proper suffix of each node.
         
         \begin{figure}[H]
             \centering

@@ -102,14 +102,14 @@
     \indent \textbf{Notation:}
         \begin{itemize}
             \item \textbf{Text $T$ (length $n$)}: The main text being searched.
-            \item \textbf{Pattern $P$}: The string that we are looking for.
-            \item \textbf{Shift ($s$)}: The current offset of the text T.
-            \item \textbf{Positions ([(start position, end position), \ldots])}: A list storing the indices where a complete match is found.
+            \item \textbf{Pattern $P$ (length $m$)}: The string that we are looking for.
+            \item \textbf{String $S$ (length $m + n + 1$)}: String $S$ is the concatenation of the pattern, the sentinel character $\#$, and the text.\\
+            Note: Any character can be used instead of $\#$, provided it does not appear in $T$ or $P$.
+            \item \textbf{$\pi$ array}: The prefix array used to calculate values for all positions.
+            \item \textbf{Current substring}: The substring ending at the current index with a size equal to the current value plus one, is used for illustration.
         \end{itemize}
 
     \indent \textbf{Example:} text $T = [b, a, n, a, b, a]$, pattern $P = [b, a, n, a]$ and string $S = [b, a, n, a, \#, b, a, n, a, b, a]$\\
-    \indent Note: String $S$ is the concatenation of the pattern, the sentinel character $\#$, and the text. 
-    \indent Any character can be used instead of $\#$, provided it does not appear in $T$ or $P$.
     \begin{itemize}
         \begin{figure}[H]
             \centering
@@ -117,7 +117,7 @@
             \caption[Figure \thefigure]{Step 1}
         \end{figure}
         \item Assuming we have calculated the $\pi$ array up to index 6, while the remaining indices are set to -1 (indicating they have not yet been calculated).\\
-        Note that $\pi[0]$ is always $0$ because a single-character string has no proper prefixes.
+        Note: $\pi[0]$ is always $0$ because a single-character string has no proper prefixes.
         
         \begin{figure}[H]
             \centering
@@ -181,13 +181,11 @@
     \begin{tabular}{|l|c|p{8cm}|}
     \hline
     \textbf{Metric} & \textbf{Complexity} & \textbf{Reasoning} \\ \hline
-    \textbf{Time (Average)} & $O(K \cdot (R + C) \cdot (m + D))$ & The Knuth-Morris-Pratt algorithm is a finite automaton that finds all matching positions. 
-    Although the process of finding the next match may take several steps at some indices, it will take at most $2n$ comparisons in total. 
-    This means the Big O is $O(n)$ and the runtime is very stable. 
-    Note: $D = \max(R, C)$. \\ 
+    \textbf{Time (Average)} & $O(K \cdot (R + C) \cdot (m + D))$ & For each of the $K$ patterns, the algorithm searches all rows ($R$) and columns ($C$). Since we use the $P + \# + T$ trick, each search takes $O(m + D)$ time. 
+    Note: $D = \max(R, C)$, $m$ is the length of the longest pattern. \\ 
     \hline
-    \textbf{Auxiliary Space} & $O(m + D)$ & The algorithm uses extra memory for the prefix array ($\pi$ table). 
-    Note: $D = \max(R, C)$. \\
+    \textbf{Auxiliary Space} & $O(m + D)$ & We need a $\pi$ table large enough to hold the concatenated string ($P + \# + T$), so the size is $m + D$.
+    Note: $D = \max(R, C)$, $m$ is the length of the longest pattern. \\
     \hline
     \end{tabular}
     \caption{Complexity Analysis of 2D Knuth-Morris-Pratt Algorithm}
