@@ -77,7 +77,10 @@
     \item \textbf{Text $T$ (length $n$)}: The main text being searched.
     \item \textbf{Pattern $P$ (length $m$)}: The string that we are looking for.
     \item \textbf{Shift ($s$)}: The current offset of the text $T$.
-    \item \textbf{Positions ($[s_1, s_2, \dots]$)}: A list storing the indices where a complete match is found.
+    \item \textbf{Base $d$}: The numerical base (radix) used for the hashing function.
+    \item \textbf{Prime $q$}: The modulus used to prevent overflow and minimize hash collisions.
+    \item \textbf{$p\_hash$ / $t\_hash$}: The pre-computed hash value of the pattern and the rolling hash of the current text window.
+    \item \textbf{$Positions$}: A list storing the indices where a successful match is identified.
 \end{itemize}
 
 \textbf{Example:} text $T = [a, a, b, c, a, b, b]$ and pattern $P = [a, b, c]$.
