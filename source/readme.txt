@@ -18,7 +18,7 @@ Specify the algorithm using the "-a" flag:
 - rk  : Rabin-Karp
 - kmp : Knuth-Morris-Pratt
 - bm  : Boyer-Moore
-- ac  : Aho-Corasic
+- ac  : Aho-Corasick
 
 4. USER GUIDE (EXECUTION)
 -------------------------
